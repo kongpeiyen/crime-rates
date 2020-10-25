@@ -14,3 +14,28 @@ things to think about:
 1. comparing the different factors' influence on crime rates in 2 cities 
 2. by looking at these 2 cities as case studies coming to conlclusions arounf which factors influence crime rates
 
+## Data sources
+
+Cities:
+- London: 
+https://data.london.gov.uk/dataset/recorded_crime_summary  --> crime rate/borough
+https://www.kaggle.com/jboysen/london-crime
+https://data.london.gov.uk/dataset/recorded_crime_associated  --> associated factors to crime
+https://data.london.gov.uk/dataset/public-perception- --> Public perception of police
+https://data.london.gov.uk/dataset/daily-areal-rainfall --> Daily rainfall of differents areas (2018)
+
+- New York:
+https://www.kaggle.com/adamschroeder/crimes-new-york-city  --> Crime rate+ population/borough (2016)
+https://data.world/mithragoesdark/crime-in-new-york-city --> Crimes per borough (2014-2015)
+https://www.labor.ny.gov/stats/nyc/ --> Employment per borough
+https://www.kaggle.com/selfishgene/historical-hourly-weather-data  --> City's weather attributes (pressure, temperature...) over same period
+
+- Tokyo:
+https://www.kaggle.com/loovmj/tokyo-weather-data  --> Weather data of Tokyo (2018)
+https://knoema.com/atlas/Japan/Tokyo/datasets --> some data on Tokyo including the crime rate
+
+- Singapore:
+https://data.gov.sg/dataset/overall-crime-cases-crime-rate?resource_id=124af3cd-08d5-405a-9c83-02f0ad16cb5f  --> crime rate (classified)
+https://data.gov.sg/dataset/realtime-weather-readings --> Weather readings (temperature, wind...)(2016)
+
+
