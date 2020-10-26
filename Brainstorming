@@ -14,12 +14,15 @@ things to think about:
 1. comparing the different factors' influence on crime rates in 2 cities 
 2. by looking at these 2 cities as case studies coming to conlclusions arounf which factors influence crime rates
 
+
 ## Data sources
 
 Cities:
 - London: 
 https://data.london.gov.uk/dataset/recorded_crime_summary  --> crime rate/borough
+https://www.met.police.uk/sd/stats-and-data/met/crime-data-dashboard/ --> crime rate by month (also colour codes by borough!! its quite cool) 
 https://www.kaggle.com/jboysen/london-crime
+https://www.statista.com/topics/4627/crime-in-london/ --> crime rates (yearly)
 https://data.london.gov.uk/dataset/recorded_crime_associated  --> associated factors to crime
 https://data.london.gov.uk/dataset/public-perception- --> Public perception of police
 https://data.london.gov.uk/dataset/daily-areal-rainfall --> Daily rainfall of differents areas (2018)
@@ -33,9 +36,18 @@ https://www.kaggle.com/selfishgene/historical-hourly-weather-data  --> City's we
 - Tokyo:
 https://www.kaggle.com/loovmj/tokyo-weather-data  --> Weather data of Tokyo (2018)
 https://knoema.com/atlas/Japan/Tokyo/datasets --> some data on Tokyo including the crime rate
+https://www.google.com/search?client=safari&rls=en&sxsrf=ALeKk03_oRlYJlMPo8nm67osgpJhEBh9tw%3A1603683797375&ei=1UWWX625FsbXz7sP_MuNyAE&q=tokyo+monthly+weather+&oq=tokyo+monthly+weather+&gs_lcp=CgZwc3ktYWIQAzIFCAAQyQMyAggAMgYIABAWEB4yBggAEBYQHjoECAAQRzoHCCMQsAIQJzoICCEQFhAdEB5Qlh5Y3zRg0DZoAHABeACAAU-IAaEEkgECMTCYAQCgAQGqAQdnd3Mtd2l6yAEIwAEB&sclient=psy-ab&ved=0ahUKEwjt98vYq9HsAhXG63MBHfxlAxkQ4dUDCAw&uact=5 
+--> tokyo monthly weather (the've got 4 seasons too though, temperature is similar to london and may not be particulalry useful) 
 
 - Singapore:
 https://data.gov.sg/dataset/overall-crime-cases-crime-rate?resource_id=124af3cd-08d5-405a-9c83-02f0ad16cb5f  --> crime rate (classified)
 https://data.gov.sg/dataset/realtime-weather-readings --> Weather readings (temperature, wind...)(2016)
 
+- Hong Kong:
+https://www.police.gov.hk/ppp_en/09_statistics/csd.html --> data on Hong Kong crime rate by month (Oct 2019- Sep 2020)
+https://data.gov.hk/en-data/dataset/hk-hkpf-stat-crm-stat-detail/resource/1708d8c2-11f5-4f9e-9a11-31bd599efcb2 --> crime rate data over last 10 years
+https://www.kaggle.com/rameessahlu/hong-kong-rain-fall --> hong kong rainfall  
 
+- US: 
+https://www.governing.com/gov-data/safety-justice/crime-data-statistics-for-cities-local-law-enforcement-by-month.html --> crime rates by month (many different cities available)
+Houston: https://www.houstontx.gov/police/cs/Monthly_Crime_Data_by_Street_and_Police_Beat.htm --> crime rat eby month (2019-2020)
