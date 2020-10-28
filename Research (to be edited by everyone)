@@ -5,3 +5,8 @@ This data counts the number of crimes at three different geographic levels of Lo
 •	https://data.london.gov.uk/dataset/london-average-air-quality-levels 
  The data shows roadside and background average readings for Nitric Oxide, Nitrogen Dioxide, Oxides of Nitrogen, Ozone, Particulate Matter (PM10 and PM2.5), and Sulphur Dioxide. Measured in Micrograms per Cubic Meter of Air (ug/m3). The spreadsheet shows which Index level each reading falls in, and contains charts showing pollutant levels by time of day per month.
  --> this data was used to make graphs like the ones in here https://data.london.gov.uk/ (environment category)
+ 
+•	https://www.gov.hk/en/residents/environment/air/aqhi.htm  Hong Kong’s government website with air quality information (struggling to find useful data though)
+ --> https://www.aqhi.gov.hk/en/aqhi/statistics-of-aqhi/aqhi-monthly-summary.html monthly data 
+
+
