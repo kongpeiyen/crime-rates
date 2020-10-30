@@ -1,10 +1,12 @@
 # MONTHLY DATA 
 
+LONDON CRIME
 •	https://www.met.police.uk/sd/stats-and-data/met/crime-data-dashboard/ 
 --> crime rate by month (also colour codes by borough!! its quite cool)
 •	https://data.london.gov.uk/dataset/recorded_crime_summary
 --> This data counts the number of crimes at three different geographic levels of London (borough, ward, LSOA) per month, according to crime type. Data for all months of 2019
 
+LONDON WEATHER AND POLLUTION DATA
 •	https://data.london.gov.uk/dataset/london-average-air-quality-levels 
 --> The data shows roadside and background average readings for Nitric Oxide, Nitrogen Dioxide, Oxides of Nitrogen, Ozone, Particulate Matter (PM10 and PM2.5), and Sulphur Dioxide. Measured in Micrograms per Cubic Meter of Air (ug/m3). The spreadsheet shows which Index level each reading falls in, and contains charts showing pollutant levels by time of day per month.
 this data was used to make graphs like the ones in here https://data.london.gov.uk/ (environment category)
@@ -13,11 +15,15 @@ this data was used to make graphs like the ones in here https://data.london.gov.
 • https://www.google.com/search?client=safari&rls=en&sxsrf=ALeKk034Y2YcDrVTHmYHXYzDKKJX1ZyK_g%3A1603683860556&ei=FEaWX8OlIfvAz7sPyMiAoAE&q=london+monthly+weather&oq=london+monthly+weather&gs_lcp=CgZwc3ktYWIQAzICCAAyBggAEAcQHjIGCAAQBxAeMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMgYIABAHEB4yBggAEAcQHjICCAAyBAgAEB46BAgAEEdQ3uYKWI3sCmDy7QpoAHAFeACAAT-IAc0CkgEBNpgBAKABAaoBB2d3cy13aXrIAQjAAQE&sclient=psy-ab&ved=0ahUKEwjD_9v2q9HsAhV74HMBHUgkABQQ4dUDCAw&uact=5
 --> monthly temperatures of London
 
+HONG KONG CRIME 
 • https://www.police.gov.hk/ppp_en/09_statistics/csd.html 
 -->data on Hong Kong crime rate by month (Oct 2019- Sep 2020)
 • https://www.police.gov.hk/ppp_en/09_statistics/csc.html
 -> Data on Hong Kong crime rate/ 6months and per crime category (2018-2019)
+• https://www.police.gov.hk/ppp_en/09_statistics/csc.html
+--> data on crime (overall rates and also individual components), we can also search data all the way till 2001 (just have to click on the toggle button)
  
+ HONG KONG WEATHER AND POLLUTION DATA
 •	https://www.gov.hk/en/residents/environment/air/aqhi.htm 
 --> Hong Kong’s government website with air quality information (struggling to find useful data though)
 •	https://www.aqhi.gov.hk/en/aqhi/statistics-of-aqhi/aqhi-monthly-summary.html 
@@ -26,6 +32,13 @@ this data was used to make graphs like the ones in here https://data.london.gov.
 --> hong kong monthly temperature 
 • https://www.kaggle.com/rameessahlu/hong-kong-rain-fall 
 --> hong kong rainfall (YEARLY 1900-2018)
+• https://www.epd.gov.hk/epd/english/environmentinhk/air/data/aq_stat.html
+--> stats for 2019 (on the whole, not by month) 
+• https://www.epd.gov.hk/epd/english/environmentinhk/air/data/emission_inve.html 
+--> 2001-2017 yearly data for individual components eg sulfur dioxide, nitrogen dioxide 
+
+#note: i guess for weather, we can do a month on month analysis, whereas for pollution we can do a year on year analysis? 
+
 
 
 
