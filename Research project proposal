@@ -4,6 +4,10 @@ This proposal should:
 •  provide context and motivation (Jana and Pei)
 
 • suggest available datasets and/or sources of data (Tiphaine, to check which is most suitable + how it can help w the data presentation)
+For London, we mostly found datasets on the crime rate from the metropolitan police database. However, for the weather attributes we were thinking of using different sources. Both of the datasets we obtained were created by London universities (King's College London and Imperial College London) and shared through the datastore website (therefore supported by the  GLA). 
+Most of these datasets are in the csv format and mesure our variables monthly which will allow us to get a better precision.
+For Hong Kong, we struggled more to find open data on the crime rate. The sources available are the open data from the Hong Kong police force and global organizations such as the United Nations.  For the weather attributes, we also found two useful national sources which are open data from the Hong Kong government and the Hong Kong observatory.
+These datasets abtained are in the csv and xls formats. They mesure our variables ona monthly and anually basis which mean that we might have to pair our data according to the time frame used to measure the variables.
 
 • sketch methods for analysing and presenting data (Alaric) 
 
