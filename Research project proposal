@@ -10,6 +10,7 @@ For Hong Kong, we struggled more to find open data on the crime rate. The source
 These datasets abtained are in the csv and xls formats. They mesure our variables ona monthly and anually basis which mean that we might have to pair our data according to the time frame used to measure the variables.
 
 • sketch methods for analysing and presenting data (Alaric) 
+We will be comparing the crime rates in London and Hong Kong with regards to the weather attributes. We will be using bar charts with monthly temperature in Celsius of the x-axis and crime per XXX people for both cities, a linear regression with the same axis to investigate the correlations between our two variables. TBC 
 
 • outline what a successful project will tell you about your domain of interest (Camilla)
 Answering our research question through visualizations and statistical analysis will allow us to find out whether the effect of air pollution and weather on crime rates is statistically significant. 
