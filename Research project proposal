@@ -7,18 +7,26 @@ Listing each team member:
 This proposal should:
 •  provide context and motivation (Jana and Pei)
 
-We focused on the two countries, London and Hong Kong, for a few reasons. Firstly, they are both developed first world countries. Since we are comparing crime rates, we felt that there would hence be more equal comparisons as the level of development affects the propensity of crime to occur, with a higher level of development typically showing an inverse correlation to the crime rate. This is because developed countries are not plagued by culturally-sanctioned violence against women and gays and serious forms of transnational crime such as sex traﬃcking, drug traﬃcking, murderous incursions by militias, and theft of natural resources including valuable minerals, endangered animals, ﬁsh stocks and timber, on top of ordinary volumes of crimes - which is what developed countries are subject to. 
+We focused on the two countries, London and Hong Kong, for a few reasons. Firstly, they are both developed first world countries. 
+Since we are comparing crime rates, we felt that there would hence be more equal comparisons as the level of development affects the propensity of crime to occur, with a higher level of development typically showing an inverse correlation to the crime rate. 
+This is because developed countries are not plagued by culturally-sanctioned violence against women and gays and serious forms of transnational crime such as sex traﬃcking, drug traﬃcking, murderous incursions by militias, and theft of natural resources including valuable minerals, endangered animals, ﬁsh stocks and timber, on top of ordinary volumes of crimes - which is what developed countries are subject to. 
 
-Secondly, as one of the factors we were comparing was weather, we hence found a country that experienced four seasons (London) and another country that had temperate weather all year round (Hong Kong). We hoped to see the difference of the effect of weather on crime rates even more significantly by comparing and contrasting two countries with very different climates. 
+Secondly, as one of the factors we were comparing was weather, we hence found a country that experienced four seasons (London) and another country that had temperate weather all year round (Hong Kong). 
+We hoped to observe a more significant difference of the effect of weather on crime rates even more significantly by comparing and contrasting two countries with very different climates. 
 
-Thirdly, they are of similar population size. However, the population sizes are not entirely equal and the difference in population is approximately one million. The group is aware of this issue but we are taking the assumption that they are equal for this investigation. This is because the overall population size is still relatively similar and is the best comparison we have been able to find, given the constraints of the first and second factors as mentioned above. 
+Thirdly, they are of similar population size. 
+However, the population sizes are not entirely equal and the difference in population is approximately one million. 
+The group is aware of this issue but we are taking the assumption that they are equal for this investigation. 
+This is because the overall population size is still relatively similar and is the best comparison we have been able to find, given the constraints of the first and second factors as mentioned above. 
 
+The time frame we are adopting is 2015-2019. This was the most recent as well as the best amount of open source data we could find. 
+In five years, we hope to find more data to justify and compare such results. The time period of five years is chosen as this is the maximum time frame given by the governmental organisations. 
 
 • suggest available datasets and/or sources of data (Tiphaine, to check which is most suitable + how it can help w the data presentation)
 For London, we mostly found datasets on the crime rate from the metropolitan police database. However, for the weather attributes we were thinking of using different sources. Both of the datasets we obtained were created by London universities (King's College London and Imperial College London) and shared through the datastore website (therefore supported by the  GLA). 
 Most of these datasets are in the csv format and mesure our variables monthly which will allow us to get a better precision.
 For Hong Kong, we struggled more to find open data on the crime rate. The sources available are the open data from the Hong Kong police force and global organizations such as the United Nations.  For the weather attributes, we also found two useful national sources which are open data from the Hong Kong government and the Hong Kong observatory.
-These datasets abtained are in the csv and xls formats. They mesure our variables ona monthly and anually basis which mean that we might have to pair our data according to the time frame used to measure the variables.
+These datasets obtained are in the csv and xls formats. They mesure our variables on a monthly and annual basis which mean that we might have to pair our data according to the time frame used to measure the variables.
 
 • sketch methods for analysing and presenting data (Alaric) 
 We will be comparing the crime rates in London and Hong Kong with regards to the weather attributes. We will be using bar charts with monthly temperature in Celsius of the x-axis and crime per XXX people for both cities, a linear regression with the same axis to investigate the correlations between our two variables. TBC 
