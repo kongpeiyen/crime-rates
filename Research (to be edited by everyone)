@@ -1,6 +1,8 @@
-# MONTHLY DATA 
+# DATA 
 
 LONDON CRIME
+•	https://data.london.gov.uk/dataset/recorded_crime_summary
+--> London crime stats - csv files: 
 •	https://www.met.police.uk/sd/stats-and-data/met/crime-data-dashboard/ 
 --> crime rate by month (also colour codes by borough!! its quite cool)
 •	https://data.london.gov.uk/dataset/recorded_crime_summary
@@ -12,6 +14,8 @@ LONDON WEATHER AND POLLUTION DATA
 this data was used to make graphs like the ones in here https://data.london.gov.uk/ (environment category)
 •	https://data.london.gov.uk/dataset/daily-areal-rainfall 
 --> Daily rainfall of differents areas (DAILY 2018)
+• http://www.londonair.org.uk/LondonAir/Default.aspx
+--> London air pollution
 • https://www.google.com/search?client=safari&rls=en&sxsrf=ALeKk034Y2YcDrVTHmYHXYzDKKJX1ZyK_g%3A1603683860556&ei=FEaWX8OlIfvAz7sPyMiAoAE&q=london+monthly+weather&oq=london+monthly+weather&gs_lcp=CgZwc3ktYWIQAzICCAAyBggAEAcQHjIGCAAQBxAeMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMgYIABAHEB4yBggAEAcQHjICCAAyBAgAEB46BAgAEEdQ3uYKWI3sCmDy7QpoAHAFeACAAT-IAc0CkgEBNpgBAKABAaoBB2d3cy13aXrIAQjAAQE&sclient=psy-ab&ved=0ahUKEwjD_9v2q9HsAhV74HMBHUgkABQQ4dUDCAw&uact=5
 --> monthly temperatures of London
 
@@ -28,41 +32,29 @@ HONG KONG CRIME
  HONG KONG WEATHER AND POLLUTION DATA
 •	https://www.gov.hk/en/residents/environment/air/aqhi.htm 
 --> Hong Kong’s government website with air quality information (struggling to find useful data though)
-•	https://www.aqhi.gov.hk/en/aqhi/statistics-of-aqhi/aqhi-monthly-summary.html 
---> Monthly data on air quality (September 2020)
 • https://www.google.com/search?client=safari&rls=en&sxsrf=ALeKk00R7y0v0OrMNLkTW_Lsjvb7di-vyQ%3A1603684039206&ei=x0aWX-2ODJjaz7sP-Ju4-AQ&q=hong+kong+monthly+weather&oq=hong+kong+monthly+weather&gs_lcp=CgZwc3ktYWIQAzIGCAAQBxAeMgIIADICCAAyBAgAEB4yBggAEAgQHjIGCAAQCBAeMgYIABAIEB46BAgAEEc6CAgAEAgQBxAeUJ0VWOAjYOIkaAFwA3gAgAFDiAH9A5IBAjEwmAEAoAEBqgEHZ3dzLXdpesgBCMABAQ&sclient=psy-ab&ved=0ahUKEwitjvTLrNHsAhUY7XMBHfgNDk8Q4dUDCAw&uact=5
 --> hong kong monthly temperature 
 • https://www.kaggle.com/rameessahlu/hong-kong-rain-fall 
 --> hong kong rainfall (YEARLY 1900-2018)
-• https://www.epd.gov.hk/epd/english/environmentinhk/air/data/aq_stat.html
---> stats for 2019 (on the whole, not by month) -->ALREADY PROCESSED
 • https://www.epd.gov.hk/epd/english/environmentinhk/air/data/emission_inve.html 
 --> 2001-2017 yearly data for individual components eg sulfur dioxide, nitrogen dioxide -->ALREADY PROCESSED
 •	 https://www.hko.gov.hk/en/index.html 
 --> monthly data for weather 
-
-#note: i guess for weather, we can do a month on month analysis, whereas for pollution we can do a year on year analysis? 
-
-
-
-Data sets on crimerates:
-
-London crime stats - csv files: 
-https://data.london.gov.uk/dataset/recorded_crime_summary
+•	 https://aqicn.org/city/hongkong/
+--> Real time air quality index HK
+•	https://cd.epic.epd.gov.hk/EPICDI/air/station/
+--> Air pollution HK map where you can insert desired months and dates from 1990-2000
 
 Crime data come from the Home Office Offenders Index database (OI)
 https://discovery.ucl.ac.uk/id/eprint/10015133/1/WBLResRep14.pdf 
 p.11, p.13
-
-
-needed: crime stats for 2nd city 
-
-London air pollution:
-http://www.londonair.org.uk/LondonAir/Default.aspx
+ 
 
 
 
-factors influencing crime:
+# LITERATURE
+
+factors influencing crime (LITERATURE):
 
 -air pollution contributes to crime, especially less serious crimes:
 https://www.lse.ac.uk/News/Latest-news-from-LSE/2018/04-April-2018/Air-pollution-increases-crime-in-London#:~:text=The%20researchers%20found%20that%20a,rate%20by%200.9%20per%20cent.&text=An%20AQI%20of%20over%2035,per%20cent%20reduction%20in%20policing
@@ -75,46 +67,12 @@ https://airqualitynews.com/2019/10/03/exposure-to-air-pollution-increases-violen
 https://airqualitynews.com/2019/02/07/air-pollution-increases-crime-in-cities-heres-how/
 
 
-Weather and crime literature: 
+Weather and crime (LITERATURE): 
 
 https://www.zmescience.com/science/weather-crime-connection-04234/#:~:text=WARM%20WEATHER%20LEADS%20TO%20HIGHER%20CRIME%20RATES,-Tracking%20ambient%20temperature&text=Researchers%20found%20that%20temperature%20changes,centigrade%20rise%20in%20the%20temperature.
 
 https://www.jstor.org/stable/23638231?seq=1
 “This paper brings together for the first time the accumulated research on weather and crime. It discusses the theoretical background, examines research into the influence of different weather conditions (such as high temperatures, rain, and wind) on various types of criminal behaviour, outlines problems with the current research, and suggests ways of advancing knowledge about weather and crime.”
-
-
-Time Frame proposition: 
-A year in the 2000s, not sure which but much data is available for the 21st century. 
-recent data is , significant because it shows the relevance to today. 
-
-
-HK monthly crime rates 
-
-https://www.police.gov.hk/ppp_en/09_statistics/csc.html
-->crime rates comparison for Juan August 20XX and Jan-August 20YY
-
-https://www.police.gov.hk/ppp_en/09_statistics/csd.html
--> monthly crime rates for 2019
-
-real time air quality index HK:
-
-https://aqicn.org/city/hongkong/
-
-monthly air pollution London
-
-https://data.london.gov.uk/dataset/london-average-air-quality-levels
-
-->different roadside and background readings for different pollutants 23016 to 2019
-
-http://londonair.org.uk/london/asp/annualmaps.asp
-	Pollution maps 
-
-Monthly air pollution HK 
-https://www.hongkongairport.com/en/sustainability/environment/air-quality/air-monthly-aqhi.page
-	Monthly pollution international airport HK 
-https://cd.epic.epd.gov.hk/EPICDI/air/station/
-	Air pollution HK map where you can insert desired months and dates from 1990-2000
-
 
 
 RESEARCH FOR LITERATURE REVIEW
