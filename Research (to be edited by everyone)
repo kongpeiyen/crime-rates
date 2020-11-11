@@ -53,7 +53,12 @@ this data was used to make graphs like the ones in here https://data.london.gov.
 • https://www.google.com/search?client=safari&rls=en&sxsrf=ALeKk034Y2YcDrVTHmYHXYzDKKJX1ZyK_g%3A1603683860556&ei=FEaWX8OlIfvAz7sPyMiAoAE&q=london+monthly+weather&oq=london+monthly+weather&gs_lcp=CgZwc3ktYWIQAzICCAAyBggAEAcQHjIGCAAQBxAeMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMgYIABAHEB4yBggAEAcQHjICCAAyBAgAEB46BAgAEEdQ3uYKWI3sCmDy7QpoAHAFeACAAT-IAc0CkgEBNpgBAKABAaoBB2d3cy13aXrIAQjAAQE&sclient=psy-ab&ved=0ahUKEwjD_9v2q9HsAhV74HMBHUgkABQQ4dUDCAw&uact=5
 --> monthly temperatures of London
 
+https://www.blf.org.uk/air-quality?cmp_id=1486843417&adg_id=63798229194&kwd=london%20air%20pollution%20map&device=c&gclid=CjwKCAiAtK79BRAIEiwA4OskBmkcoGIIgR_nLIAPPAXqJp6ZJbPhN_RceG6wt1vuZK_G_Cr67Z3VkBoC2wcQAvD_BwE
 
+Interactive air pollution map of the UK shows if GP practice or hospital is in area where air pollution is above or under the WHO’s limit for fine particulate matter (PM2.5).
+So we can use this map to look at the fine particulate matter levels in areas of London. 
+The WHO annual limit for PM2.5 is 10 μg/m3
+The map shows that most of the areas in London exceed this. 
 
 
 HONG KONG CRIME 
