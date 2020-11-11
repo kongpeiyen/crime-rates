@@ -5,6 +5,25 @@ Air pollution:
 - Emissions of O3, SO2, NO2, BaP (which are the most polluting chemicals)
 - Emissions of CO2 (Most of greenhouse gases emissions BUT less impact than the others)
 
+Weather: 
+Previous research found that temperature and precipitation have a significant effect on the number of violent crimes recorded and that
+temperature also affects the number of property crimes recorded (Horrocks, & Menclova, 2011 - "The effects of weather on crime)
+Another study (Cohn, 1990, "Weather and crime") analyzes:
+- temperature
+- sunlight (lenght of the day)
+- wind
+- rain 
+- humidity
+
+Crime:
+Study conducted by Cohn (1990) analyzes the relationship between heat (temperature) and 
+- collective violence (riots), 
+- assault,
+- homicide
+- robbery (ambigous relationship with weather)
+- domestic violence
+
+
 # DATA 
 
 LONDON CRIME
@@ -25,6 +44,9 @@ this data was used to make graphs like the ones in here https://data.london.gov.
 --> London air pollution
 • https://www.google.com/search?client=safari&rls=en&sxsrf=ALeKk034Y2YcDrVTHmYHXYzDKKJX1ZyK_g%3A1603683860556&ei=FEaWX8OlIfvAz7sPyMiAoAE&q=london+monthly+weather&oq=london+monthly+weather&gs_lcp=CgZwc3ktYWIQAzICCAAyBggAEAcQHjIGCAAQBxAeMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMgYIABAHEB4yBggAEAcQHjICCAAyBAgAEB46BAgAEEdQ3uYKWI3sCmDy7QpoAHAFeACAAT-IAc0CkgEBNpgBAKABAaoBB2d3cy13aXrIAQjAAQE&sclient=psy-ab&ved=0ahUKEwjD_9v2q9HsAhV74HMBHUgkABQQ4dUDCAw&uact=5
 --> monthly temperatures of London
+
+
+
 
 HONG KONG CRIME 
 • https://www.police.gov.hk/ppp_en/09_statistics/csd.html 
