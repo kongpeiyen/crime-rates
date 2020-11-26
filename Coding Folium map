@@ -1,0 +1,37 @@
+Link to reference: https://python-graph-gallery.com/292-choropleth-map-with-folium/
+
+[1]
+import pandas as pd
+import folium
+
+[2]
+# Need to load the shape of the zone so we need a .json or .geoJSON file I think for london boroughs--> https://data.london.gov.uk/dataset/statistical-gis-boundary-files-london?resource=9ba8c833-6370-4b11-abdc-314aa020d5e0
+state_geo = os.path.join('/Users/y.holtz/Desktop/ (place of file)', 'name of file')
+
+[3]
+# Need to load the rate of each crime 
+Borough_type of crime = os.path.join('/Users/y.holtz/Desktop/ (place of file)', 'name of file')
+state_data = pd.read_csv(state_unemployment)
+
+[4]
+# Start map
+m = folium.Map(location=[37, -102](coordinates), zoom_start=5)
+
+[5]
+# Put details, colours
+m.choropleth(
+ geo_data=state_geo,
+ name='choropleth',
+ data=state_data,
+ columns=['Boroughs', 'rate of crime'],
+ key_on='feature.id',
+ fill_color='YlGn',
+ fill_opacity=0.7,
+ line_opacity=0.2,
+ legend_name='Unemployment Rate (%)'
+)
+folium.LayerControl().add_to(m)
+
+[6]
+# Save it as html
+m.save('#292_folium_chloropleth_USA1.html')
