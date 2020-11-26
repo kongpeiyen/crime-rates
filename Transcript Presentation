@@ -21,6 +21,11 @@ This is why we believe it is worth analyzing this variable further.
 # Data sources
 
 # Data analysis
+Firstly, we will perform some descriptive statistics. We will plot our data for each different type of crime rate to see if it is normally distributed  and to check for skewness. We will plot the mode, median, mean as well.
+
+Secondly, to understand the relationships between COVID-19 and crime, we need some estimates of how much crime would be expected to occur in the absence of the pandemic. Therefore, we plan to use crime data from 2015 to 2019 and use it to make a predictive model how crime rates are expected to be. We will then compare the results of the prediction with the actual crime data of 2020. 
+Finally, we will then conduct statistical tests to check whether the difference between the predictive values and the actual values of crimes is statistically significant. This will allow us to either accept or reject our hypothesis.
+
 
 # Data visualization
 
