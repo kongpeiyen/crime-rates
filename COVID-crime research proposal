@@ -1,0 +1,65 @@
+Research question: How did burglary and sexual assault change after the outbreak of covid19 in London? 
+
+# Context and motivation
+
+# Choice of variables
+- Sexual offences
+
+- Burglary
+
+- Drug offences
+A recent report from the UN suggested that drug markets were likely to be affected by the COVID-19 pandemic. 
+On the one hand, the report predicted an increase in drug use. Indeed, drug use has been rising for 20 years due to the population growth. However, the pandemic made the economy suffer and therefore increased unemployment while new opportunities stayed rare (UNODC, June 2020). Studies show that disadvantaged people earning less have a higher risk to face a drug use disorder which may lead them to take part in drug trafficking activities (Shaw et al., 2007). With this reasoning we would predict the number of drug offences to rise even more than what expected from March 2020.
+
+On the other hand, the measures implemented in response to the COVID-19 spread induced a shortage of supply of certain drugs. Indeed, drug routes by air or by sea were disrupted due to closed borders and mobility restrictions (Bergeron et al., September 2020). Therefore, some criminal groups shifted their illicit drug trafficking activity towards other emerging crime opportunities like cybercrime. Others adapted their markets to the restrictions by for example, using land routes which according to the UN report has a higher control rate. As a result, more seizures are being reported on our data sources (UNODC, June 2020). This means it may not be the drug offences number that increased but the drug enforcement activities. The later point may be a limitation of our study that we have to acknowledge as it seems difficult to control it.
+ 
+The said-complex impact of the COVID-19 on the drug offences number makes it a major variable in our crime data which in turn justify our need to use it to analyse the pandemic impact on crime in our research.
+
+# Hypothesis
+
+# Suggestions of available datasets
+Datasets from metropolitan police : Recorded Crime: Geographic Breakdown
+This is our main source of data. It shows the level of crime per borough per crime type (so for both sexual offense and burglary, both residential and commercial). It’s monthly data.
+https://data.london.gov.uk/dataset/recorded_crime_summary
+
+A second source is also from the metropolitan police. It compares the data of different types of crimes (such as burglary and sexual offense) from 2019 and 2020. It looks already processed but you obtain the raw data. It might be more easy to handle as you can single out the type of offense you want to obtain. It is weekly data however I don’t think we can see it per borough.
+https://www.met.police.uk/sd/stats-and-data/met/covid-19-dashboard/
+
+https://www.police.uk/pu/your-area/city-of-london-police/community-policing/?tab=Statistics
+Interesting visualisations
+
+https://lginform.local.gov.uk/reports/lgastandard?mod-metric=475&mod-area=E12000007&mod-group=AllBoroughInRegion_London&mod-type=namedComparisonGroup
+Sexual offence rate per 1000 of people in London boroughs (but it went down……)--> data in quartile of months (3months per 3months up until june 2020)
+
+# Sketch methods for presenting data
+
+# Sketch methods for analyzing data
+
+# Outline what a successful project will tell you about your domain of interest
+
+# Limitations
+
+# References
+- Andresen, M. A. and Malleson, N. (2013) “Crime Seasonality and Its Variations Across Space,” Applied Geography, 43, pp. 25–35. doi: 10.1016/j.apgeog.2013.06.007.
+Ashby, M.P., 2020. Initial evidence on the relationship between the coronavirus pandemic and crime in the United States. Crime Science, 9, pp.1-16. 
+
+- Campedelli GM, Aziani A and Favarin S (2020) “Exploring the Immediate Effects of Covid-19 Containment Policies on Crime: An Empirical Analysis of the Short-Term Aftermath in Los Angeles,” American journal of criminal justice : AJCJ, 1-24, pp. 1–24. doi: 10.1007/s12103-020-09578-6.
+
+- COVID-19 intensifies ‘brutal crime’ of sexual violence in conflict  (2020). Available at: https://news.un.org/en/story/2020/06/1066712 (Accessed: 12 November 2020).
+
+- Hodgkinson T and Andresen MA (2020) “Show Me a Man or a Woman Alone and I'll Show You a Saint: Changes in the Frequency of Criminal Incidents during the Covid-19 Pandemic,” Journal of criminal justice, 69, pp. 101706–101706. doi: 10.1016/j.jcrimjus.2020.101706.
+
+- Mustaine, E. E. (1997) “Victimization Risks and Routine Activities: A Theoretical Examination Using a Gender-Specific and Domain-Specific Model,” American Journal of Criminal Justice, 22(1), pp. 41–70. doi: 10.1007/BF02887340.
+
+- Tseloni, A. et al. (2002) “Modelling Property Crime Using the British Crime Survey. What Have We Learnt?,” British Journal of Criminology, 42(1), pp. 109–109.
+
+- United Nations Office On Drugs And Crime (2020). “Covid-19 and the drug supply chain: from production and trafficking to use”. pp. 23-29. Available at: https://wdr.unodc.org/wdr2020/field/WDR20_BOOKLET_1.pdf
+
+- United Nations Office On Drugs And Crime (2020). “Effect of COVID-19 on drug markets”. pp. 7-14. Available at: https://wdr.unodc.org/wdr2020/field/WDR20_BOOKLET_1.pdf
+
+- Bergeron et al. (2020). “Preliminary findings of the impact of COVID-19 on drugs crypto markets”. International Journal of Drug Policy, 83 (102870). pp. 1-3. Available at: https://www.sciencedirect.com/science/article/pii/S0955395920302103?via%3Dihub
+
+- Shaw et al. (2007) “Drugs and poverty: A literature review”. Scottish Drugs Forum. pp. 11-15. Available at: http://www.sdf.org.uk/wp-content/uploads/2017/03/Drugs__Poverty_Literature_Review_2007.pdf 
+
+- University of Leeds, 2020, Leeds academics to investigate Covid-19 crimes, viewed 13 November 2020, https://www.leeds.ac.uk/news/article/4607/leeds_academics_to_investigate_covid-19_crimes
+ 
