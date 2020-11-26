@@ -5,7 +5,7 @@ import pandas as pd
 import folium
 
 [2]
-# Need to load the shape of the zone so we need a .json or .geoJSON file I think for london boroughs--> https://data.london.gov.uk/dataset/statistical-gis-boundary-files-london?resource=9ba8c833-6370-4b11-abdc-314aa020d5e0
+# Need to load the shape of the zone so we need a .geoJSON shape file I think for london boroughs--> https://data.london.gov.uk/dataset/statistical-gis-boundary-files-london?resource=9ba8c833-6370-4b11-abdc-314aa020d5e0
 state_geo = os.path.join('/Users/y.holtz/Desktop/ (place of file)', 'name of file')
 
 [3]
