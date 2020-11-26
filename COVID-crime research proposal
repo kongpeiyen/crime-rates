@@ -6,6 +6,15 @@ Research question: How did burglary and sexual assault change after the outbreak
 - Sexual offences
 
 - Burglary
+Previous studies agree about the fact that burglaries, in the absence of special circumstances such as a global pandemic, are more likely to happen in unoccupied homes (Mustaine, 1997; Tseloni et al., 2002). 
+
+The study conducted by Ashby (2020) analyzed how different types of crime changed after the pandemic by using data from 16 different cities in the USA. When looking at burglary, the study found that in Chicago, Los Angeles, and Memphis the frequency of burglary was around half compared to what it was expected to be if covid19 never occurred. However, cities such as Austin, Louisville and Minneapolis did not experience a decrease. Moreover, out of the 11 cities that saw a decrease in burglary, in only one was the difference statistically significant. 
+
+Another research found ambiguous results when looking at how burglaries changed after covid19 in Los Angeles (Campedelli, Aziani and Favarin, 2020). More precisely, when the authors used a univariate statistical model, the results showed an increase of 0.89% with respect to the predicted value in the absence of state’s interventions, while when they used a multivariate model, a decrease of 0.58%  was found.
+Hodgkinson and Andresen (2020) looked at the effect of covid19 on residential and commercial burglary in Vancouver. This is because the likelihood of burglary is strongly related to the presence of a guardian which, during the period of lockdown, varies significantly between residential homes and stores. In fact, their research found an increase in commercial burglaries, since owners and employees were not able anymore to act as capable guardians, while residential burglary showed no obvious change. 
+
+The inconsistency of this trend suggests that more research should be conducted around this topic. The dataset we found differentiate between residential and commercial burglaries. We will keep this distinction as we hypothesize that covid19 has a different impact on them.
+
 
 - Drug offences
 A recent report from the UN suggested that drug markets were likely to be affected by the COVID-19 pandemic. 
@@ -16,6 +25,12 @@ On the other hand, the measures implemented in response to the COVID-19 spread i
 The said-complex impact of the COVID-19 on the drug offences number makes it a major variable in our crime data which in turn justify our need to use it to analyse the pandemic impact on crime in our research.
 
 # Hypothesis
+After having done an extensive literature review, we were able to formulate the following hypothesis:
+Hypothesis 1: we hypothesize that the number of residential burglaries decreased after the outbreak of covid19
+Hypothesis 2:  we hypothesize that the number of commercial burglaries increased after the outbreak of covid19
+Hypothesis 3: we hypothesize that the number of sexual assaults changed after the outbreak of covid19
+Hypothesis 4: we hypothesize that the number of drug offenses changed after the outbreak of covid19
+
 
 # Suggestions of available datasets
 Datasets from metropolitan police : Recorded Crime: Geographic Breakdown
@@ -32,8 +47,19 @@ https://lginform.local.gov.uk/reports/lgastandard?mod-metric=475&mod-area=E12000
 Sexual offence rate per 1000 of people in London boroughs (but it went down……)--> data in quartile of months (3months per 3months up until june 2020)
 
 # Sketch methods for presenting data
+We will plot our data for each different type of crime rates on a distribution to check for skewness. 
+We will plot the mode, median, mean as well
+Since we are lucky enough to have data for each crime rate type per each London’s borough, we want to create a choropleth map showing how each type of crime changed in different areas of London. Instead of making one map for each crime, we are planning to create only one with a scrolling menu to choose which crime you want to visualize. 
+For each crime, we will make a graph with time (from 2015 to 2019) on the x-axis and the number of crimes on the y-axis to see the trend over time and to check for points that do not follow the general trend (given by the predictive model). This will also allow us to see if there is a seasonal effect
+For each crime type, we will create a graph with time (from January to October 2020) on the x-axis and number of crimes occurred on the y axis. There will be a trend line showing the predicted values of crime if COVID-19 did not occur, as well as the actual values of crime happening in 2020
+
 
 # Sketch methods for analyzing data
+Understanding relationships between COVID-19 and crime requires some estimate of how much crime would be expected to occur in the absence of the pandemic. Therefore, we plan to use crime data from 2015 to 2019 and use it to make a predictive model how crime rates are expected to be. We will then compare the results of the prediction with the actual crime data of 2020. The decision of using a forecast model was made based on previous literature review (Ashby, 2020; Campedelli, Aziani & Favarin, 2020; Hodgkinson & Andresen, 2020; University of Leeds, 2020).
+While we could make a week-to-week or year-on-year comparisons of weekly or monthly crime counts, we thought that these comparisons risk drawing false conclusions and may not be accurate because they ignore long-term trends (which affect year-on-year comparisons) and seasonal variations (which complicate week to week comparisons) (Ashby, 2020).
+A plausible forecast model is the ARIMA (autoregressive integrated moving average) model, which was used by Ashby (2020) or an interrupted time series model, which has been implemented in many researches in the criminology field (Hodgkinson & Andresen, 2020). 
+We will then conduct statistical tests to check whether the difference between the predictive values and the actual values of crimes is statistically significant. This will allow us to either accept or reject our hypothesis. 
+
 
 # Outline what a successful project will tell you about your domain of interest
 
