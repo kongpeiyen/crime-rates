@@ -1,0 +1,59 @@
+used this for reference: https://pandas.pydata.org/pandas-docs/stable/getting_started/intro_tutorials/06_calculate_statistics.html
+
+and
+
+https://www.tutorialspoint.com/python_pandas/python_pandas_descriptive_statistics.htm
+
+[1]
+ import pandas as pd
+[ ]
+#i havent imported the data yet
+crimeforburglary = pd.read_csv("data/titanic.csv")
+
+crimeforburglary.head()
+[ ]
+crimeforburglary[].mean()
+[ ]
+crimeforburglary[].median()
+[ ]
+crimeforburglary[].mode()
+[ ]
+crimeforburglary[].std()
+[ ]
+crimeforburglary[].min()
+[ ]
+crimeforburglary[].max()
+[ ]
+#i havent imported the data yet
+crimeforsexualassault = pd.read_csv("data/titanic.csv")
+
+crimeforsexualassault.head()
+[ ]
+crimeforsexualassault[].mean()
+[ ]
+crimeforsexualassault[].median()
+[ ]
+crimeforsexualassault[].mode()
+[ ]
+crimeforsexualassault[].std()
+[ ]
+crimeforsexualassault[].min()
+[ ]
+crimeforsexualassault[].max()
+[ ]
+#i havent imported the data yet
+crimefordrug = pd.read_csv("data/titanic.csv")
+
+crimefordrug.head()
+[ ]
+crimefordrug[].mean()
+[ ]
+crimefordrug[].median()
+[ ]
+crimefordrug[].mode()
+[ ]
+crimefordrug[].std()
+[ ]
+crimefordrug[].min()
+[ ]
+crimefordrug[].max()
