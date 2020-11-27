@@ -1,7 +1,29 @@
 # Context
 
+
+
+
+
+
+Lastly, we feel that understanding which crimes have increased during covid19 is essential to raising awareness and providing support for survivors and potential victims. 
+This has been made obvious by the rise in domestic abuse during the first lockdown and more people turning to drugs. 
+We also hope that shedding light on the effect that lockdowns have on certain people who become victims of crime will help enlarge societal sensibility.
+This will further urge people to respect government imposed lockdowns to prevent the number of victims susceptible to crimes from increasing. 
+
+
 # Choice of variables
 ## COVID-19 and burglary
+Our first variable we are examining is burglary. burglary can occur in the residential or commercial sphere. 
+Previous studies done on the effect of COVID19 on burglary. However, there have been many different results that have been reported. 
+For example, a study conducted by Ashby found that some states in the US experienced an increase in burglary while others did not. It varied greatly amongst the different states. 
+Another study done by Hodgkinson and Andresen looked at the effect of covid19 on residential and commercial burglary in Vancouver. They found an increase in commercial burglaries.
+As seen, there is an ambiguous effect of covid19 on burglary, and the group wants to examine this specifically in the context of London. 
+The literature we have read guides our research hypothesis, which is that the number of commercial burglaries increased after the outbreak of COVID-19
+
+
+
+
+
 ## COVID-19 and sexual offences
 There are  different offences that qualify as sexual offences in England and Wales which are defined in the 2003 Sexual Offence Act. However, following our available data we are going to look at sexual offences as a whole.
 
@@ -30,5 +52,15 @@ Finally, we will then conduct statistical tests to check whether the difference 
 # Data visualization
 
 # Limitations
+Our group has used predictive methods in the project. we acknowledge that predictive methods are not totally accurate and the data we have predicted is not set in stone. 
+As the majority of our data was retrieved from the Metropolitan Police Service, we are limited to the impact that covid19 has on reported crimes only. However, literature suggests that the amount of unreported sexual offences has increased because the ability of survivors to report crimes is limited by national lockdowns. 
+We acknowledge that this study is necessarily limited and it will be possible to understand more as the pandemic progresses and more data become available. however, we will use the most up to date data that can be found for this project. 
+additionally, we also are aware that there are other factors which affect crime rates as well, such as weather, and these changes in crime may not necessarily be solely because of covid19. 
+
+
 
 # Website
+Here is a peek of our website. we have divided the sections into context, variables and data. under the context section, we talked about the context and motivation, and the importance of our research. 
+under variables,  we talk about why london, why this timeframe, and why these crimes 
+under data, we talk about our data sources, the methods of analysing data, present our data visualisation and analysis, and acknowledge our potential limitations  
+Thank you !
