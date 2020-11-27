@@ -57,3 +57,8 @@ crimefordrug[].std()
 crimefordrug[].min()
 [ ]
 crimefordrug[].max()
+
+
+#comments: 
+-Does the code differentiate between the two types of burglaries? 
+-pb importing the data separately 
