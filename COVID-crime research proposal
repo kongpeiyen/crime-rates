@@ -5,6 +5,12 @@ Research question: How did burglary and sexual assault change after the outbreak
 # Choice of variables
 - Sexual offences
 
+
+
+
+
+
+
 - Burglary
 Previous studies agree about the fact that burglaries, in the absence of special circumstances such as a global pandemic, are more likely to happen in unoccupied homes (Mustaine, 1997; Tseloni et al., 2002). 
 
@@ -45,6 +51,22 @@ Interesting visualisations
 
 https://lginform.local.gov.uk/reports/lgastandard?mod-metric=475&mod-area=E12000007&mod-group=AllBoroughInRegion_London&mod-type=namedComparisonGroup
 Sexual offence rate per 1000 of people in London boroughs (but it went down……)--> data in quartile of months (3months per 3months up until june 2020)
+
+https://www.ons.gov.uk/peoplepopulationandcommunity/crimeandjustice/bulletins/coronavirusandcrimeinenglandandwales/august2020
+theyve got some data here on different crime rates (sexual assault and others) 
+
+data on sexual crime in london (but it went down) 
+https://lginform.local.gov.uk/reports/lgastandard?mod-metric=475&mod-area=E12000007&mod-group=AllRegions_England&mod-type=namedComparisonGroup
+
+data on sexual crime in london 
+https://www.theguardian.com/law/2020/oct/22/prosecutions-for-crimes-against-female-victims-in-uk-dropped-amid-referral-rise-lockdown-covid Police referred more cases of violence against women and girls to the CPS across all crime types during the first three months of the pandemic, rising 5% to 64,007 from 61,179 in the previous quarter.
+The number of rape cases referred increased by 15%, domestic abuse cases increased by 8% and child abuse cases rose by 9%. 
+However, in the most recent quarter the volume of suspects charged (but not yet prosecuted) by the CPS across all crimes of violence against women and girls decreased by 4% from 37,403 to 35,799.CPS secretly dropped 'weak' rape cases, say rights group. 
+The volume of rape cases charged by the CPS decreased from 503 in the last quarter to 487 in this quarter, a fall of 3.2%.
+
+https://www.theguardian.com/society/2020/apr/12/domestic-violence-surges-seven-hundred-per-cent-uk-coronavirus 
+UK’s largest domestic abuse charity, Refuge, has reported a 700% increase in calls to its helpline in a single day, while a separate helpline for perpetrators of domestic abuse seeking help to change their behaviour received 25% more calls after the start of the Covid-19 lockdown.
+
 
 # Sketch methods for presenting data
 We will plot our data for each different type of crime rates on a distribution to check for skewness. 
