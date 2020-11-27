@@ -62,3 +62,6 @@ crimefordrug[].max()
 #comments: 
 -Does the code differentiate between the two types of burglaries? 
 -pb importing the data separately 
+
+https://www.datasciencemadesimple.com/descriptive-summary-statistics-python-pandas/
+might be simpler?? 
