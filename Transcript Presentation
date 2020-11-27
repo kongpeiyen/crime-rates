@@ -64,3 +64,35 @@ Here is a peek of our website. we have divided the sections into context, variab
 under variables,  we talk about why london, why this timeframe, and why these crimes 
 under data, we talk about our data sources, the methods of analysing data, present our data visualisation and analysis, and acknowledge our potential limitations  
 Thank you !
+
+
+
+
+# Question preparation 
+1. context and motivation
+
+2. Limitations 
+Why are survivors less able to report crimes during lockdowns? 
+This is due to the fact that survivors may be living with the perpetrator and fear them finding out about the allegations they must make from their own home as lockdowns restrict movements. 
+Moreover, survivors of sexual offences may be less willing to seek assistance from fear of contracting the virus.
+The pandemic also has the negative consequence of deprioritizing all administrative processes and services needed by survivors (news.un.org, https://news.un.org/en/story/2020/06/1066712). 
+however, the group does not have access to other non-reported statistics, and have done the best we could to find and retrieve open-source data for this project. 
+we will do our statistical analysis based on the best possible data that we can retrieve. 
+
+3. Why this timeframe ?
+The timeframe we are using is from 2015 to 2020. 
+This is because although COVID only began this year, there was still data on crime for the years before COVID began (prior to 2019). 
+We hence felt that using this data we felt that we could still make use of such data to analyse how crime trends were like before COVID.
+From this, we can make a comparison with the rich evidence we had with the crime rate data after COVID began. 
+While we could make a week-to-week or year-on-year comparisons of weekly or monthly crime counts, we thought that these comparisons risk drawing false conclusions and may not be accurate because they ignore long-term trends (which affect year-on-year comparisons) and seasonal variations (which complicate week to week comparisons) (Ashby, 2020). 
+Hence, we will be doing an analysis on the monthly data. This hence takes into account the seasonal patterns of crime and would make for a more accurate comparison of the crime statistics. 
+
+
+
+4. Why london?
+We chose London because London has the 3rd highest crime rate in the UK, with 94.9 crimes per 1000 people. 
+Therefore, we expect that there will be enough data and statistics available to support our analysis. 
+Additionally, London has the largest population in the UK. 
+hence we felt like the findings from this project would impact and benefit a huge number of individuals
+Lastly, to our knowledge, based on the extensive research that the group has done before deciding on this topic, there has been no other study that has covered the effect of covid on these specific crimes in London. 
+Thus, we would like to plug that gap in research through this project.  
