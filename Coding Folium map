@@ -1,14 +1,18 @@
 Link to reference: https://python-graph-gallery.com/292-choropleth-map-with-folium/
 More detailed instructions: https://python-visualization.github.io/folium/modules.html
 Chloropleth in Folium: https://python-visualization.github.io/folium/quickstart.html#Choropleth-maps
+Explanation process: https://www.youtube.com/watch?v=4RnU5qKTfYY
 
 [1]
 import pandas as pd
 import folium
+import os
 
 [2]
-# Need to load the shape of the zone so we need a .geoJSON shape file I think for london boroughs--> https://data.london.gov.uk/dataset/statistical-gis-boundary-files-london?resource=9ba8c833-6370-4b11-abdc-314aa020d5e0
-state_geo = os.path.join('/Users/y.holtz/Desktop/ (place of file)', 'name of file')
+# Variables
+boroughs = os.path.join("content", "london_boroughs.json")
+crime = os.path.join ("content", "filename")
+borough_data = pd.read_csv(Crime)
 
 [3]
 # Need to load the rate of each crime 
@@ -16,47 +20,29 @@ Borough_type of crime = os.path.join('/Users/y.holtz/Desktop/ (place of file)', 
 state_data = pd.read_csv(state_unemployment)
 
 [4]
-# Start map
-m = folium.Map(location=[37, -102](coordinates), zoom_start=5)
+# Create map object
+m = folium.Map(location=[51.5074, 0.1278], zoom_start=10)
 # you can add parameters like tiles or markers with each their colours and symbol
+# Need to import the csv file of our dataset (name of boroughs must match id in json file but can change id)
 
 [5]
-# Put details, colours
+# Create the chloropleth function
 m.choropleth(
- geo_data=state_geo,
- name='choropleth',
- data=state_data,
- columns=['Boroughs', 'rate of crime'],
- key_on='feature.id',
- fill_color='YlGn',
- fill_opacity=0.7,
- line_opacity=0.2,
- legend_name='Unemployment Rate (%)'
+    geo_data=boroughs,
+    name="chloropleth",
+    data=borough_data
+    columns=["Borough", "Crime offence"],
+    key_on="feature.id",
+    fill_color="YlGn",
+    fill_opacity=0.7,
+    line_opacity=0.2,
+    legend_name="Crime rate"
 )
 folium.LayerControl().add_to(m)
 
-[6]
-# Save it as html
-m.save('#292_folium_chloropleth_USA1.html')
-
-[7]
-# To add the clhoropleth feature on map
-folium.Choropleth(
-    geo_data=state_geo,
-    name='crime offence',
-    data=borough_data,
-    columns=['Boroughs', 'rate of crime'],
-    key_on='feature.id',
-    fill_color='YlGn',
-    fill_opacity=0.7,
-    line_opacity=0.2,
-    legend_name='Crime rate'
-).add_to(m)
-
-folium.LayerControl().add_to(m)
+# Save map as html
+m.save("map.html")
 
 --> Add the layers
 --> Do it 3 times for the three types of crime
-
-#Possibility to pass your own bins
 
