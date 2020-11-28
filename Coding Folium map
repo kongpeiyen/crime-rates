@@ -1,5 +1,6 @@
 Link to reference: https://python-graph-gallery.com/292-choropleth-map-with-folium/
 More detailed instructions: https://python-visualization.github.io/folium/modules.html
+Chloropleth in Folium: https://python-visualization.github.io/folium/quickstart.html#Choropleth-maps
 
 [1]
 import pandas as pd
@@ -17,6 +18,7 @@ state_data = pd.read_csv(state_unemployment)
 [4]
 # Start map
 m = folium.Map(location=[37, -102](coordinates), zoom_start=5)
+# you can add parameters like tiles or markers with each their colours and symbol
 
 [5]
 # Put details, colours
@@ -36,3 +38,25 @@ folium.LayerControl().add_to(m)
 [6]
 # Save it as html
 m.save('#292_folium_chloropleth_USA1.html')
+
+[7]
+# To add the clhoropleth feature on map
+folium.Choropleth(
+    geo_data=state_geo,
+    name='crime offence',
+    data=borough_data,
+    columns=['Boroughs', 'rate of crime'],
+    key_on='feature.id',
+    fill_color='YlGn',
+    fill_opacity=0.7,
+    line_opacity=0.2,
+    legend_name='Crime rate'
+).add_to(m)
+
+folium.LayerControl().add_to(m)
+
+--> Add the layers
+--> Do it 3 times for the three types of crime
+
+#Possibility to pass your own bins
+
