@@ -56,3 +56,9 @@ aim: start working on the data visualizations
 -research predictive module code: Camilla 
 -summary statistics code: Jana and Pei 
 -regressions: Alaric 
+
+meeting 30.11.2020 at 9am
+
+-continue working on predictive models and research the auto Python function for ARIMA models (steps 2-4) - Camilla
+-continue working on folium map code - Tiphaine 
+-find a way of making the data exploitable (not have it divided by borough) -Alaric, Jana and Pei 
