@@ -6,5 +6,20 @@ problem: we need our data to not be prganised byb borough:
 #reading part of the csv file 
 
 https://stackoverflow.com/questions/46355419/reading-a-part-of-csv-file
-
 wokbook 3
+
+#selecting only part of the csv file:
+
+f= open("",""r")       -> csv file name 
+a=[]
+b=[]
+num= {}
+rows= f.readlines ()
+for i in range (0, lens (rows)):
+  a=rows[i].rsplit (',')
+  if a[0]== 'Robberry' or a[0]=='Sexual Offences' or a[0]== 'Theft':
+  if a [0] not in num.keys ():
+    num [a[0]]=0
+    num [a[0]]+=1
+print (num)
+f.close()o
