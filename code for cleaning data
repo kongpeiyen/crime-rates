@@ -23,3 +23,45 @@ for i in range (0, lens (rows)):
     num [a[0]]+=1
 print (num)
 f.close()o
+
+
+
+
+
+
+
+# combine the boroughs together
+
+#importing the data
+data = pd.read_csv("MPS-Borough-Level-Crime-most-recent-24-months.csv")
+
+
+#creating a dataframe
+#got the code from: https://www.geeksforgeeks.org/creating-a-dataframe-using-csv-files/
+df = pd.read_csv("MPS-Borough-Level-Crime-most-recent-24-months.csv") 
+print(df.head()) 
+
+
+#defining what we want to find in the file
+#got the code from: https://pythonexamples.org/python-find-index-of-item-in-list/
+burglary = "Burglary"
+
+
+#to find the index
+#got the code from: https://pythonexamples.org/python-find-index-of-item-in-list/
+
+index = data.index(burglary)
+
+
+#printing row of the index 
+#got the code from: https://stackoverflow.com/questions/43772362/how-to-print-a-specific-row-of-a-pandas-dataframe 
+print(df.loc[[2]])
+
+
+#to print the values of the row  
+for burglary in data: 
+  if burglary == "Burglary":
+        print(df.loc[[2]])
+    
+    else:
+       continue 
