@@ -65,3 +65,77 @@ crimefordrug[].max()
 
 https://www.datasciencemadesimple.com/descriptive-summary-statistics-python-pandas/
 might be simpler?? 
+
+
+
+
+another version for summary statistics
+taken from J701  - Teach Yourself - Numpy and Plotting - BASC
+
+import pandas as pd
+
+walking = pd.read_csv("walking_speed_for_python.csv")
+
+walking_speed_data = np.genfromtxt('walking_speed_for_python.csv')
+
+# Note that the function contains an odd looking argument: delimiter=','
+
+# This is used because there are several different kinds of csv file.
+# If your data doesn't load properly, try replacing this with one of these:
+
+# delimiter=' '
+# delimiter=';'
+
+# We'll only print the first 10 values... there's a lot of data!
+
+print(walking_speed_data[:10])
+
+
+
+# The number of data points
+
+data_num    = len(walking_speed_data)
+
+# The mean and median:
+
+data_mean   = np.mean(walking_speed_data)
+data_median = np.median(walking_speed_data)
+
+# The minimum and maximum:
+
+data_min = np.min(walking_speed_data)
+data_max = np.max(walking_speed_data)
+
+# The range:
+
+data_range = data_max - data_min
+
+# The standard deviation:
+
+data_stdev = np.std(walking_speed_data)
+
+# The lower & upper quartiles (also called the 25th & 75th percentiles):
+
+data_lq = np.percentile(walking_speed_data,25)
+data_uq = np.percentile(walking_speed_data,75)
+
+# The interquartile range:
+
+data_iqr = data_uq - data_lq
+
+# And then we can print them:
+
+print("Number of data points:",data_num)
+print() # blank line
+print("Mean:",data_mean)
+print("Median:",data_median)
+print() # blank line
+print("Minimum:",data_min)
+print("Maximum:",data_max)
+print("Range:",data_range)
+print() # blank line
+print("Standard Deviation:",data_stdev)
+print() # blank line
+print("Lower Quartile:",data_lq)
+print("Upper Quartile:",data_uq)
+print("Interquartile Range:",data_iqr)
