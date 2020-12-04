@@ -1,0 +1,60 @@
+taken from J701 - Teach Yourself - Numpy and Plotting - BASC
+
+import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+import pandas as pd
+
+
+bdata = np.loadtxt('building_data_for_python.csv',delimiter=",")
+
+# Here are the first 10 rows:
+
+print(bdata[:10])
+
+
+import scipy.stats as sps # This is a package of statistical functions
+
+correlation = sps.pearsonr(bdata[:,1],bdata[:,2])[0]
+
+# bdata[:,1] is the x-values
+# bdata[:,2] is the y-values --> this is for selecting the column!! its the second 
+
+# The function is called pearsonr because this is the Pearson correlation. There are other kinds of correlation.
+# This function gives two pieces of information; correlation is the first one, hence [0] to pick out the first value.
+
+print(correlation)
+
+plt.scatter(bdata[:,1],bdata[:,2])
+
+# bdata[:,1] is the x-values
+# bdata[:,2] is the y-values
+
+plt.figure(figsize=(7,7)) # set the size of the figure (before plotting the points)
+
+plt.scatter(bdata[:,1],bdata[:,2],c='r',s=10,marker='o')
+
+plt.xlim([0,120]) # The x-axis goes from 0 to 120
+plt.ylim([0,1400]) # The y-axis goes from 0 to 1400
+
+plt.title("60 Buildings from the 1994 World Almanac",fontsize=15)
+
+plt.xlabel("Number of storeys",fontsize=12)
+plt.ylabel("Height (m)",fontsize=12)
+
+
+plt.figure(figsize=(8,7)) # set the size of the figure (before plotting the points)
+
+plt.scatter(bdata[:,1],bdata[:,2],c=bdata[:,0],s=40,marker='o',cmap='jet')
+
+plt.xlim([0,120]) # The x-axis goes from 0 to 120
+plt.ylim([0,1400]) # The y-axis goes from 0 to 1400
+
+plt.title("60 Buildings from the 1994 World Almanac",fontsize=15)
+
+plt.xlabel("Number of storeys",fontsize=12)
+plt.ylabel("Height (m)",fontsize=12)
+
+#to make it into a colour bar
+plt.colorbar()
