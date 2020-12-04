@@ -72,7 +72,13 @@ might be simpler??
 another version for summary statistics
 taken from J701  - Teach Yourself - Numpy and Plotting - BASC
 
+import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib inline
+
 import pandas as pd
+
+
 
 walking = pd.read_csv("walking_speed_for_python.csv")
 
