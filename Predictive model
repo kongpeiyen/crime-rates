@@ -1,0 +1,61 @@
+# Importing necessary libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+get_ipython().run_line_magic('matplotlib', 'inline')
+import warnings
+warnings.filterwarnings('ignore')
+
+#Installing pmdarima package
+get_ipython().system(' pip install pmdarima')
+
+# Importing auto_arima 
+from pmdarima.arima import auto_arima
+
+#Read the crime dataset --> IMPORT OUR DATA SET HERE
+sales_data = pd.read_csv('/content/data/residential_b.csv')
+
+#ISSUE 1 Convert the month column to datetime and set the index of the Month  --> OUR DATA
+sales_data['MONTH']=pd.to_datetime(sales_data['MONTH'])
+sales_data.set_index('MONTH',inplace=True) 
+
+# To understand the pattern --> THIS IS PROBABLY ALREADY DONE
+sales_data.plot()
+
+#ISSUE 2 Testing for stationarity --> it should say 'False'
+from pmdarima.arima import ADFTest
+adf_test = ADFTest(alpha = 0.05)
+adf_test.should_diff(sales_data)
+
+#Spliting the dataset into train and test --> OUR DATA + CHANGE NUMBER IN BRACKETS 
+train = sales_data[:85]
+test = sales_data[-20:]
+
+#ISSUE 3 Building ARIMA model 
+arima_model =  auto_arima(train,start_p=2, d='none', start_q=2, 
+                          max_p=5, max_d=5, max_q=5, start_P=1, 
+                          D='none', start_Q=1, max_P=2, max_D=1,
+                          max_Q=2, m=12, seasonal=True, 
+                          error_action='warn',trace = True,
+                          supress_warnings=True,stepwise = True,
+                          random_state=20,n_fits = 10)
+arima_model.summary()
+
+#Finding predicted crime values --> CHANGE NAME  such as 'predicted sexual assaults'
+prediction = pd.DataFrame(arima_model.predict(n_periods = 12),index=test.index)
+prediction.columns = ['predicted_sales']
+prediction
+
+#Plotting predicted values and real values from 2020
+sales_data = pd.read_csv('/content/data/residential_b.csv')
+plt.figure(figsize=(8,5))
+plt.plot(prediction,label="Predicted")
+plt.plot()
+plt.legend(loc = 'Left corner')
+plt.show()
+
+#Finding r2 --> OUR DATA
+from sklearn.metrics import r2_score
+test['predicted_sales'] = prediction
+r2_score(test['Champagne sales'], test['predicted_sales'])
+
