@@ -1,0 +1,24 @@
+#Import necessary libraries
+from scipy.stats import ttest_ind
+import numpy as np
+import pandas as pd
+
+#Print real data 2020 to later write it as an array
+sales_data.tail(11)
+
+#Print predicted 2020 data to later write as an array
+prediction = pd.DataFrame(arima_model.predict(n_periods = 11),index=test.index)
+prediction.columns = ['predicted_burglaries']
+prediction
+
+#Write 2020 data as arrays
+real_burglaries_2020 = [5431,5286,5241,4705,3819,2517,2946,3321,3808,3951, 4015]
+predicted_burglaries_2020 = [4977,5195,5142,5194,4891,5079,4991,5039,5366,5855, 6010]
+
+#Perform t-test and test hypothesis
+ttest,pval = ttest_ind(real_burglaries_2020,predicted_burglaries_2020)
+print("p-value",pval)
+if pval <0.05:
+  print("we reject null hypothesis")
+else:
+  print("we accept null hypothesis")
