@@ -1,3 +1,28 @@
+#assumptions for t-test
+
+https://ncss-wpengine.netdna-ssl.com/wp-content/themes/ncss/pdf/Procedures/NCSS/Two-Sample_T-Test.pdf 
+Two-Sample T-Test Assumptions
+The assumptions of the two-sample t-test are:
+1. The data are continuous (not discrete).
+2. The data follow the normal probability distribution.
+3. The variances of the two populations are equal. (If not, the Aspin-Welch Unequal-Variance test is used.)
+https://www.itl.nist.gov/div898/handbook/eda/section3/eda359.htm
+An F-test (Snedecor and Cochran, 1983) is used to test if the variances of two populations are equal. 
+This test can be a two-tailed test or a one-tailed test. The two-tailed version tests against the alternative that the variances are not equal. 
+The one-tailed version only tests in one direction, that is the variance from the first population is either greater than or less than (but not both) the second population variance. 
+The choice is determined by the problem. For example, if we are testing a new process, we may only be interested in knowing if the new process is less variable than the old process.
+4. The two samples are independent. There is no relationship between the individuals in one sample as compared to the other (as there is in the paired t-test).
+5. Both samples are simple random samples from their respective populations. Each individual in the population has an equal probability of being selected in the sample.
+
+For our project: 
+1. Yes it is 
+2. (still trying to test) 
+3. (still trying to test) 
+4. 
+5. 
+
+
+
 #Import necessary libraries
 from scipy.stats import ttest_ind
 import numpy as np
@@ -22,3 +47,7 @@ if pval <0.05:
   print("we reject null hypothesis")
 else:
   print("we accept null hypothesis")
+
+
+
+
