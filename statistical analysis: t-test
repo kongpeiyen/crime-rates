@@ -4,14 +4,21 @@ https://ncss-wpengine.netdna-ssl.com/wp-content/themes/ncss/pdf/Procedures/NCSS/
 Two-Sample T-Test Assumptions
 The assumptions of the two-sample t-test are:
 1. The data are continuous (not discrete).
+
 2. The data follow the normal probability distribution.
+
 3. The variances of the two populations are equal. (If not, the Aspin-Welch Unequal-Variance test is used.)
 https://www.itl.nist.gov/div898/handbook/eda/section3/eda359.htm
 An F-test (Snedecor and Cochran, 1983) is used to test if the variances of two populations are equal. 
 This test can be a two-tailed test or a one-tailed test. The two-tailed version tests against the alternative that the variances are not equal. 
 The one-tailed version only tests in one direction, that is the variance from the first population is either greater than or less than (but not both) the second population variance. 
 The choice is determined by the problem. For example, if we are testing a new process, we may only be interested in knowing if the new process is less variable than the old process.
+
 4. The two samples are independent. There is no relationship between the individuals in one sample as compared to the other (as there is in the paired t-test).
+use chi-square test to find out if its independent 
+The formula for calculating the Chi-square statistic (X²) is shown as follows:
+X² = sum of [(observed-expected)² / expected]
+
 5. Both samples are simple random samples from their respective populations. Each individual in the population has an equal probability of being selected in the sample.
 
 For our project: 
@@ -20,6 +27,91 @@ For our project:
 3. (still trying to test) 
 4. 
 5. 
+
+
+
+1. continous 
+
+
+2. testing if our data shows normal probability distirbution 
+import pandas as pd
+burglary = pd.read_csv('databurglary.csv')
+burglary.head()
+#for histogram
+burglary.hist()
+
+3. testing if the varainces are equal 
+https://stackoverflow.com/questions/21494141/how-do-i-do-a-f-test-in-python 
+
+#have not changed the values yet
+a = [1,2,1,2,1,2,1,2,1,2]
+b = [1,3,-1,2,1,5,-1,6,-1,2]
+print('Variance a={0:.3f}, Variance b={1:.3f}'.format(np.var(a, ddof=1), np.var(b, ddof=1)))
+fstatistics = np.var(a, ddof=1)/np.var(b, ddof=1) # because we estimate mean from data
+fdistribution = stats.f(len(a)-1,len(b)-1) # build an F-distribution object
+p_value = 2*min(fdistribution.cdf(f_critical), 1-fdistribution.cdf(f_critical))
+f_critical1 = fdistribution.ppf(0.025)
+f_critical2 = fdistribution.ppf(0.975)
+print(fstatistics,f_critical1, f_critical2 )
+if (p_value<0.05):
+    print('Reject H0', p_value)
+else:
+    print('Cant Reject H0', p_value)
+
+4. 
+https://machinelearningmastery.com/chi-squared-test-for-machine-learning/
+
+#use chi-squared to test for independence 
+
+# chi-squared test with similar proportions
+from scipy.stats import chi2_contingency
+from scipy.stats import chi2
+
+# contingency table (we probably have to change it, but im not sure what to change it to)
+table = [	[10, 20, 30],
+			[6,  9,  17]]
+print(table)
+stat, p, dof, expected = chi2_contingency(table)
+print('dof=%d' % dof)
+print(expected)
+
+# interpret test-statistic
+prob = 0.95
+critical = chi2.ppf(prob, dof)
+print('probability=%.3f, critical=%.3f, stat=%.3f' % (prob, critical, stat))
+if abs(stat) >= critical:
+	print('Dependent (reject H0)')
+else:
+	print('Independent (fail to reject H0)')
+ 
+# interpret p-value
+alpha = 1.0 - prob
+print('significance=%.3f, p=%.3f' % (alpha, p))
+if p <= alpha:
+	print('Dependent (reject H0)')
+else:
+	print('Independent (fail to reject H0)')
+
+
+
+5. simple random sampling 
+# Obtain simple random sample
+simple_random_sample = df.sample(n=4).sort_values(by='product_id')
+
+# Save the sample mean in a separate variable
+simple_random_mean = round(simple_random_sample['measure'].mean(),3)
+
+# View sampled data frame
+simple_random_sample
+
+
+
+
+
+
+
+
+
 
 
 
