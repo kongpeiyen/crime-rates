@@ -78,3 +78,11 @@ meeting 07.12.2020 at 9am
 -test the predictive model code with cleaned data (excel file while we wait to find Python code): Camilla 
 -work on the organisation of website and the design: Jana 
 -> meeting goals: prepare questions for office hours, discuss cleaning of data with Python code and goals to reach before holidays 
+-> workshop: continue these taks 
+
+#meeting 14.12.20 at 9am:
+-work on using pandas filter sum to clean code: Alaric + Jana 
+-find a new way of doing the map which works with our data set: Tiphaine and Pei
+-find a way of testing predictive model: Camilla 
+
+There have been major set back this week in the sense that the way we thjought we could clean our data did not work but our goal is still to finish the codes by the holidays 
