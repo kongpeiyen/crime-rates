@@ -9,6 +9,35 @@ import folium
 import os
 
 [2]
+#Cleaning the data
+crime = pd.read_csv('/content/data/MPS Borough Level Crime (most recent 24 months) (1).csv', index_col=0)
+crime
+
+crime.rename(columns={"LookUp_BoroughName": "Boroughs"}, inplace=True)
+crime.rename(columns={"MajorText": "Crime type"}, inplace=True)
+
+crime.drop (['MinorText', "201812", "201901", "201902", "201903", "201904", "201905", "201906", "201907", "201908", "201909", "201910", "201911", "201912"], axis=1, inplace=True)
+crime.drop(
+    labels=["Arson and Criminal Damage", "Miscellaneous Crimes Against Society", "Possession of Weapons", "Public Order Offences", "Robbery", "Theft", "Vehicle Offences", "Violence Against the Person"],
+    axis=0,
+    inplace=True
+)
+crime.head()
+
+crime.groupby(['Boroughs',"MajorText"]).sum
+
+
+covidcases = pd.read_csv("/content/data/phe_cases_london_boroughs.csv")
+covidcases
+
+covidcases.drop(["area_code", "total_cases", "date"], axis=1, inplace=True)
+covidcases.drop(covidcases.index[9410:9697], inplace=True)
+covidcases.head()
+
+covidcases.groupby(['area_name']).sum
+
+
+
 # Variables
 boroughs = os.path.join("content", "london_boroughs.json")
 crime = os.path.join ("content", "filename")
