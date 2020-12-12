@@ -65,3 +65,19 @@ for burglary in data:
     
     else:
        continue 
+
+
+#renaming the crimes for both datasets to have the same crime names 
+
+# importing pandas module 
+import pandas as pd 
+  
+# making data frame from csv file 
+df1 = pd.read_csv(r'/content/data/MPS Borough Level Crime (24 months).csv',index_col="Name")
+  
+# changing index cols with rename() 
+data.rename(index = {"Burglary business and community": "Burglary in other building", 
+                     "Burglary residential":"Burglary in a Dwelling"}, 
+                                 inplace = True) 
+# display 
+data 
