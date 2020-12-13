@@ -64,6 +64,28 @@ df = pd.read_csv('interval.csv', header=None)
 df.rename(columns={0: 'min', 1: 'max'}, inplace=True)
 df.to_csv('interval_with_col.csv', index=False) 
 
+#Importing necessary libraries and see the table
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+get_ipython().run_line_magic('matplotlib', 'inline')
+import warnings
+warnings.filterwarnings('ignore')
+interval = pd.read_csv('/content/interval_with_col.csv')
+interval.head()
+
+#Create month column
+import pandas as pd
+dates = pd.DataFrame({'MONTH':['01 2020','02 2020','03 2020','04 2020','05 2020','06 2020','07 2020', '08 2020', '09 2020', '10 2020', '11 2020']})
+dates.head()
+
+#Put together min max and month
+table = pd.concat([interval, dates.reindex(interval.index)], axis=1)
+
+#Convert the month column to datetime and set the index of the Month  --> OUR DATA
+table['MONTH']=pd.to_datetime(table['MONTH'])
+table.set_index('MONTH',inplace=True) 
+
 # Importing necessary libraries
 import pandas as pd
 import numpy as np
@@ -78,6 +100,7 @@ interval.head()
 plt.figure(figsize=(8,5))
 plt.plot(prediction,label="Without COVID trend")
 plt.plot(sales_data,label="Real trend")
+plt.plot(table,label="Prediction interval")
 plt.legend(loc = 'Left corner')
 plt.title("RESIDENTIAL BURGLARIES FROM 2015 TO 2020 IN LONDON")
 plt.xlabel("Time")
