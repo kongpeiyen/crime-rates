@@ -50,6 +50,30 @@ prediction
 conf_int  = arima_model.predict(11,return_conf_int=True,alpha=0.05)
 print(conf_int)
 
+#save prediction interval array as csv file
+from numpy import asarray
+from numpy import savetxt
+#define interval
+interval = asarray('conf_int')
+# save to csv file
+savetxt('interval.csv', data, delimiter=',')
+
+#add columns name
+import pandas as pd
+df = pd.read_csv('interval.csv', header=None)
+df.rename(columns={0: 'min', 1: 'max'}, inplace=True)
+df.to_csv('interval_with_col.csv', index=False) 
+
+# Importing necessary libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+get_ipython().run_line_magic('matplotlib', 'inline')
+import warnings
+warnings.filterwarnings('ignore')
+interval = pd.read_csv('/content/interval_with_col.csv')
+interval.head()
+
 #Plotting predicted values and real values from 2020
 plt.figure(figsize=(8,5))
 plt.plot(prediction,label="Without COVID trend")
