@@ -22,7 +22,7 @@ sales_data.set_index('MONTH',inplace=True)
 #To understand the pattern
 sales_data.plot()
 
-#ISSUE 2 Testing for stationarity --> it should say 'False'
+#Testing for stationarity --> it should say 'False'
 from pmdarima.arima import ADFTest
 adf_test = ADFTest(alpha = 0.05)
 adf_test.should_diff(sales_data)
@@ -45,6 +45,10 @@ arima_model.summary()
 prediction = pd.DataFrame(arima_model.predict(n_periods = 12),index=test.index)
 prediction.columns = ['predicted_sales']
 prediction
+
+#Finding prediction interval
+conf_int  = arima_model.predict(11,return_conf_int=True,alpha=0.05)
+print(conf_int)
 
 #Plotting predicted values and real values from 2020
 plt.figure(figsize=(8,5))
