@@ -101,3 +101,29 @@ from sklearn.metrics import mean_squared_error
 
 rms = sqrt(mean_squared_error(, prediction2019))
 print(rms)
+
+#Understanding RSME
+https://machinelearningmastery.com/time-series-forecasting-performance-measures-with-python/
+https://stackoverflow.com/questions/45626209/how-to-find-accuracy-of-arima-model
+
+
+There are three primary metrics used to evaluate linear models. 
+MAE: The easiest to understand. Represents average error
+These error values are in the squared units of the original units of the predicted values. A mean absolute error of zero indicates no error.
+MSE: Similar to MAE but noise is exaggerated and larger errors are “punished”. It is harder to interpret than MAE as it’s not in base units, however, it is generally more popular.
+These error values are in the original units of the predicted values. A mean absolute error of zero indicates no error.
+RMSE: Most popular metric, similar to MSE, however, the result is square rooted to make it more interpretable as it’s in base units. It is recommended that RMSE be used as the primary metric to interpret your model.
+The RMES error values are in the same units as the predictions. As with the mean squared error, an RMSE of zero indicates no error.
+
+All of them require two lists as parameters, with one being your predicted values and the other being the true values
+
+#import metrics library 
+From skylearn import metrics 
+
+#print results of MAE 
+print (metrics.mean__absolute_error(y_test, y_pred)
+
+#print resulto f MSE
+print (metrics.mean__squared_error(y_test, y_pred)
+#print results of RMSE 
+print (np.sqrt(metrics.mean__squared_error(y_test, y_pred))
