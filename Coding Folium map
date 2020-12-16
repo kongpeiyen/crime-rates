@@ -43,8 +43,8 @@ crime = os.path.join("content", "phe_cases_london_boroughs.csv")
 
 [3]
 # Need to load the rate of each crime 
-Borough_type of crime = os.path.join('/Users/y.holtz/Desktop/ (place of file)', 'name of file')
-state_data = pd.read_csv(state_unemployment)
+boroughs = os.path.join("london_boroughs.json")
+crime = os.path.join("content", "phe_cases_london_boroughs.csv")
 
 [4]
 # Create map object
