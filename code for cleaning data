@@ -103,3 +103,33 @@ a = asarray([[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]])
 
 # save to csv file
 savetxt('predictiondata.csv', a, delimiter=',')
+
+
+#summing up the data from the boroughs
+
+https://kanoki.org/2019/08/22/pandas-transform-and-filter/
+ 
+Pandas apply sum 
+df.groupby(['Borough','Crime'])['time'].apply(sum).reset_index()
+
+Pandas groupby transform
+df['sum']=df.groupby(['borough','crime'])['time'].transform('sum')
+df
+
+#stacking 
+https://www.youtube.com/watch?v=BUOy4RUUepg
+https://www.youtube.com/watch?v=kJsiiPK5sxs
+https://www.youtube.com/watch?v=reTeOfEebeA
+
+import pandas as pd 
+df1 = pd.read_csv(r'/content/data/MPS Borough Level Crime (24 months).csv',index_col=0, header=[0,1])
+df1
+df1.stack()
+
+#to stack another row 
+use the level: level=0
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.stack.html
+
+#storing the dataframe
+df_stacked=df.stack()
+df_stacked
