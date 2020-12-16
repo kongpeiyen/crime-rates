@@ -30,18 +30,16 @@ crime.groupby(['Boroughs',"MajorText"]).sum
 covidcases = pd.read_csv("/content/data/phe_cases_london_boroughs.csv")
 covidcases
 
-covidcases.drop(["area_code", "total_cases", "date"], axis=1, inplace=True)
-covidcases.drop(covidcases.index[9410:9697], inplace=True)
-covidcases.head()
-
-covidcases.groupby(['area_name']).sum
+covidcases.drop(covidcases.index[0:9664], inplace=True)
+clean = covidcases[['area_name','total_cases']]
+pd.set_option("display.max_rows", None, "display.max_columns", None)
+clean
 
 
 
 # Variables
-boroughs = os.path.join("content", "london_boroughs.json")
-crime = os.path.join ("content", "filename")
-borough_data = pd.read_csv(Crime)
+boroughs = os.path.join("london_boroughs.json")
+crime = os.path.join("content", "phe_cases_london_boroughs.csv")
 
 [3]
 # Need to load the rate of each crime 
@@ -56,18 +54,19 @@ m = folium.Map(location=[51.5074, 0.1278], zoom_start=10)
 
 [5]
 # Create the chloropleth function
-m.choropleth(
-    geo_data=boroughs,
-    name="chloropleth",
-    data=borough_data
-    columns=["Borough", "Crime offence"],
-    key_on="feature.id",
-    fill_color="YlGn",
+folium.Choropleth(
+    boroughs,
+    name='COVID-19 infections',
+    data=clean,
+    columns=['area_name', 'total_cases'],
+    key_on='name',
+    fill_color='YlGn',
     fill_opacity=0.7,
-    line_opacity=0.2,
-    legend_name="Crime rate"
-)
-folium.LayerControl().add_to(m)
+    line_opacity=0.5,
+    legend_name='Covid infections'
+).add_to(m)
+
+m
 
 # Save map as html
 m.save("map.html")
