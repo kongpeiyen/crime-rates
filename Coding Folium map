@@ -24,8 +24,28 @@ crime.drop(
 )
 crime.head()
 
-crime.groupby(['Boroughs',"MajorText"]).sum
+cleancrime = crime.groupby(['MajorText','Boroughs']).sum().reset_index()
 
+cleancrime['Total'] = cleancrime.loc[:,['202001', '202002', '202003', '202004', '202005', '202006', '202007', '202008', '202009', '202010', '202011']].sum(axis=1)
+cleancrime.head()
+
+cleancrime.drop (['202001', '202002', '202003', '202004', '202005', '202006', '202007', '202008', '202009', '202010', '202011'], axis=1, inplace=True)
+cleancrime.head()
+
+burglary= cleancrime.iloc[0:33]
+burglary.drop (["MajorText"], axis=1, inplace=True)
+pd.set_option("display.max_rows", None, "display.max_columns", None)
+burglary
+
+drugoffence= cleancrime.iloc[33:66]
+drugoffence.drop (["MajorText"], axis=1, inplace=True)
+pd.set_option("display.max_rows", None, "display.max_columns", None)
+drugoffence
+
+sexualoffence= cleancrime.iloc[66:99]
+sexualoffence.drop (["MajorText"], axis=1, inplace=True)
+pd.set_option("display.max_rows", None, "display.max_columns", None)
+sexualoffence
 
 covidcases = pd.read_csv("/content/data/phe_cases_london_boroughs.csv")
 covidcases
