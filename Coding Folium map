@@ -5,11 +5,14 @@ Explanation process: https://www.youtube.com/watch?v=4RnU5qKTfYY
 
 [1]
 import pandas as pd
+!pip install --upgrade geopandas
+import geopandas as gpd
 import folium
 import os
 
 [2]
 #Cleaning the data
+CRIME
 crime = pd.read_csv('/content/data/MPS Borough Level Crime (most recent 24 months) (1).csv', index_col=0)
 crime
 
@@ -47,6 +50,7 @@ sexualoffence.drop (["MajorText"], axis=1, inplace=True)
 pd.set_option("display.max_rows", None, "display.max_columns", None)
 sexualoffence
 
+COVID CASES
 covidcases = pd.read_csv("/content/data/phe_cases_london_boroughs.csv")
 covidcases
 
@@ -55,35 +59,41 @@ clean = covidcases[['area_name','total_cases']]
 pd.set_option("display.max_rows", None, "display.max_columns", None)
 clean
 
-
-
-# Variables
-boroughs = os.path.join("london_boroughs.json")
-crime = os.path.join("content", "phe_cases_london_boroughs.csv")
-
 [3]
-# Need to load the rate of each crime 
-boroughs = os.path.join("london_boroughs.json")
-crime = os.path.join("content", "phe_cases_london_boroughs.csv")
-
-[4]
 # Create map object
 m = folium.Map(location=[51.5074, 0.1278], zoom_start=10)
 # you can add parameters like tiles or markers with each their colours and symbol
 # Need to import the csv file of our dataset (name of boroughs must match id in json file but can change id)
 
+[4]
+# Variables
+boroughs = os.path.join("london_boroughs.json")
+boroughsdata = gpd.read_file("/content/london_boroughs.json")
+crime = os.path.join("content", "phe_cases_london_boroughs.csv")
+
 [5]
+# Formatting the json file
+boroughsdata['geometry'] = boroughsdata['geometry'].to_crs(epsg=4326)
+boroughsdata.to_file("london-borough.json", driver="GeoJSON")
+
+[6]
+# Create map object
+m = folium.Map(location=[51.5074, 0.1278], zoom_start=10)
+# you can add parameters like tiles or markers with each their colours and symbol
+# Need to import the csv file of our dataset (name of boroughs must match id in json file but can change id)
+
+[7]
 # Create the chloropleth function
 folium.Choropleth(
-    geo_data=boroughs,
+    geo_data=boroughsdata,
     name='COVID-19 infections',
     data=clean,
     columns=['area_name', 'total_cases'],
-    key_on='name',
+    key_on='properties.name',
     fill_color='GnBu',
     fill_opacity=0.7,
     line_opacity=0.5,
-    bins=8,
+    bins=3,
     nan_fill_color='White',
     nan_fill_opacity=0.8,
     legend_name='Covid infections',
