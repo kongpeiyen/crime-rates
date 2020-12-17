@@ -83,6 +83,16 @@ data.rename(index = {"Burglary business and community": "Burglary in other build
 data 
 
 
+Trying to make the code read all the crimes we need - expand the head: https://www.geeksforgeeks.org/python-pandas-dataframe-series-head-method/ -> expanding the head - DID NOT WORK
+
+https://towardsdatascience.com/how-to-show-all-columns-rows-of-a-pandas-dataframe-c49d4507fcf -> using the max_rows function
+
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.head.html -> I think we need to try changing the n for the head which is automatically set at 5 in Python but I am having issues reading the 2nd data set
+
+
+
+
+
 #cleaning the output data from predictive model: 
 
 #changing arrays to csv format to plot the output predicted data 
