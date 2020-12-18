@@ -109,3 +109,71 @@ m.save("map.html")
 --> Add the layers
 --> Do it 3 times for the three types of crime
 
+
+
+
+
+
+
+
+
+
+
+
+#running through the entire folium map including normalization of all data
+
+import pandas as pd
+!pip install --upgrade geopandas
+import geopandas as gpd
+import folium
+import os
+
+
+
+# Reshaping the files
+crime = pd.read_csv('MPS Borough Level Crime (most recent 24 months).csv', index_col=0)
+crime
+
+
+crime.rename(columns={"LookUp_BoroughName": "Boroughs"}, inplace=True)
+crime.rename(columns={"MajorText": "Crime type"}, inplace=True)
+
+crime.drop (['MinorText', "201812", "201901", "201902", "201903", "201904", "201905", "201906", "201907", "201908", "201909", "201910", "201911", "201912"], axis=1, inplace=True)
+
+crime.drop(
+    labels=["Arson and Criminal Damage", "Miscellaneous Crimes Against Society", "Possession of Weapons", "Public Order Offences", "Robbery", "Theft", "Vehicle Offences", "Violence Against the Person"],
+    axis=0,
+    inplace=True
+)
+crime.head()
+
+
+
+cleancrime = crime.groupby(['MajorText','Boroughs']).sum().reset_index()
+
+
+
+cleancrime['Total'] = cleancrime.loc[:,['202001', '202002', '202003', '202004', '202005', '202006', '202007', '202008', '202009', '202010', '202011']].sum(axis=1)
+cleancrime.head()
+
+
+
+cleancrime.drop (['202001', '202002', '202003', '202004', '202005', '202006', '202007', '202008', '202009', '202010', '202011'], axis=1, inplace=True)
+cleancrime.head()
+
+
+
+burglary= cleancrime.iloc[0:33]
+burglary.drop (["MajorText"], axis=1, inplace=True)
+pd.set_option("display.max_rows", None, "display.max_columns", None)
+burglary
+
+#normalizing for burglary
+
+from sklearn import preprocessing
+import numpy as np
+
+x_array = np.array(burglary['Total'])
+normalized_X = preprocessing.normalize([x_array])
+
+print(normalized_X)
