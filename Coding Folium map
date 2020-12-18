@@ -202,3 +202,19 @@ x_array = np.array(sexualoffence['Total'])
 normalized_X = preprocessing.normalize([x_array])
 
 print(normalized_X)
+
+
+covidcases = pd.read_csv("phe_cases_london_boroughs.csv")
+covidcases
+
+covidcases.drop(covidcases.index[0:9664], inplace=True)
+clean = covidcases[['area_name','total_cases']]
+pd.set_option("display.max_rows", None, "display.max_columns", None)
+clean
+
+#normalizing covid cases
+
+x_array = np.array(covidcases['total_cases'])
+normalized_X = preprocessing.normalize([x_array])
+
+print(normalized_X)
