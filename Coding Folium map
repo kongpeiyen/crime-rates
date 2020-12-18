@@ -169,11 +169,36 @@ pd.set_option("display.max_rows", None, "display.max_columns", None)
 burglary
 
 #normalizing for burglary
+#got the normalization code from here: https://medium.com/@rrfd/standardize-or-normalize-examples-in-python-e3f174b65dfchttps://medium.com/@rrfd/standardize-or-normalize-examples-in-python-e3f174b65dfc
 
 from sklearn import preprocessing
 import numpy as np
 
 x_array = np.array(burglary['Total'])
+normalized_X = preprocessing.normalize([x_array])
+
+print(normalized_X)
+
+drugoffence= cleancrime.iloc[33:66]
+drugoffence.drop (["MajorText"], axis=1, inplace=True)
+pd.set_option("display.max_rows", None, "display.max_columns", None)
+drugoffence
+
+#normalizing for drug offences
+
+x_array = np.array(drugoffence['Total'])
+normalized_X = preprocessing.normalize([x_array])
+
+print(normalized_X)
+
+sexualoffence= cleancrime.iloc[66:99]
+sexualoffence.drop (["MajorText"], axis=1, inplace=True)
+pd.set_option("display.max_rows", None, "display.max_columns", None)
+sexualoffence
+
+#normalizing for sexualoffences
+
+x_array = np.array(sexualoffence['Total'])
 normalized_X = preprocessing.normalize([x_array])
 
 print(normalized_X)
