@@ -100,7 +100,14 @@ print(normalized_X)
 df = pd.DataFrame(burglary=normalized_X, index=None, columns=["Borough", "Normalized Total"])
 print(df)
 
+#replacing the column
+#this failed
+# https://stackoverflow.com/questions/36846060/how-to-replace-an-entire-column-on-pandas-dataframe
+
+burglary['Total'] = df['Normalized Total']
 
  #this failed
  
  pd.concat([burglary, df_transposed])
+ 
+ 
