@@ -95,19 +95,27 @@ normalized_X = preprocessing.normalize([x_array])
 
 print(normalized_X)
 
-#creating dataframe
-#this failed
-df = pd.DataFrame(burglary=normalized_X, index=None, columns=["Borough", "Normalized Total"])
-print(df)
+ #convert array into dataframe
+# https://datatofish.com/numpy-array-to-pandas-dataframe/ 
 
-#replacing the column
-#this failed
-# https://stackoverflow.com/questions/36846060/how-to-replace-an-entire-column-on-pandas-dataframe
+import numpy as np
+import pandas as pd
 
-burglary['Total'] = df['Normalized Total']
 
- #this failed
- 
- pd.concat([burglary, df_transposed])
- 
- 
+df = pd.DataFrame(normalized_X)
+
+df
+
+
+# https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.transpose.html
+
+df_transposed = df.T 
+
+df_transposed
+
+
+https://pandas-docs.github.io/pandas-docs-travis/user_guide/merging.html 
+
+normalized = pd.concat([burglary, df_transposed], axis=1)
+
+normalized
