@@ -149,6 +149,10 @@ drugoffence
 
 
 
+#reset index
+drugoffence.reset_index(drop=True, inplace=True)
+
+drugoffence
 
 
 normalized = pd.concat([drugoffence, df_transposed], axis=1)
@@ -197,7 +201,9 @@ sexualoffence.drop (['Total'], axis=1, inplace=True)
 sexualoffence
 
 
+sexualoffence.reset_index(drop=True, inplace=True)
 
+sexualoffence
 
 
 normalized = pd.concat([sexualoffence, df_transposed], axis=1)
@@ -244,15 +250,18 @@ df_transposed
 
 
 
-covidcases.drop (['Total'], axis=1, inplace=True)
+clean.drop (['total_cases'], axis=1, inplace=True)
 
-drugoffence
-
-
+clean
 
 
+clean.reset_index(drop=True, inplace=True)
 
-normalized = pd.concat([covidcases, df_transposed], axis=1)
+clean
+
+
+
+normalized = pd.concat([clean, df_transposed], axis=1)
 
 normalized
 
