@@ -55,6 +55,54 @@ normalized_X = preprocessing.normalize([x_array])
 
 print(normalized_X)
 
+
+
+
+
+ #convert array into dataframe
+# https://datatofish.com/numpy-array-to-pandas-dataframe/ 
+
+import numpy as np
+import pandas as pd
+
+
+df = pd.DataFrame(normalized_X)
+
+df
+
+
+# https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.transpose.html
+
+df_transposed = df.T 
+
+df_transposed
+
+#renaming the column
+df_transposed.columns = ['Normalized Total']
+
+df_transposed
+
+
+
+
+#run this only if you want the final df to have only the "borough & normalized total", rather than "borough & total & normalized total"
+burglary.drop (['Total'], axis=1, inplace=True)
+
+burglary
+
+
+
+
+#https://pandas-docs.github.io/pandas-docs-travis/user_guide/merging.html 
+
+normalized = pd.concat([burglary, df_transposed], axis=1)
+
+normalized
+
+
+
+
+## Drug Offence
 drugoffence= cleancrime.iloc[33:66]
 drugoffence.drop (["MajorText"], axis=1, inplace=True)
 pd.set_option("display.max_rows", None, "display.max_columns", None)
@@ -95,27 +143,3 @@ normalized_X = preprocessing.normalize([x_array])
 
 print(normalized_X)
 
- #convert array into dataframe
-# https://datatofish.com/numpy-array-to-pandas-dataframe/ 
-
-import numpy as np
-import pandas as pd
-
-
-df = pd.DataFrame(normalized_X)
-
-df
-
-
-# https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.transpose.html
-
-df_transposed = df.T 
-
-df_transposed
-
-
-https://pandas-docs.github.io/pandas-docs-travis/user_guide/merging.html 
-
-normalized = pd.concat([burglary, df_transposed], axis=1)
-
-normalized
