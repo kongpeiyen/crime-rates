@@ -39,6 +39,8 @@ cleancrime.head()
 
 
 
+## BURGLARY
+
 burglary= cleancrime.iloc[0:33]
 burglary.drop (["MajorText"], axis=1, inplace=True)
 pd.set_option("display.max_rows", None, "display.max_columns", None)
@@ -90,6 +92,7 @@ df_transposed
 
 
 #run this only if you want the final df to have only the "borough & normalized total", rather than "borough & total & normalized total"
+
 burglary.drop (['Total'], axis=1, inplace=True)
 
 burglary
@@ -106,7 +109,7 @@ normalized
 
 
 
-## Drug Offence
+## DRUG OFFENCES
 drugoffence= cleancrime.iloc[33:66]
 drugoffence.drop (["MajorText"], axis=1, inplace=True)
 pd.set_option("display.max_rows", None, "display.max_columns", None)
@@ -118,6 +121,43 @@ x_array = np.array(drugoffence['Total'])
 normalized_X = preprocessing.normalize([x_array])
 
 print(normalized_X)
+
+
+
+
+df = pd.DataFrame(normalized_X)
+
+df
+
+
+
+df_transposed = df.T 
+
+df_transposed
+
+
+
+df_transposed.columns = ['Normalized Total']
+
+df_transposed
+
+
+
+drugoffence.drop (['Total'], axis=1, inplace=True)
+
+drugoffence
+
+
+
+
+
+normalized = pd.concat([drugoffence, df_transposed], axis=1)
+
+normalized
+
+
+
+## SEXUAL OFFENCES
 
 sexualoffence= cleancrime.iloc[66:99]
 sexualoffence.drop (["MajorText"], axis=1, inplace=True)
@@ -131,6 +171,43 @@ normalized_X = preprocessing.normalize([x_array])
 
 print(normalized_X)
 
+
+
+
+df = pd.DataFrame(normalized_X)
+
+df
+
+
+
+df_transposed = df.T 
+
+df_transposed
+
+
+
+df_transposed.columns = ['Normalized Total']
+
+df_transposed
+
+
+
+sexualoffence.drop (['Total'], axis=1, inplace=True)
+
+sexualoffence
+
+
+
+
+
+normalized = pd.concat([sexualoffence, df_transposed], axis=1)
+
+normalized
+
+
+
+
+## COVID CASES
 
 covidcases = pd.read_csv("phe_cases_london_boroughs.csv")
 covidcases
@@ -146,4 +223,36 @@ x_array = np.array(covidcases['total_cases'])
 normalized_X = preprocessing.normalize([x_array])
 
 print(normalized_X)
+
+
+
+df = pd.DataFrame(normalized_X)
+
+df
+
+
+
+df_transposed = df.T 
+
+df_transposed
+
+
+
+df_transposed.columns = ['Normalized Total']
+
+df_transposed
+
+
+
+covidcases.drop (['Total'], axis=1, inplace=True)
+
+drugoffence
+
+
+
+
+
+normalized = pd.concat([covidcases, df_transposed], axis=1)
+
+normalized
 
