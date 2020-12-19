@@ -1,0 +1,106 @@
+import pandas as pd
+!pip install --upgrade geopandas
+import geopandas as gpd
+import folium
+import os
+
+
+
+# Reshaping the files
+crime = pd.read_csv('MPS Borough Level Crime (most recent 24 months).csv', index_col=0)
+crime
+
+
+crime.rename(columns={"LookUp_BoroughName": "Boroughs"}, inplace=True)
+crime.rename(columns={"MajorText": "Crime type"}, inplace=True)
+
+crime.drop (['MinorText', "201812", "201901", "201902", "201903", "201904", "201905", "201906", "201907", "201908", "201909", "201910", "201911", "201912"], axis=1, inplace=True)
+
+crime.drop(
+    labels=["Arson and Criminal Damage", "Miscellaneous Crimes Against Society", "Possession of Weapons", "Public Order Offences", "Robbery", "Theft", "Vehicle Offences", "Violence Against the Person"],
+    axis=0,
+    inplace=True
+)
+crime.head()
+
+
+
+cleancrime = crime.groupby(['MajorText','Boroughs']).sum().reset_index()
+
+
+
+cleancrime['Total'] = cleancrime.loc[:,['202001', '202002', '202003', '202004', '202005', '202006', '202007', '202008', '202009', '202010', '202011']].sum(axis=1)
+cleancrime.head()
+
+
+
+cleancrime.drop (['202001', '202002', '202003', '202004', '202005', '202006', '202007', '202008', '202009', '202010', '202011'], axis=1, inplace=True)
+cleancrime.head()
+
+
+
+burglary= cleancrime.iloc[0:33]
+burglary.drop (["MajorText"], axis=1, inplace=True)
+pd.set_option("display.max_rows", None, "display.max_columns", None)
+burglary
+
+#normalizing for burglary
+#got the normalization code from here: https://medium.com/@rrfd/standardize-or-normalize-examples-in-python-e3f174b65dfchttps://medium.com/@rrfd/standardize-or-normalize-examples-in-python-e3f174b65dfc
+
+from sklearn import preprocessing
+import numpy as np
+
+x_array = np.array(burglary['Total'])
+normalized_X = preprocessing.normalize([x_array])
+
+print(normalized_X)
+
+drugoffence= cleancrime.iloc[33:66]
+drugoffence.drop (["MajorText"], axis=1, inplace=True)
+pd.set_option("display.max_rows", None, "display.max_columns", None)
+drugoffence
+
+#normalizing for drug offences
+
+x_array = np.array(drugoffence['Total'])
+normalized_X = preprocessing.normalize([x_array])
+
+print(normalized_X)
+
+sexualoffence= cleancrime.iloc[66:99]
+sexualoffence.drop (["MajorText"], axis=1, inplace=True)
+pd.set_option("display.max_rows", None, "display.max_columns", None)
+sexualoffence
+
+#normalizing for sexualoffences
+
+x_array = np.array(sexualoffence['Total'])
+normalized_X = preprocessing.normalize([x_array])
+
+print(normalized_X)
+
+
+covidcases = pd.read_csv("phe_cases_london_boroughs.csv")
+covidcases
+
+covidcases.drop(covidcases.index[0:9664], inplace=True)
+clean = covidcases[['area_name','total_cases']]
+pd.set_option("display.max_rows", None, "display.max_columns", None)
+clean
+
+#normalizing covid cases
+
+x_array = np.array(covidcases['total_cases'])
+normalized_X = preprocessing.normalize([x_array])
+
+print(normalized_X)
+
+#creating dataframe
+#this failed
+df = pd.DataFrame(burglary=normalized_X, index=None, columns=["Borough", "Normalized Total"])
+print(df)
+
+
+ #this failed
+ 
+ pd.concat([burglary, df_transposed])
