@@ -59,7 +59,7 @@ print(normalized_X)
 
 
 
- #convert array into dataframe
+#convert array into dataframe
 # https://datatofish.com/numpy-array-to-pandas-dataframe/ 
 
 import numpy as np
@@ -77,7 +77,11 @@ df_transposed = df.T
 
 df_transposed
 
+
+
 #renaming the column
+# https://stackoverflow.com/questions/11346283/renaming-columns-in-pandas
+
 df_transposed.columns = ['Normalized Total']
 
 df_transposed
