@@ -52,10 +52,11 @@ burglary
 from sklearn import preprocessing
 import numpy as np
 
-x_array = np.array(burglary['Total'])
-normalized_X = preprocessing.normalize([x_array])
 
-print(normalized_X)
+x_array = np.array(burglary['Total'])
+normalizedburglary = preprocessing.normalize([x_array])
+
+print(normalizedburglary)
 
 
 
@@ -68,25 +69,26 @@ import numpy as np
 import pandas as pd
 
 
-df = pd.DataFrame(normalized_X)
+normalized_burglary = pd.DataFrame(normalizedburglary)
 
-df
+normalized_burglary
 
 
 # https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.transpose.html
 
-df_transposed = df.T 
 
-df_transposed
+normalized_burglary = normalized_burglary.T 
+
+normalized_burglary
 
 
 
 #renaming the column
 # https://stackoverflow.com/questions/11346283/renaming-columns-in-pandas
 
-df_transposed.columns = ['Normalized Total']
+normalized_burglary.columns = ['Normalized Total']
 
-df_transposed
+normalized_burglary
 
 
 
@@ -102,9 +104,10 @@ burglary
 
 #https://pandas-docs.github.io/pandas-docs-travis/user_guide/merging.html 
 
-normalized = pd.concat([burglary, df_transposed], axis=1)
+normalized_burglary_with_borough = pd.concat([burglary, normalized_burglary], axis=1)
 
-normalized
+
+normalized_burglary_with_borough
 
 
 
@@ -117,29 +120,30 @@ drugoffence
 
 #normalizing for drug offences
 
-x_array = np.array(drugoffence['Total'])
-normalized_X = preprocessing.normalize([x_array])
 
-print(normalized_X)
+y_array = np.array(drugoffence['Total'])
+normalizeddrugoffence = preprocessing.normalize([y_array])
 
-
-
-
-df = pd.DataFrame(normalized_X)
-
-df
+print(normalizeddrugoffence)
 
 
 
-df_transposed = df.T 
 
-df_transposed
+normalized_drugoffence = pd.DataFrame(normalizeddrugoffence)
+
+normalized_drugoffence
 
 
 
-df_transposed.columns = ['Normalized Total']
+normalized_drugoffence = normalized_drugoffence.T 
 
-df_transposed
+normalized_drugoffence
+
+
+
+normalized_drugoffence.columns = ['Normalized Total']
+
+normalized_drugoffence
 
 
 
@@ -155,9 +159,9 @@ drugoffence.reset_index(drop=True, inplace=True)
 drugoffence
 
 
-normalized = pd.concat([drugoffence, df_transposed], axis=1)
+normalized_drugoffence_with_borough = pd.concat([drugoffence, normalized_drugoffence], axis=1)
 
-normalized
+normalized_drugoffence_with_borough
 
 
 
@@ -170,29 +174,29 @@ sexualoffence
 
 #normalizing for sexualoffences
 
-x_array = np.array(sexualoffence['Total'])
-normalized_X = preprocessing.normalize([x_array])
-
-print(normalized_X)
+z_array = np.array(sexualoffence['Total'])
+normalizedsexualoffence = preprocessing.normalize([z_array])
 
 
-
-
-df = pd.DataFrame(normalized_X)
-
-df
+print(normalizedsexualoffence)
 
 
 
-df_transposed = df.T 
+normalized_sexualoffence = pd.DataFrame(normalizedsexualoffence)
 
-df_transposed
+normalized_sexualoffence
 
 
 
-df_transposed.columns = ['Normalized Total']
+normalized_sexualoffence = normalized_sexualoffence.T 
 
-df_transposed
+normalized_sexualoffence
+
+
+
+normalized_sexualoffence.columns = ['Normalized Total']
+
+normalized_sexualoffence
 
 
 
@@ -206,9 +210,9 @@ sexualoffence.reset_index(drop=True, inplace=True)
 sexualoffence
 
 
-normalized = pd.concat([sexualoffence, df_transposed], axis=1)
+normalized_sexualoffence_with_borough = pd.concat([sexualoffence, normalized_sexualoffence], axis=1)
 
-normalized
+normalized_sexualoffence_with_borough
 
 
 
@@ -225,28 +229,28 @@ clean
 
 #normalizing covid cases
 
-x_array = np.array(covidcases['total_cases'])
-normalized_X = preprocessing.normalize([x_array])
+c_array = np.array(covidcases['total_cases'])
+normalizedcovid = preprocessing.normalize([c_array])
 
-print(normalized_X)
-
-
-
-df = pd.DataFrame(normalized_X)
-
-df
+print(normalizedcovid)
 
 
 
-df_transposed = df.T 
+normalized_covid = pd.DataFrame(normalizedcovid)
 
-df_transposed
+normalized_covid
 
 
 
-df_transposed.columns = ['Normalized Total']
+normalized_covid = normalized_covid.T 
 
-df_transposed
+normalized_covid
+
+
+
+normalized_covid.columns = ['Normalized Total']
+
+normalized_covid
 
 
 
@@ -255,13 +259,14 @@ clean.drop (['total_cases'], axis=1, inplace=True)
 clean
 
 
+
 clean.reset_index(drop=True, inplace=True)
 
 clean
 
 
 
-normalized = pd.concat([clean, df_transposed], axis=1)
+normalized_covid_with_borough = pd.concat([clean, normalized_covid], axis=1)
 
-normalized
+normalized_covid_with_borough
 
