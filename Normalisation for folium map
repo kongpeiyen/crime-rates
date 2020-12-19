@@ -101,7 +101,7 @@ burglary
 
 
 
-
+#to merge the normalized total with the boroughs
 #https://pandas-docs.github.io/pandas-docs-travis/user_guide/merging.html 
 
 normalized_burglary_with_borough = pd.concat([burglary, normalized_burglary], axis=1)
@@ -154,6 +154,7 @@ drugoffence
 
 
 #reset index
+# https://stackoverflow.com/questions/32801806/pandas-concat-ignore-index-doesnt-work
 drugoffence.reset_index(drop=True, inplace=True)
 
 drugoffence
@@ -226,6 +227,7 @@ covidcases.drop(covidcases.index[0:9664], inplace=True)
 clean = covidcases[['area_name','total_cases']]
 pd.set_option("display.max_rows", None, "display.max_columns", None)
 clean
+
 
 #normalizing covid cases
 
