@@ -71,7 +71,7 @@ plt.show()
 #write values as lists
 import pandas as pd
 prediction2019_list = prediction2019['predicted_rape'].values.tolist()
-rape_short = rape.tail(12)
+rape_short = rape_accuracy.tail(12)
 rape_list = rape_short['Rape'].values.tolist()
 
 #calculate rmse
