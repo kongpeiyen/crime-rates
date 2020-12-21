@@ -13,8 +13,8 @@ get_ipython().system(' pip install pmdarima')
 from pmdarima.arima import auto_arima
 
 #Read the crime dataset 
-data2019 = pd.read_csv('/content/data/testing .csv')
-dataset_accuracy = data2019.tail(12)
+rape_accuracy = rape.head(145)
+rape_accuracy.head()
 
 #Convert the month column to datetime and set the index of the Month  
 data2019['MONTH']=pd.to_datetime(data2019['MONTH'])
@@ -23,11 +23,11 @@ data2019.set_index('MONTH',inplace=True)
 #Testing for stationarity --> it should say 'False'
 from pmdarima.arima import ADFTest
 adf_test = ADFTest(alpha = 0.05)
-adf_test.should_diff(data2019)
+adf_test.should_diff(rape_accuracy)
 
 #Spliting the dataset into train and test 
-train = data2019['01 2015': '01 2019']
-test = data2019['01 2019': '01 2020'] 
+train = rape_accuracy['200801': '201901']
+test = rape_accuracy['201901':] 
 
 #Building ARIMA model 
 arima_model =  auto_arima(train,start_p=0, d=1, start_q=0, 
@@ -41,48 +41,25 @@ arima_model.summary()
 
 #Finding predicted crime values
 prediction2019 = pd.DataFrame(arima_model.predict(n_periods = 12),index=test.index)
-prediction2019.columns = ['predicted_burglaries']
+prediction2019.columns = ['predicted_rape']
 prediction2019
 
-#Finding prediction interval as an array
-conf_int2019  = arima_model.predict(12,return_conf_int=True,alpha=0.05)
-print(conf_int2019)
-
-#save prediction interval array as csv file
-from numpy import asarray
-from numpy import savetxt
-#define interval
-interval2019 = asarray('conf_int2019')
-# save to csv file
-savetxt('interval2019.csv', interval, delimiter=',')
-
-#add columns name
-import pandas as pd
-df = pd.read_csv('interval2019.csv', header=None)
-df.rename(columns={0: 'min', 1: 'max'}, inplace=True)
-df.to_csv('interval_with_col2019.csv', index=False) 
-
-#Importing necessary libraries and see the table
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-get_ipython().run_line_magic('matplotlib', 'inline')
-import warnings
-warnings.filterwarnings('ignore')
-interval2019 = pd.read_csv('/content/interval_with_col2019.csv')
-interval2019.head()
+#Finding prediction interval as a dataframe
+conf_int2019 = arima_model.predict(12,return_conf_int=True,alpha=0.05)
+interval2019 = pd.DataFrame(conf_int2019[1], columns = ['min','max'])
+interval2019
 
 #Create month column
 import pandas as pd
-dates = pd.DataFrame({'MONTH':['01 2019','02 2019','03 2019','04 2019','05 2019','06 2019','07 2019', '08 2019', '09 2019', '10 2019', '11 2019','12 2019' ]})
-dates.head()
+dates2019 = pd.DataFrame({'MONTH':['201901','201901','202003','201904','201905','201906','201907', '201908', '201909', '201910', '201911', '201912']})
+dates2019.head()
 
 #Put together min max and month
-table = pd.concat([interval, dates.reindex(interval.index)], axis=1)
+table2019 = pd.concat([dates2019, interval2019], axis=1)
+table2019
 
-#Convert the month column to datetime and set the index of the Month  --> OUR DATA
-table['MONTH']=pd.to_datetime(table['MONTH'])
-table.set_index('MONTH',inplace=True) 
+#Convert the month column to datetime and set the index of the Month 
+table2019.set_index('MONTH',inplace=True) 
 
 #Plotting predicted values and real values from 2019
 plt.figure(figsize=(8,5))
@@ -95,12 +72,31 @@ plt.xlabel("Time")
 plt.ylabel("Residential burglary's values")
 plt.show()
 
+#write values as lists
+import pandas as pd
+prediction2019_list = prediction2019['predicted_rape'].values.tolist()
+rape_short = rape.tail(12)
+rape_list = rape_short['Rape'].values.tolist()
+
 #calculate rmse
 from math import sqrt
 from sklearn.metrics import mean_squared_error
-
-rms = sqrt(mean_squared_error(, prediction2019))
+rms = sqrt(mean_squared_error(rape_list, prediction2019_list))
 print(rms)
+
+#calculate mean absolute error
+from math import sqrt
+from sklearn.metrics import mean_absolute_error
+mae = sqrt(mean_absolute_error(rape_list, prediction2019_list))
+print(mae)
+
+#calculate mean absolute percentage error
+import numpy as np
+def mean_absolute_percentage_error(rape_list, prediction2019_list): 
+    rape_list, prediction2019_list = np.array(rape_list), np.array(prediction2019_list)
+    return np.mean(np.abs((rape_list - prediction2019_list) / rape_list)) * 100
+
+mean_absolute_percentage_error(rape_list, prediction2019_list)
 
 #Understanding RSME
 https://machinelearningmastery.com/time-series-forecasting-performance-measures-with-python/
