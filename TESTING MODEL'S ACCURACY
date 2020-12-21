@@ -16,10 +16,6 @@ from pmdarima.arima import auto_arima
 rape_accuracy = rape.head(145)
 rape_accuracy.head()
 
-#Convert the month column to datetime and set the index of the Month  
-data2019['MONTH']=pd.to_datetime(data2019['MONTH'])
-data2019.set_index('MONTH',inplace=True) 
-
 #Testing for stationarity --> it should say 'False'
 from pmdarima.arima import ADFTest
 adf_test = ADFTest(alpha = 0.05)
