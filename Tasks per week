@@ -90,5 +90,46 @@ There have been major set back this week in the sense that the way we thjought w
 #for office hours 17.12.20
 
 -work on testing the accuracy of the predicted model: Camilla and Jana 
--work on new clhoropleth map: Tiphiane and Jana 
+-work on new clhoropleth map: Tiphiane and Pei 
 -continue work on cleaning data: Alaric and Jana 
+
+#workshop 18.12.20
+
+-continue work on Chloroplet map: Tiphaine and Pei
+-work on advice Daniel gave for data cleanng issues: Alaric and Jana 
+-try solving problem with the arrays in predictive model: Camilla and Jana 
+
+notes from workshop 18.12.20: 
+-read the Shby 2020 paper, sction on how model is tested again
+-try using MAE to test the accuracy of the model 
+-use conf_int[1] to extract te array 
+-find a way to permanently keep the datasets in the code to avoid contsantly uploading them 
+WEBSITE:
+-explain the meaning of the data visualisations
+-do not import any graphs without an explanation
+-do not ave too many pages in the website and do not have any unlinked pages
+-have a narrative on the cleaning of the data 
+-write for a lay audience 
+
+next meeting: Saturday 19.12.20
+
+#meeting 19.12.20 14:30 UK
+-need to work on selecting sections of the dataset to run the model
+-need to test the predictive model with the cleaned data
+-find another data visualisation for simpy presenting our cleaned data 
+-work on the structure of the website and building of the narrative
+-set working deadlines for the holidays
+
+#tasks for meeting Tuesday 22.12.20 at 10am UK 
+-work on the structure of the wesite (there are too many pages and unlinked ones): Pei and Jana
+-work on content for the website (what we can write about so far): Jana 
+-work on importing the cleaned data into predictive model and test te model: Camilla and Tiphaine
+-find the last data visulisation: Alaric
+
+to discuss in meeting: 
+-how the model works 
+-last data visualiation
+possibly creting new website as te structure is very unclear? but issue of showing the credit for the past work done on initial websiste... 
+
+
+#meeting 21.12.20 @10am UK 
