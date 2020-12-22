@@ -53,3 +53,14 @@ D] CONCLUSION
 -answering the research question 
 -interpreting data analsysis findings 
 -how does this resaerch fit into the wider context and what can still be done in future research 
+
+
+#research on interpreting data anaslyis 
+
+ARIMA MODEL
+
+-> interpreting the accuracy:
+https://stats.stackexchange.com/questions/194453/interpreting-accuracy-results-for-an-arima-model-fit
+
+Out of all the one simplest to understand is MAPE (Mean absolute percentage error). It considers actual values fed into model and fitted values from the model and calculates absolute difference between the two as a percentage of actual value and finally calculates mean of that.
+https://towardsdatascience.com/machine-learning-part-19-time-series-and-autoregressive-integrated-moving-average-model-arima-c1005347b0d7
