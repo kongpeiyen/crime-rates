@@ -1,0 +1,66 @@
+# Importing necessary libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+get_ipython().run_line_magic('matplotlib', 'inline')
+import warnings
+warnings.filterwarnings('ignore')
+
+#Installing pmdarima package
+get_ipython().system(' pip install pmdarima')
+
+# Importing auto_arima 
+from pmdarima.arima import auto_arima
+
+#Read the crime dataset 
+rape.head()
+
+# To understand the pattern --> THIS IS PROBABLY ALREADY DONE
+rape.plot()
+
+#Spliting the dataset into train and test 
+train = rape['200801': '202001']
+test = rape['202001':] 
+
+#Building ARIMA model 
+arima_model =  auto_arima(train,start_p=0, d=1, start_q=0, 
+                          max_p=5, max_d=5, max_q=5, start_P=0, 
+                          D=1, start_Q=0, max_P=5, max_D=5,
+                          max_Q=5, m=12, seasonal=True, 
+                          error_action='warn',trace = True,
+                          supress_warnings=True,stepwise = True,
+                          random_state=20,n_fits = 50 )
+arima_model.summary()
+
+#Finding predicted crime values
+prediction = pd.DataFrame(arima_model.predict(n_periods = 11),index=test.index)
+prediction.columns = ['predicted_rape']
+
+#Finding prediction interval as an array
+conf_int = arima_model.predict(11,return_conf_int=True,alpha=0.05)
+interval = pd.DataFrame(conf_int[1], columns = ['min','max'])
+interval.head()
+
+#Create month column
+import pandas as pd
+dates = pd.DataFrame({'MONTH':['202001','202002','202003','202004','202005','202006','202007', '202008', '202009', '202010', '202011']})
+dates.head()
+
+#Put together min max and month
+table = pd.concat([dates, interval], axis=1)
+#Convert the month column to datetime and set the index of the Month 
+table_to_plot = table.set_index('MONTH') 
+table_to_plot
+
+#Plotting predicted values and real values from 2020
+plt.figure(figsize=(10,5))
+plt.plot(prediction,label="Without COVID trend")
+plt.plot(rape,label="Real trend")
+plt.plot(table_to_plot,label="Interval", color='r')
+plt.legend(loc = 'Left corner')
+plt.title("RAPES FROM 2008 TO 2020 IN LONDON")
+plt.xlabel("Time")
+plt.ylabel("Number of rapes")
+plt.grid(b=True, which='major', color='#666666', linestyle='-', linewidth=0.3)
+plt.show()
+
