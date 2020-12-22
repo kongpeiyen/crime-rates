@@ -1,6 +1,80 @@
 #Major stages in project 
 
--Initial idea of basing project on migrants' access to mental health. We wanted to focus on two geographical areas and a specific timeframe and quantatively analyse refugee and asylum seekers' access to mental health facilities. 
-Basing ourselves on literature review we were going to investigate refugee and asylum seekers access to mental health by looking at the data for number of diagnosed cases of mental health issues shown through research to be more prevaent in migrant communties (such as anxiety, depression, PTSD
+ 1) Initial research topic: Refugee access to mental health  
+
+Initial idea of basing project on migrants' access to mental health. We wanted to focus on two geographical areas and a specific timeframe and quantitively analyze refugee and asylum seekers' access to mental health facilities.  
+
+Basing ourselves on literature review we were going to investigate refugee and asylum seekers access to mental health by looking at the data for number of diagnosed cases of mental health issues shown through research to be more prevalent among migrant communities (such as anxiety, depression, PTSD and addiction) and admissions to psychiatric wards, mental health treatment centers, and other treatment facilities.  
+
+We planned on comparing the data for France and the UK because they are both developed countries with similar GDPs and their refugee integration strategies are very different.  
+
+The research question was: what factors influence a refugee’s access to mental health facilities and support in the United Kingdom and France between 2000 and 2019?  
+
+The idea for the topic came from different motivations. Firstly, the rise of populism in the last decade has put the idea of migrants “draining healthcare systems” at the forefront of media and political debates. In addition, the 21st century has brought an increased awareness on mental wellbeing and health. Research has shown that refugees and asylum seekers are significantly more likely to suffer from mental health problems then the native population because of the difficulties and stress associated to a forced migration process and the push factors in origin country. Even though comparative studies on native populations and refugees’ mental health have been conducted, there is a significant literature gap in terms of quantitative analysis of refugees’ access to mental health facilities which has a negative impact on healthcare policies.  
 
 
+2) issues with initial topic  
+
+Although our group was very interested in researching refugees and asylum seekers’ access to mental health and the social relevance and benefits of such a study were undeniable, we were very limited by the available datasets. After 2 weeks of research none of us could find suitable datasets for refugees' access to mental health facilities or diagnosis rates in the UK and France. There were no datasets in exploitable formats and all the data we found was often in published studies and was therefore already analysed and we could not access the raw version in a csv format.  
+
+Solution: We decided to change topics to something more “'clearly quantitative’'.  
+
+We discussed common interests and as Jana was studying criminal law, she suggested working with crime rates and a few of the other members were also interested in criminology.  
+
+We thought of doing something with crime rates as the data is often published for cities in government data banks. We also knew that the London datastore had crime yearly and monthly crime rates in CSV format.  
+
+ 
+
+3) new topic: effect of weather and air pollution on crime rates  
+
+-comparing two cities  
+
+-studying London 
+
+ 
+
+4) abandoning topic and starting over 5 days before the presentation 
+
+See comments on proposal  
+
+Issues with topic 
+
+ 
+
+5) new topic: Coronavirus and crime in London 
+
+Explanation of topic and motivations  
+
+Division of tasks  
+
+ 
+
+6) choosing data visualizations   
+
+-why did we choose these visualizations? 
+
+-planned methods?  
+
+ 
+
+7) presentation and feedback 
+
+See presentation feedback notes 
+
+Work on ARIMA model  
+
+ 
+
+8) starting the coding  
+
+ 
+
+9) issues with data cleaning  
+
+ 
+
+10) issues with map and choice of new map 
+
+ 
+
+11) difficulties encountered with predictive model  
