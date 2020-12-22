@@ -131,6 +131,21 @@ https://www.youtube.com/watch?v=BUOy4RUUepg
 https://www.youtube.com/watch?v=kJsiiPK5sxs
 https://www.youtube.com/watch?v=reTeOfEebeA
 
+
+
+#using the cleaned dataset in the predctive model
+-> issue the x axis is too messy and we want to just so years instead of months 
+
+Changing the labels on the x axis  
+
+https://www.kite.com/python/examples/1870/matplotlib-change-x-axis-tick-labels 
+
+change axis/scale for time series plot after forecast 
+
+https://www.machinelearningplus.com/time-series/arima-model-time-series-forecasting-python/ 
+
+ guide to ARIMA model
+ https://www.machinelearningplus.com/time-series/arima-model-time-series-forecasting-python/
 import pandas as pd 
 df1 = pd.read_csv(r'/content/data/MPS Borough Level Crime (24 months).csv',index_col=0, header=[0,1])
 df1
