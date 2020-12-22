@@ -1,1 +1,55 @@
-INTRODUCTION PAGE 
+A]INTRODUCTION PAGE 
+
+1) content and motivation 
+-> see proposal and presentation notes 
+
+2) aims and relevance of project
+-> see proposal notes 
+
+3) explanation of all the variables, city and timeframe 
+-> see proposal and presentation notes 
+-> see research 
+-> google drive
+
+-section on biographies
+-hypothesis
+-presentation of data visualisations
+
+B] DATA COLLECTION 
+
+1) sources of data 
+-explain how he data was collected 
+-limitations of having just one data source
+
+2) cleaning the data
+->explain the steps of cleaning the data 
+->difficulties cleaning the data 
+->use for cleaned data 
+
+C]DATA VISUALISATIONS AND ANALYSIS 
+
+1) scatter plots 
+-motivation in doing scatterplots and what they bring to the project
+-explain how they were done and link to github gist 
+-limitations 
+
+2)cloropleth map
+-explain how the map works
+-explain motivations and what the map brings to the project 
+-code gists
+-explain the worflow in mking the map: difficulties and explanation of changing map type 
+-limitations
+
+3) ARIMA predictive model
+-explain motivation in choosing model
+-explain aims of model and what it brings to project 
+-explain coding process and process of putting the cleaned data inside 
+-interpret the results 
+-explain the accuracy
+-limitations 
+
+
+D] CONCLUSION 
+-answering the research question 
+-interpreting data analsysis findings 
+-how does this resaerch fit into the wider context and what can still be done in future research 
