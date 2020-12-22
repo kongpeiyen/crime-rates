@@ -133,6 +133,14 @@ https://www.youtube.com/watch?v=reTeOfEebeA
 
 
 
+#to stack another row 
+use the level: level=0
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.stack.html
+
+#storing the dataframe
+df_stacked=df.stack()
+df_stacked
+
 #using the cleaned dataset in the predctive model
 -> issue the x axis is too messy and we want to just so years instead of months 
 
@@ -142,19 +150,14 @@ https://www.kite.com/python/examples/1870/matplotlib-change-x-axis-tick-labels
 
 change axis/scale for time series plot after forecast 
 
-https://www.machinelearningplus.com/time-series/arima-model-time-series-forecasting-python/ 
+https://stackoverflow.com/questions/49864304/change-axis-scale-for-time-series-plot-after-forecast
+
+plot(fc.hwm, xaxt='n', xlim=c(2017,2017+11/12), main = "Forecast from Mutltiplicative HW", xlab = "Year", ylab = "crimes")
+axis(side=1, at= x, labels=c("2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019"))
 
  guide to ARIMA model
  https://www.machinelearningplus.com/time-series/arima-model-time-series-forecasting-python/
 import pandas as pd 
 df1 = pd.read_csv(r'/content/data/MPS Borough Level Crime (24 months).csv',index_col=0, header=[0,1])
 df1
-df1.stack()
 
-#to stack another row 
-use the level: level=0
-https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.stack.html
-
-#storing the dataframe
-df_stacked=df.stack()
-df_stacked
