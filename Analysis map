@@ -14,10 +14,38 @@ We also wanted to see if the differences in the number of COVID-19 between the b
 Furthermore, The repoducibility of our project was of great importance for us as our theme is still on going and recent.Therefore, creating a dual map on which you can add choroplethlayers on top of one another represents also a dynamic, interactive and accessible method to understand our project.
 
 -code gists
+Below is a part of our code to create a folium dual map with a choropleth layer. The full version can be found here.
 
+# Creating the dual map object
+m = folium.plugins.DualMap(location=[51.5074, 0.1278], zoom_start=10)
+
+# Adding the choropleth layer onto the map
+folium.Choropleth(
+    geo_data=boroughsdata,
+    name='COVID-19 infections',
+    data=normalized_covid_with_borough,
+    columns=['area_name', 'Normalized Total'],
+    key_on='properties.name',
+    fill_color='Blues',
+    fill_opacity=0.7,
+    line_opacity=0.5,
+    bins=6,
+    nan_fill_color='White',
+    nan_fill_opacity=0.8,
+    legend_name='Covid infections',
+    overlay=True,
+    show=True
+).add_to(m.m1)
 
 -explain the worflow in mAking the map: difficulties and explanation of changing map type 
 
 
 -limitations
-Although it provides us with a great overview of crime and COVID-19 spread, the map admits some limitations. First and foremost, 
+Although it provides us with a great overview of crime and COVID-19 spread, the map admits some limitations. 
+First and foremost, the visualisation is not the most efficient for a comparison. The markers we chose (colored layers) cannot be put on top of one another. Each category has its color code therefore you cannot visualize all four of our variables at the same time. In other words, you can only put one layer at a time on each map which restricts our analysis.
+
+Moreover the data we mapped represents London boroughs in 2020 up until November. The scope is therefore short sighted and the conclusions drawn must be interpreted accordingly. We took it into account when analysing our results and encourage any future project to reproduce it to challenge our results.
+
+
+
+
