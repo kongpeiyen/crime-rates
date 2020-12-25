@@ -7,8 +7,11 @@ We decided to create a dual Choropleth map using a folium library which allowed 
 The map translates our data into a geospatial visualisationthe geographic evolution of the data and our previous conclusions
 
 -explain motivations and what the map brings to the project 
-Our aim with this cartogram was to take a closer on the impact of COVID on crime. We wanted to add a more specific geospatial notion to our analysis. The model already provided on the impact of COVID-19 on London's crime rate. However, we wanted to see if the differences in the number of COVID-19 between the boroughs could be somehow linked to their crime rate differences. The possible relationship between crime and COVID could then be induced not only by the city's multiple lockdowns but also by the individual's own health psychology. 
-Furthermore, creating a dual map on which you can add layers on top of one another represents also a dynamic, interactive and accessible method to understand our project.
+Our aim with this cartogram was to take a closer on the impact of COVID on crime. We wanted to add a more specific geospatial notion to our analysis. The model already provided on the impact of COVID-19 on London's crime rate. However, it focused on London as a whole rather than each of its boroughs. The map added this more particular analysis angle. 
+
+We also wanted to see if the differences in the number of COVID-19 between the boroughs could be somehow linked to their crime rate differences. The possible relationship between crime and COVID could then be induced not only by the city's multiple lockdowns but also by the individual's own health psychology. Therefore creating a map would allow a more complex and thorough analysis for our project.
+
+Furthermore, The repoducibility of our project was of great importance for us as our theme is still on going and recent.Therefore, creating a dual map on which you can add choroplethlayers on top of one another represents also a dynamic, interactive and accessible method to understand our project.
 
 -code gists
 
@@ -16,4 +19,5 @@ Furthermore, creating a dual map on which you can add layers on top of one anoth
 -explain the worflow in mAking the map: difficulties and explanation of changing map type 
 
 
--limitations$
+-limitations
+Although it provides us with a great overview of crime and COVID-19 spread, the map admits some limitations. First and foremost, 
