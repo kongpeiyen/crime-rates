@@ -5,9 +5,12 @@ Explanation process: https://www.youtube.com/watch?v=4RnU5qKTfYY
 
 [1]
 import pandas as pd
+import numpy as np
+from sklearn import preprocessing
 !pip install --upgrade geopandas
 import geopandas as gpd
 import folium
+import folium.plugins
 import os
 
 [2]
@@ -61,15 +64,14 @@ clean
 
 [3]
 # Create map object
-m = folium.Map(location=[51.5074, 0.1278], zoom_start=10)
-# you can add parameters like tiles or markers with each their colours and symbol
-# Need to import the csv file of our dataset (name of boroughs must match id in json file but can change id)
+m = folium.plugins.DualMap(location=[51.5074, 0.1278], zoom_start=10)
 
 [4]
 # Variables
 boroughs = os.path.join("london_boroughs.json")
 boroughsdata = gpd.read_file("/content/london_boroughs.json")
-crime = os.path.join("content", "phe_cases_london_boroughs.csv")
+covid = os.path.join("content", "phe_cases_london_boroughs.csv")
+crime1 = os.path.join("content", "MPS Borough Level Crime (most recent 24 months).csv")
 
 [5]
 # Formatting the json file
@@ -77,37 +79,112 @@ boroughsdata['geometry'] = boroughsdata['geometry'].to_crs(epsg=4326)
 boroughsdata.to_file("london-borough.json", driver="GeoJSON")
 
 [6]
-# Create map object
-m = folium.Map(location=[51.5074, 0.1278], zoom_start=10)
-# you can add parameters like tiles or markers with each their colours and symbol
-# Need to import the csv file of our dataset (name of boroughs must match id in json file but can change id)
-
-[7]
 # Create the chloropleth function
 folium.Choropleth(
     geo_data=boroughsdata,
     name='COVID-19 infections',
-    data=clean,
-    columns=['area_name', 'total_cases'],
+    data=normalized_covid_with_borough,
+    columns=['area_name', 'Normalized Total'],
     key_on='properties.name',
-    fill_color='GnBu',
+    fill_color='Blues',
     fill_opacity=0.7,
     line_opacity=0.5,
-    bins=3,
+    bins=6,
     nan_fill_color='White',
     nan_fill_opacity=0.8,
     legend_name='Covid infections',
     overlay=True,
     show=True
-).add_to(m)
+).add_to(m.m1)
+
+folium.Choropleth(
+    geo_data=boroughsdata,
+    name='Sexual offences',
+    data=normalized_sexualoffence_with_borough,
+    columns=['Boroughs', 'Normalized Total'],
+    key_on='properties.name',
+    fill_color='Reds',
+    fill_opacity=0.7,
+    line_opacity=0.5,
+    bins=6,
+    nan_fill_color='White',
+    nan_fill_opacity=0.8,
+    legend_name='Sexual offences',
+    overlay=True,
+    show=False
+).add_to(m.m2)
+
+folium.Choropleth(
+    geo_data=boroughsdata,
+    name='Drug offences',
+    data=normalized_drugoffence_with_borough,
+    columns=['Boroughs', 'Normalized Total'],
+    key_on='properties.name',
+    fill_color='Greens',
+    fill_opacity=0.7,
+    line_opacity=0.5,
+    bins=6,
+    nan_fill_color='White',
+    nan_fill_opacity=0.8,
+    legend_name='Drug offences',
+    overlay=True,
+    show=True
+).add_to(m.m2)
+
+folium.Choropleth(
+    geo_data=boroughsdata,
+    name='Burglary',
+    data=normalized_burglary_with_borough,
+    columns=['Boroughs', 'Normalized Total'],
+    key_on='properties.name',
+    fill_color='Purples',
+    fill_opacity=0.7,
+    line_opacity=0.5,
+    bins=6,
+    nan_fill_color='White',
+    nan_fill_opacity=0.8,
+    legend_name='Burglaries',
+    overlay=True,
+    show=False
+).add_to(m.m2)
 
 m
 
+[7]
+# Showing the boroughs' name
+mnames=folium.GeoJson(
+    data=boroughsdata,
+    name="Map of London Boroughs",
+    style_function = lambda feature: dict(fillColor= '#00000000', color= '#00000000', weight=0, opacity=-1000),
+    overlay=True,
+    control=False,
+    show=True,
+    tooltip=folium.features.GeoJsonTooltip(
+            fields=['name'],
+            labels=False)
+).add_to(m.m1)
+m.m1.keep_in_front(mnames)
+
+mnames=folium.GeoJson(
+    data=boroughsdata,
+    name="Map of London Boroughs",
+    style_function = lambda feature: dict(fillColor= '#00000000', color= '#00000000', weight=0, opacity=-1000),
+    overlay=True,
+    control=False,
+    show=True,
+    tooltip=folium.features.GeoJsonTooltip(
+            fields=['name'],
+            labels=False)
+).add_to(m.m2)
+m.m2.keep_in_front(mnames)
+
+[8]
+#Adding the layer control function
+folium.LayerControl(collapsed=False).add_to(m) 
+
+[9]
 # Save map as html
 m.save("map.html")
-
---> Add the layers
---> Do it 3 times for the three types of crime
 
 
 
@@ -130,43 +207,10 @@ import os
 
 
 
-# Reshaping the files
-crime = pd.read_csv('MPS Borough Level Crime (most recent 24 months).csv', index_col=0)
-crime
-
-
-crime.rename(columns={"LookUp_BoroughName": "Boroughs"}, inplace=True)
-crime.rename(columns={"MajorText": "Crime type"}, inplace=True)
-
-crime.drop (['MinorText', "201812", "201901", "201902", "201903", "201904", "201905", "201906", "201907", "201908", "201909", "201910", "201911", "201912"], axis=1, inplace=True)
-
-crime.drop(
-    labels=["Arson and Criminal Damage", "Miscellaneous Crimes Against Society", "Possession of Weapons", "Public Order Offences", "Robbery", "Theft", "Vehicle Offences", "Violence Against the Person"],
-    axis=0,
-    inplace=True
-)
-crime.head()
 
 
 
-cleancrime = crime.groupby(['MajorText','Boroughs']).sum().reset_index()
 
-
-
-cleancrime['Total'] = cleancrime.loc[:,['202001', '202002', '202003', '202004', '202005', '202006', '202007', '202008', '202009', '202010', '202011']].sum(axis=1)
-cleancrime.head()
-
-
-
-cleancrime.drop (['202001', '202002', '202003', '202004', '202005', '202006', '202007', '202008', '202009', '202010', '202011'], axis=1, inplace=True)
-cleancrime.head()
-
-
-
-burglary= cleancrime.iloc[0:33]
-burglary.drop (["MajorText"], axis=1, inplace=True)
-pd.set_option("display.max_rows", None, "display.max_columns", None)
-burglary
 
 #normalizing for burglary
 #got the normalization code from here: https://medium.com/@rrfd/standardize-or-normalize-examples-in-python-e3f174b65dfchttps://medium.com/@rrfd/standardize-or-normalize-examples-in-python-e3f174b65dfc
@@ -204,8 +248,7 @@ normalized_X = preprocessing.normalize([x_array])
 print(normalized_X)
 
 
-covidcases = pd.read_csv("phe_cases_london_boroughs.csv")
-covidcases
+
 
 covidcases.drop(covidcases.index[0:9664], inplace=True)
 clean = covidcases[['area_name','total_cases']]
