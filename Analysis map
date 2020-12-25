@@ -1,0 +1,19 @@
+CHOROPLETH MAP
+
+-explain how the map works
+We decided to create a dual Choropleth map using a folium library which allowed to illustrate and compare the evolution of our selected crimes and COVID-19 spread. In other words, we depicted the amount of each crime type (Burglary, Drug offences and Sexual offences) across the different London boroughs in 2020 compared to the amount of covid cases in each borough during the same time period. 
+
+-analysis of map's results
+The map translates our data into a geospatial visualisationthe geographic evolution of the data and our previous conclusions
+
+-explain motivations and what the map brings to the project 
+Our aim with this cartogram was to take a closer on the impact of COVID on crime. We wanted to add a more specific geospatial notion to our analysis. The model already provided on the impact of COVID-19 on London's crime rate. However, we wanted to see if the differences in the number of COVID-19 between the boroughs could be somehow linked to their crime rate differences. The possible relationship between crime and COVID could then be induced not only by the city's multiple lockdowns but also by the individual's own health psychology. 
+Furthermore, creating a dual map on which you can add layers on top of one another represents also a dynamic, interactive and accessible method to understand our project.
+
+-code gists
+
+
+-explain the worflow in mAking the map: difficulties and explanation of changing map type 
+
+
+-limitations$
