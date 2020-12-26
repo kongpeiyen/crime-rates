@@ -42,7 +42,7 @@ folium.Choropleth(
 ).add_to(m.m1)
 
 -explain the worflow in mAking the map: difficulties and explanation of changing map type 
-
+Our inital objective was to create an time evolutive map of crime in the boroughs of London. However, we struggled to format our data to fit the complex format required for this type of map, especially make the month columns be considered as date by our code. Therefore, after many unfruitful attempts we found the idea of comparing the number covid cases and the crime rate. We believed there would be more information to analyse as well as being more simplifed and therefore more accessible visualisation. Thus, we changed our map focus and started from scratch in December. which later proved to be the right decision considering the analytical possibilities it provided.
 
 -limitations
 Although it provides us with a great overview of crime and COVID-19 spread, the map admits some limitations. 
