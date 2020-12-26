@@ -55,6 +55,40 @@ D] CONCLUSION
 -how does this resaerch fit into the wider context and what can still be done in future research 
 
 
+
+
+
+*Cleaning of the data for the predictive model*
+
+In building the ARIMA predictive model and [insert name of last visualisation] one of the main challenges and consequential components of the code was the section on data cleaning. 
+
+The two datasets we were working with, downloaded from the metropolitan police website were indeed not in the right format for importing into our code. To make our visualisations the most reproducible we wrote a code to ‘clean our data’. 
+We had four main goals in re-formatting our raw datasets: 
+We have two data sets: one for the last 24 months, and one that starts in 2008 and ends where the first one starts and we needed to combine them  into one dataframe: 
+>INSERT RELEVANT CODE GIST
+We were able to do this by...
+
+The data set downloaded from the Met Police website had many crimes but our research project is limited to the six following offences: ‘Burglary - Business and Community’, ‘Burglary - Residential’, ‘Drug Trafficking’, ‘Possession of Drugs’, ‘Rape’ and ‘Other Sexual Offenses’. Hence we needed our code to get rid of of all the other crimes. 
+ >INSERT RELEVANT CODE GIST
+We were able to do this by...
+
+Our datasets were defined geographically by borough in London. This was an issue for the visualisations we wished to make because we needed the dataset to show the respective crimes according to time, more specifically  according to months. Thus, our aim was to rid ourselves of the geographic variable by summing up the crimes in all boroughs for a given month. The result would be a table of crimes committed in London for each month between 2008 and 2020..
+ >INSERT RELEVANT CODE GIST
+We were able to do this by...
+
+Finally, we needed to change the names of the crimes in one of our data sets so that when we combine the two, the crimes, which are the same, would have the same appellation. For example, ‘Burglary- Residential’ was called ‘Burglary in Dwellings’ in one data set and we changed it to ‘Burglary-Residential’ to assure the consistency of our data. 
+  >INSERT RELEVANT CODE GIST
+We were able to do this by...
+
+
+
+
+
+
+
+
+
+
 #research on interpreting data anaslyis 
 
 ARIMA MODEL
