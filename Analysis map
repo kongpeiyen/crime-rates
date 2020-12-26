@@ -1,12 +1,12 @@
 CHOROPLETH MAP
 
 -explain how the map works
-We decided to create a dual Choropleth map using a folium library which allowed to illustrate and compare the evolution of our selected crimes and COVID-19 spread. In other words, we depicted the normalised amount of each crime type (Burglary, Drug offences and Sexual offences) across the different London boroughs in 2020 compared to the amount of covid cases in each borough during the same time period. The boroughs which don't have values associated to them are colored in white.
+We decided to create a dual Choropleth map using a folium library which allowed to illustrate and compare the evolution of our selected crimes and COVID-19 spread. In other words, we depicted the normalised amount of each crime type (Burglary, Drug offences and Sexual offences) across the different London boroughs in 2020, compared to the amount of covid cases in each borough during the same time period. The boroughs which don't have values associated to them are colored in white.
 
 
 -analysis of map's results
 The map translates our data into a geospatial comparative visualisation. 
-In that sense, we can see higher rates of COVID-cases at the North of the Thames, especially away from the central London (Newham, Redbridge, Havering on the East side and Barnet and Ealing on th West side).
+From the map, we can see higher rates of COVID-cases at the North of the Thames, especially away from the central London (Newham, Redbridge, Havering on the East side and Barnet and Ealing on th West side).
 
 However, if we look at our 3 types of crime's rate we can see they are more emphasised towards central London Boroughs especially Westminster, Tower Hamlets and Lambeth (Although, some high rates can be seen on the outer boroughs like Croydon and Barnet). This may be due, for example in Westminster, to the numbers of commuters 
 
@@ -46,10 +46,22 @@ folium.Choropleth(
 ).add_to(m.m1)
 
 
--explain the worflow in mAking the map: difficulties and explanation of changing map type 
+-explain the worflow in making the map
+We firstly had to clean the data again, on top of the cleaned data that we had done for the three crimes as we needed to include the boroughs for our map. 
+
+For the data set, we had to delete the columns which contained data that we did not need, and also rename certain columns as we did not want to break our crimes down into subgroups for our map. This is because we wanted consolidated information for the three main crimes we were analysing  - burglary, sexual offences and drug offences. 
+Following that, we wanted to split our data into the three main crimes as mentioned earlier. Hence, we found code to do so. 
+Lastly, after splitting the data, we had to normalize the numbers to ensure that the data and therefore the colours reflected on the chloropleth map were not affected by the population size of each borough. 
+Hence, normalization was done on the three main crimes, as well as the number of COVID infections in each borough. 
+
+
+
+-difficulties and explanation of changing map type 
 Our inital objective was to create an time evolutive map of crime in the boroughs of London. However, we struggled to format our data to fit the complex format required for this type of map, especially make the month columns be considered as date by our code. 
 
 Therefore, after many unfruitful attempts we found the idea of comparing the number covid cases and the crime rate. We believed there would be more information to analyse as well as being more simplifed and therefore more accessible visualisation. Thus, we changed our map focus and started from scratch in December. which later proved to be the right decision considering the analytical possibilities it provided.
+
+
 
 
 -limitations
@@ -58,7 +70,7 @@ First and foremost, the visualisation is not the most efficient for a comparison
 
 Moreover, our datasets either don't mention the City of London borough (crime dataset) or associated it with Hackney (covid cases dataset). Therefore, we lack information for a full picture which reduce our analysis' efficiency.
 
-Lastly, the data we mapped represents London boroughs in 2020 up until November. The scope is therefore short sighted and the conclusions drawn must be interpreted accordingly. We took it into account when analysing our results and encourage any future project to reproduce it to challenge our results.
+Lastly, the data we mapped represents London boroughs in 2020 up until November. The scope is therefore short sighted and the conclusions drawn must be interpreted accordingly. We took it into account when analysing our results and encourage any future project to reproduce it to build upon our results.
 
 
 
