@@ -3,12 +3,15 @@ CHOROPLETH MAP
 -explain how the map works
 We decided to create a dual Choropleth map using a folium library which allowed to illustrate and compare the evolution of our selected crimes and COVID-19 spread. In other words, we depicted the normalised amount of each crime type (Burglary, Drug offences and Sexual offences) across the different London boroughs in 2020 compared to the amount of covid cases in each borough during the same time period. The boroughs which don't have values associated to them are colored in white.
 
+
 -analysis of map's results
 The map translates our data into a geospatial comparative visualisation. 
 In that sense, we can see higher rates of COVID-cases at the North of the Thames, especially away from the central London (Newham, Redbridge, Havering on the East side and Barnet and Ealing on th West side).
+
 However, if we look at our 3 types of crime's rate we can see they are more emphasised towards central London Boroughs especially Westminster, Tower Hamlets and Lambeth (Although, some high rates can be seen on the outer boroughs like Croydon and Barnet). This may be due, for example in Westminster, to the numbers of commuters 
-Therefore, we cannot say that there is a relationship between the number of Covid cases and the rate of Burglary, Sexual offences or Drug offences
-the geographic evolution of the data and our previous conclusions
+
+Therefore, we cannot say that there is a relationship between the number of Covid cases and the rate of Burglary, Sexual offences or Drug offences. The rare similarities encountered may be due to the number of commuters through the borough.
+
 
 -explain motivations and what the map brings to the project 
 Our aim with this cartogram was to take a closer on the impact of COVID on crime. We wanted to add a more specific geospatial notion to our analysis. The model already provided on the impact of COVID-19 on London's crime rate. However, it focused on London as a whole rather than each of its boroughs. The map added this more particular analysis angle. 
@@ -16,6 +19,7 @@ Our aim with this cartogram was to take a closer on the impact of COVID on crime
 We also wanted to see if the differences in the number of COVID-19 between the boroughs could be somehow linked to their crime rate differences. The possible relationship between crime and COVID could then be induced not only by the city's multiple lockdowns but also by the individual's own health psychology. Therefore creating a map would allow a more complex and thorough analysis for our project.
 
 Furthermore, The repoducibility of our project was of great importance for us as our theme is still on going and recent.Therefore, creating a dual map on which you can add choroplethlayers on top of one another represents also a dynamic, interactive and accessible method to understand our project.
+
 
 -code gists
 Below is a part of our code to create a folium dual map with a choropleth layer. The full version can be found here:
@@ -41,8 +45,12 @@ folium.Choropleth(
     show=True
 ).add_to(m.m1)
 
+
 -explain the worflow in mAking the map: difficulties and explanation of changing map type 
-Our inital objective was to create an time evolutive map of crime in the boroughs of London. However, we struggled to format our data to fit the complex format required for this type of map, especially make the month columns be considered as date by our code. Therefore, after many unfruitful attempts we found the idea of comparing the number covid cases and the crime rate. We believed there would be more information to analyse as well as being more simplifed and therefore more accessible visualisation. Thus, we changed our map focus and started from scratch in December. which later proved to be the right decision considering the analytical possibilities it provided.
+Our inital objective was to create an time evolutive map of crime in the boroughs of London. However, we struggled to format our data to fit the complex format required for this type of map, especially make the month columns be considered as date by our code. 
+
+Therefore, after many unfruitful attempts we found the idea of comparing the number covid cases and the crime rate. We believed there would be more information to analyse as well as being more simplifed and therefore more accessible visualisation. Thus, we changed our map focus and started from scratch in December. which later proved to be the right decision considering the analytical possibilities it provided.
+
 
 -limitations
 Although it provides us with a great overview of crime and COVID-19 spread, the map admits some limitations. 
