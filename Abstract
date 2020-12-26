@@ -1,0 +1,22 @@
+#Abstract for home page on website 
+
+Our project aimed to explore the relationship between crime and covid-19 in London. Covid-19 is a new occurence, and no previous study has done research on crime and Covid-19, specifically in the context of London.
+We focused on three crimes for our project - burglary, sexual offences and drug offences. This was narrowed down after extensive literature review. 
+For each crime, we came up with our hypotheses as follows: 
+  Hypothesis 1: we hypothesize that the number of residential burglaries decreased after the outbreak of covid19
+  Hypothesis 2:  we hypothesize that the number of commercial burglaries increased after the outbreak of covid19
+  Hypothesis 3: we hypothesize that the number of sexual assaults changed after the outbreak of covid19
+  Hypothesis 4: we hypothesize that the number of drug offenses changed after the outbreak of covid19 
+  
+To conduct our research, we first cleaned our data. We presented this cleaned data in the form of (what we choose) in order to show (aim).
+We then did a predictive model to compare how crime rates would have been if covid-19 had not occured, and compared it to the actual 2020 crime rate.
+We then built on this predictive model with our interactive chloropleth map, which was designed to view how 
+
+After our extensive data visualisations, we were able to analyse our data we had collected. The results we obtained were as follows.
+(state results for each) 
+
+This hence leads to (state which) hypotheses being accepted/ rejected.
+
+We do acknowledge that there are limitations to our project - such as (state).
+
+However, we have ensured that our process is as reproducible as possible. We have included our steps taken for each section, and have stated where we obtained our data from. We are more than happy for others to build on our findings regarding this area.  
