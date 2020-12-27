@@ -160,4 +160,49 @@ axis(side=1, at= x, labels=c("2008","2009","2010","2011","2012","2013","2014","2
 import pandas as pd 
 df1 = pd.read_csv(r'/content/data/MPS Borough Level Crime (24 months).csv',index_col=0, header=[0,1])
 df1
+import pandas as pd
+df1 = pd.read_csv(r'/content/data/MPS Borough Level Crime (24 months).csv',index_col=0)
+df1.drop (['LookUp_BoroughName'], axis=1, inplace=True)
+df1.drop(
+    labels=["Arson and Criminal Damage","Miscellaneous Crimes Against Society", "Possession of Weapons", "Public Order Offences", "Robbery", "Theft", "Vehicle Offences", "Violence Against the Person"],
+    axis=0,
+    inplace=True
+)
+df1=df1.reset_index(drop=True) 
+df1.columns.values[0]="MONTH"
+#df1 = df1.set_index('MinorText', drop=True).rename_axis(None)
+pd.options.display.max_rows = 198
+df1.head(198)
+df1= df1.groupby(by='MONTH').sum()
+df1.T.head()
+df2 = pd.read_csv(r'/content/data/MPS_Borough_Level_Crime_Historic.csv',index_col=1) 
+df2.drop (['Borough'], axis=1, inplace=True) 
+df2.drop(
+    labels=["Criminal Damage","Fraud or Forgery", "Other Notifiable Offences", "Robbery", "Theft and Handling", "Violence Against the Person"], 
+    axis=0, 
+    inplace=True 
+)
+df2=df2.reset_index(drop=True) 
+df2.columns.values[0]="MONTH"
+df2.rename(index = {"Burglary in Other Buildings": "Burglary - Business and Community", 
+                     "Burglary in a Dwelling":"Burglary - Residential", "Other Sexual":"Other Sexual Offences"}, 
+                                 inplace = True) 
+df2= df2.groupby(by='MONTH').sum()
+df2.rename(index = {"Burglary in Other Buildings": "Burglary - Business and Community", 
+                     "Burglary in a Dwelling":"Burglary - Residential", "Other Sexual":"Other Sexual Offences", "Possession Of Drugs":"Possession of Drugs"}, 
+                                 inplace = True) 
+df2.drop(
+    labels=["Other Drugs"], 
+    axis=0, 
+    inplace=True
+)
 
+df2.T.head()
+df3 = pd.concat([df2, df1], axis=1, join='inner')
+df3.head()
+df3_final = df3.T
+df3_final.head()
+df3 = pd.concat([df2, df1], axis=1, join='inner')
+df3.head()
+df3_final = df3.T
+df3_final.head()
