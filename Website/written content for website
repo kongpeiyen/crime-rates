@@ -3,6 +3,34 @@ A]INTRODUCTION PAGE
 1) content and motivation 
 -> see proposal and presentation notes 
 
+The international covid-19 pandemic is a period for social upheaval. It is essential to research the full impact that coronavirus and the measures enforced by governments as a result of the outbreak have on individuals and populations. Our research will contribute to the search of the impact of covid-19 in London.
+While we will be careful not to generalize our research, if our data analysis suggests a correlation between covid-19 and variation of crime statistics in 2020 then our study can be a basis for further research on the matter. 
+However, not all kinds of crimes saw an increase during the pandemic (Ashby, 2020). For example, previous research on burglary presents conflicting results. Therefore, it is important to conduct further studies as to clarify this discrepancy and to allow the government or the police to take actions. 
+
+
+
+*Interest in studying an event at the forefront of new headlines and impacting our everyday life ( I would delete this, does crime in London during covid really impact our life?)
+
+
+*Studies on specific types of crime, conducted in a particular time-frame and concentrated in an area are scarce and needed (Stickle and Felson 2020). That is why we have chosen to look at the impact of the pandemic on X, Y and Z in London.
+
+
+*Understanding how crime has changed provides insight for police forces and policy makers on how to influence future crime reduction
+
+
+*By challenging the criminal and justice systems studying the effects of the pandemic presents a unique opportunity to reassess the functioning of these systems in particular the incarceration policies (Miller and Blumstein 2020)
+
+
+*Understanding what crimes have increased is essential to raising awareness for victims and people at risk. Governments are submerged with dealing with the pandemic but people are not just suffering from infection and support and relief is needed for survivors and potential victims for whom government imposed safety measures present danger, such as victims of domestic abuse.
+
+
+*Shedding light on the increase of crime may also help enlarge societal sensibility and further urge people to respect government imposed lockdowns for these to last less time. 
+
+
+
+
+
+
 2) aims and relevance of project
 -> see proposal notes 
 
@@ -10,6 +38,12 @@ A]INTRODUCTION PAGE
 -> see proposal and presentation notes 
 -> see research 
 -> google drive
+
+
+
+
+
+
 
 -section on biographies
 -hypothesis
@@ -36,6 +70,7 @@ Alternate Hypothesis 4: we hypothesize that the number of drug offences did not 
 
 -presentation of data visualisations
 
+
 B] DATA COLLECTION 
 
 1) sources of data 
@@ -46,6 +81,59 @@ B] DATA COLLECTION
 ->explain the steps of cleaning the data 
 ->difficulties cleaning the data 
 ->use for cleaned data 
+
+*Cleaning of the data for the predictive model*
+
+In building the ARIMA predictive model and bar charts, one of the main challenges and consequential components of the code was the section on data cleaning. 
+
+The two datasets we were working with, downloaded from the Metropolitan Police website were not in the correct format for importing into our code. To make our visualisations the most reproducible we wrote a code to ‘clean our data’. 
+We had five goals in re-formatting our raw datasets: 
+To get rid of the crimes our research was not focussing on:
+The data sets downloaded from the Met Police website had many crimes, however, the group decided to only look at 6: ‘Burglary - Business and Community’, ‘Burglary - Residential’, ‘Drug Trafficking’, ‘Possession of Drugs’, ‘Rape’ and ‘Other Sexual Offenses’. Hence, we needed our code to get rid of all the other crimes. 
+df1.drop(labels=["Arson and Criminal Damage","Miscellaneous Crimes Against Society", "Possession of Weapons", "Public Order Offences", "Robbery", "Theft", "Vehicle Offences", "Violence Against the Person"],
+    axis=0,
+    inplace=True
+Note: this was also done for df2
+ >INSERT RELEVANT CODE GIST
+
+To get rid of the Borough column.
+Our datasets were defined geographically by borough in London. The visualisations we wished to make needed the dataset to show the respective crime and time in mm/yyyy, irregardless of which borough. 
+df1.drop (['LookUp_BoroughName'], axis=1, inplace=True) 
+Note: this was also done for df2
+>INSERT RELEVANT CODE GIST
+
+To change the names of the crimes in one of the data sets so that the same crimes had the same name throughout the dataframe:
+When combining the two data sets, the crimes would have the same name. For example, ‘Burglary- Residential’ was called ‘Burglary in Dwellings’ in one of the data sets. We changed it to ‘Burglary-Residential’ to ensure consistency of our data. 
+df2.rename(index = {"Burglary in Other Buildings": "Burglary - Business and Community",  "Burglary in a Dwelling":"Burglary - Residential", "Other Sexual":"Other Sexual Offences"}, inplace = True) 
+ 
+ >INSERT RELEVANT CODE GIST
+
+To sum all the values for each crime for every month
+Using the group.by() function so that we could plot the sums for our visualisations.
+df1= df1.groupby(by='MONTH').sum()
+
+>INSERT RELEVANT CODE GIST
+
+To transpose our data set
+So that all the variables would be in columns, rather than crime being in rows and months in columns.
+df1.T.head()
+
+>INSERT RELEVANT CODE GIST
+
+To combine the two data set 
+We have two data sets: one for the last 24 months (2018-2020), and one that starts in 2008 and ends where the first one starts and we needed to combine them into one dataframe.
+df3 = pd.concat([df2, df1], axis=1, join='inner')
+df3.head()
+df3_final = df3.T
+df3_final.head()
+
+>INSERT RELEVANT CODE GIST
+
+In order to use the cleaned data in the predictive model, we selected each crime according to time from the final data frame: 
+rape = df3_final[["Rape"]]
+rape.head()
+
+
 
 C]DATA VISUALISATIONS AND ANALYSIS 
 
@@ -79,27 +167,6 @@ D] CONCLUSION
 
 
 
-*Cleaning of the data for the predictive model*
-
-In building the ARIMA predictive model and [insert name of last visualisation] one of the main challenges and consequential components of the code was the section on data cleaning. 
-
-The two datasets we were working with, downloaded from the metropolitan police website were indeed not in the right format for importing into our code. To make our visualisations the most reproducible we wrote a code to ‘clean our data’. 
-We had four main goals in re-formatting our raw datasets: 
-We have two data sets: one for the last 24 months, and one that starts in 2008 and ends where the first one starts and we needed to combine them  into one dataframe: 
->INSERT RELEVANT CODE GIST
-We were able to do this by...
-
-The data set downloaded from the Met Police website had many crimes but our research project is limited to the six following offences: ‘Burglary - Business and Community’, ‘Burglary - Residential’, ‘Drug Trafficking’, ‘Possession of Drugs’, ‘Rape’ and ‘Other Sexual Offenses’. Hence we needed our code to get rid of of all the other crimes. 
- >INSERT RELEVANT CODE GIST
-We were able to do this by...
-
-Our datasets were defined geographically by borough in London. This was an issue for the visualisations we wished to make because we needed the dataset to show the respective crimes according to time, more specifically  according to months. Thus, our aim was to rid ourselves of the geographic variable by summing up the crimes in all boroughs for a given month. The result would be a table of crimes committed in London for each month between 2008 and 2020..
- >INSERT RELEVANT CODE GIST
-We were able to do this by...
-
-Finally, we needed to change the names of the crimes in one of our data sets so that when we combine the two, the crimes, which are the same, would have the same appellation. For example, ‘Burglary- Residential’ was called ‘Burglary in Dwellings’ in one data set and we changed it to ‘Burglary-Residential’ to assure the consistency of our data. 
-  >INSERT RELEVANT CODE GIST
-We were able to do this by...
 
 
 
