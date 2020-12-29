@@ -6,7 +6,15 @@ We decided to create a dual Choropleth map using a folium library which allowed 
 
 -analysis of map's results
 The map translates our data into a geospatial comparative visualisation. 
-From the map, we can see higher rates of COVID-cases at the North of the Thames, especially away from the central London (Newham, Redbridge, Havering on the East side and Barnet and Ealing on th West side).
+
+The map that is blue in colour represents the normalized data of Covid-19 cases in each borough. On this map, we can see higher rates of COVID-19 cases at the North of the Thames, especially away from central London (in Newham, Redbridge, Havering on the East side and Barnet and Ealing on the West side).
+
+The map that is coloured in purple represents the normalized data of burglaries in each borough. 
+For the most part, especially in central London, there seems to be a lower number of Covid-19 cases and higher rates of burglaries, while in xx area, more Covid-19 cases seems to reflect a lower rate of burglaries. 
+This seems to show that there is a negative correlation between covid cases and burglaries, where the higher the rates of Covid-19 cases, the lower the rate of burglaries. 
+
+
+
 
 However, if we look at our 3 types of crime's rate we can see they are more emphasised towards central London Boroughs especially Westminster, Tower Hamlets and Lambeth (Although, some high rates can be seen on the outer boroughs like Croydon and Barnet). This may be due, for example in Westminster, to the numbers of commuters 
 
