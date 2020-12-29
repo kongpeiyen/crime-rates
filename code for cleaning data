@@ -157,24 +157,48 @@ axis(side=1, at= x, labels=c("2008","2009","2010","2011","2012","2013","2014","2
 
  guide to ARIMA model
  https://www.machinelearningplus.com/time-series/arima-model-time-series-forecasting-python/
-import pandas as pd 
-df1 = pd.read_csv(r'/content/data/MPS Borough Level Crime (24 months).csv',index_col=0, header=[0,1])
-df1
+
+
+
+
+
 import pandas as pd
+
+#Import data set 1
+
 df1 = pd.read_csv(r'/content/data/MPS Borough Level Crime (24 months).csv',index_col=0)
+
+#Get rid of Borough column
+
 df1.drop (['LookUp_BoroughName'], axis=1, inplace=True)
+
+#Get rid of crimes we are not researching
+
 df1.drop(
     labels=["Arson and Criminal Damage","Miscellaneous Crimes Against Society", "Possession of Weapons", "Public Order Offences", "Robbery", "Theft", "Vehicle Offences", "Violence Against the Person"],
     axis=0,
     inplace=True
 )
 df1=df1.reset_index(drop=True) 
+
+#Rename first column
 df1.columns.values[0]="MONTH"
-#df1 = df1.set_index('MinorText', drop=True).rename_axis(None)
+
+# OPTIONAL Display all the rows
+
 pd.options.display.max_rows = 198
 df1.head(198)
+
+# Summing up all each crime for every month for all the boroughs
+
 df1= df1.groupby(by='MONTH').sum()
+
+#Transposing and priting
+
 df1.T.head()
+
+#Same as for df1
+
 df2 = pd.read_csv(r'/content/data/MPS_Borough_Level_Crime_Historic.csv',index_col=1) 
 df2.drop (['Borough'], axis=1, inplace=True) 
 df2.drop(
@@ -191,6 +215,8 @@ df2= df2.groupby(by='MONTH').sum()
 df2.rename(index = {"Burglary in Other Buildings": "Burglary - Business and Community", 
                      "Burglary in a Dwelling":"Burglary - Residential", "Other Sexual":"Other Sexual Offences", "Possession Of Drugs":"Possession of Drugs"}, 
                                  inplace = True) 
+                                 
+# Get rid of sub-crime we are not researching
 df2.drop(
     labels=["Other Drugs"], 
     axis=0, 
@@ -198,11 +224,15 @@ df2.drop(
 )
 
 df2.T.head()
+
+#Concating df1 and df2
+
 df3 = pd.concat([df2, df1], axis=1, join='inner')
 df3.head()
 df3_final = df3.T
 df3_final.head()
-df3 = pd.concat([df2, df1], axis=1, join='inner')
-df3.head()
-df3_final = df3.T
+
+#Renaming columns so that they have the same name
+import pandas as pd
+df3_final.rename(columns={"Burglary - Business and Community":"Burglary - Commercial"}, inplace=True)
 df3_final.head()
