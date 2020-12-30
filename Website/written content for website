@@ -55,10 +55,18 @@ We were also motivated by the opportunity to research a topic with social signif
 
 
 
-3) explanation of all the variables, city and timeframe 
--> see proposal and presentation notes 
--> see research 
--> google drive
+
+2) explanation of all the variables, city and timeframe 
+
+#Why London?
+We chose London because the city has the 3rd highest crime rate in the UK, with 94.9 crimes per 1000 people. Therefore, we expect that there will be enough data and statistics available to support our analysis. 
+Additionally, London has the largest population in the UK. hence we felt like the findings from this project would impact and benefit a huge number of individuals
+Lastly, to our knowledge and research, there has been no other study that has covered the effect of covid on these specific crimes in London. Thus, we would like to plug that gap in research through this project.  
+
+#Why this timeframe?
+The timeframe we are using is from 2008 to 2020.  
+We chose this timeframe becase of the datasets which were availble to us found and the predictive model we planned to construct. In order to make a an accurate prediction, a large sample of crime data from years previous to 2020 is needed. We thought that monthly crime rates over a period of 12 years would be a sufficiently large series to make an accurate prediction of crime trends if there had not been an outbrek of coronavirus n 2020. 
+While we could make a week-to-week or year-on-year comparisons of weekly or monthly crime counts, we thought that these comparisons risk drawing false conclusions and may not be accurate because they ignore long-term trends (which affect year-on-year comparisons) and seasonal variations (which complicate week to week comparisons) (Ashby, 2020). Thus, we chose to use monthly crim rates for our data. We expect our monthly analysis to take into account the seasonal patterns of crime and therefore, make for a accurate comparison of crime statistics. 
 
 
 
