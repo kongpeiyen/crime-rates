@@ -1,0 +1,186 @@
+# Summing the values of every months of 2015,2016,2017.2018 and 2019 to get a number for each borough for the whole year
+
+c = df3.groupby(['MONTH']).sum().reset_index()
+c['Total2015'] = c.loc[:,['201501', '201502', '201503', '201504', '201505', '201506', '201507', '201508', '201509', '201510', '201511','201512']].sum(axis=1)
+c['Total2016'] = c.loc[:,['201601', '201602', '201603', '201604', '201605', '201606', '201607', '201608', '201609', '201610', '201611','201612']].sum(axis=1)
+c['Total2017'] = c.loc[:,['201701', '201702', '201703', '201704', '201705', '201706', '201707', '201708', '201709', '201710', '201711','201712']].sum(axis=1)
+c['Total2018'] = c.loc[:,['201801', '201802', '201803', '201804', '201805', '201806', '201807', '201808', '201809', '201810', '201811','201812']].sum(axis=1)
+c['Total2019'] = c.loc[:,['201901', '201902', '201903', '201904', '201905', '201906', '201907', '201908', '201909', '201910', '201911','201912']].sum(axis=1)
+c.drop (['200801', '200802', '200803', '200804', '200805', '200806', '200807', '200808', '200809', '200810', '200811','200812','200901', '200902', '200903', '200904', '200905', '200906', '200907', '200908', '200909', '200910', '200911','200912','201001', '201002', '201003', '201004', '201005', '201006', '201007', '201008', '201009', '201010', '201011','201012','201101', '201102', '201103', '201104', '201105', '201106', '201107', '201108', '201109', '201110', '201111','201112','201201', '201202', '201203', '201204', '201205', '201206', '201207', '201208', '201209', '201210', '201211','201212','201301', '201302', '201303', '201304', '201305', '201306', '201307', '201308', '201309', '201310', '201311','201312','201401', '201402', '201403', '201404', '201405', '201406', '201407', '201408', '201409', '201410', '201411','201412'], axis=1, inplace=True)
+c.head()
+
+c.drop (['201501', '201502', '201503', '201504', '201505', '201506', '201507', '201508', '201509', '201510', '201511','201512','201601', '201602', '201603', '201604', '201605', '201606', '201607', '201608', '201609', '201610', '201611','201612','201701', '201702', '201703', '201704', '201705', '201706', '201707', '201708', '201709', '201710', '201711','201712','201801', '201802', '201803', '201804', '201805', '201806', '201807', '201808', '201809', '201810', '201811','201812','201901', '201902', '201903', '201904', '201905', '201906', '201907', '201908', '201909', '201910', '201911','201912','202001', '202002', '202003', '202004', '202005', '202006', '202007', '202008', '202009', '202010', '202011'], axis=1, inplace=True)
+c.head(6)
+
+import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+labels = ['2015', '2016', '2017', '2018', '2019']
+burgr = [44682, 43023, 54512, 65240, 59639]
+burgc = [25890, 25380, 35246, 37559, 21055]
+drugt = [3523, 3520, 3512, 2619, 3184]
+otherso = [10376, 11147, 12099, 13176, 12097]
+possod = [36961, 36019, 33413, 36054, 44751]
+rape = [5454, 6300, 7659, 8828, 7926]
+
+
+x = np.arange(len(labels))  # the label locations
+width = 0.15  # the width of the bars
+
+
+fig, ax = plt.subplots()
+rects1 = ax.bar(x - width, burgr, width, label='Burglaries - Residential')
+rects2 = ax.bar(x, burgc, width, label='Burglaries - Commercial')
+rects3 = ax.bar(x - width*2, drugt, width, label='Drug Trafficking')
+rects4 = ax.bar(x + width*2, possod, width, label='Possession of Drugs')
+rects5 = ax.bar(x + width, rape, width, label='Rape')
+#rects6 = ax.bar(x + width/2, otherso, width, label='Other Sexual Offences')
+
+# Add some text for labels, title and custom x-axis tick labels, etc.
+ax.set_ylabel('Number of crimes')
+ax.set_title('Evolution of X between 2015 and 2019')
+ax.set_xticks(x)
+ax.set_xticklabels(labels)
+ax.legend()
+
+
+def autolabel(rects):
+    """Attach a text label above each bar in *rects*, displaying its height."""
+    for rect in rects:
+        height = rect.get_height()
+        ax.annotate('{}'.format(height),
+                    xy=(rect.get_x() + rect.get_width() / 2, height),
+                    xytext=(0, 3),  # 3 points vertical offset
+                    textcoords="offset points",
+                    ha='center', va='bottom')
+
+
+autolabel(rects1)
+autolabel(rects2)
+autolabel(rects3)
+autolabel(rects4)
+autolabel(rects5)
+#autolabel(rects6)
+
+
+fig.tight_layout()
+
+plt.show()
+
+import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
+labels = ['2015', '2016', '2017', '2018', '2019']
+drugt = [3523, 3520, 3512, 2619, 3184]
+possod = [36961, 36019, 33413, 36054, 44751]
+
+x = np.arange(len(labels))  # the label locations
+width = 0.40  # the width of the bars
+
+
+fig, ax = plt.subplots()
+rects1 = ax.bar(x + width/2, drugt, width, label='Drug Trafficking')
+rects2 = ax.bar(x - width/2, possod, width, label='Possession of Drugs')
+
+
+# Add some text for labels, title and custom x-axis tick labels, etc.
+ax.set_ylabel('Number of offences')
+ax.set_title('Evolution of Drug Offences between 2015 and 2019')
+ax.set_xticks(x)
+ax.set_xticklabels(labels)
+ax.legend()
+
+
+def autolabel(rects):
+    """Attach a text label above each bar in *rects*, displaying its height."""
+    for rect in rects:
+        height = rect.get_height()
+        ax.annotate('{}'.format(height),
+                    xy=(rect.get_x() + rect.get_width() / 2, height),
+                    xytext=(0, 0),  # 3 points vertical offset
+                    textcoords="offset points",
+                    ha='center', va='bottom')
+
+
+autolabel(rects1)
+autolabel(rects2)
+fig.tight_layout()
+
+plt.show()
+
+labels = ['2015', '2016', '2017', '2018', '2019']
+burgr = [44682, 43023, 54512, 65240, 59639]
+burgc = [25890, 25380, 35246, 37559, 21055]
+
+x = np.arange(len(labels))  # the label locations
+width = 0.40  # the width of the bars
+
+
+fig, ax = plt.subplots()
+rects1 = ax.bar(x + width/2, burgc, width, label='Burglary - Commercial')
+rects2 = ax.bar(x - width/2, burgr, width, label='Burglary - Residential')
+
+
+# Add some text for labels, title and custom x-axis tick labels, etc.
+ax.set_ylabel('Number of offences')
+ax.set_title('Evolution of Burglaries between 2015 and 2019')
+ax.set_xticks(x)
+ax.set_xticklabels(labels)
+ax.legend()
+
+
+def autolabel(rects):
+    """Attach a text label above each bar in *rects*, displaying its height."""
+    for rect in rects:
+        height = rect.get_height()
+        ax.annotate('{}'.format(height),
+                    xy=(rect.get_x() + rect.get_width() / 2, height),
+                    xytext=(1, 0),  # 3 points vertical offset
+                    textcoords="offset points",
+                    ha='center', va='bottom')
+
+
+autolabel(rects1)
+autolabel(rects2)
+fig.tight_layout()
+plt.show()
+
+labels = ['2015', '2016', '2017', '2018', '2019']
+otherso = [10376, 11147, 12099, 13176, 12097]
+rape = [5454, 6300, 7659, 8828, 7926]
+
+x = np.arange(len(labels))  # the label locations
+width = 0.40  # the width of the bars
+
+
+fig, ax = plt.subplots()
+rects3 = ax.bar(x + width/2, otherso, width, label='Other Sexual Offences')
+rects4 = ax.bar(x - width/2, rape, width, label='Rape')
+
+
+# Add some text for labels, title and custom x-axis tick labels, etc.
+ax.set_ylabel('Number of offences')
+ax.set_title('Evolution of Sexual Offences between 2015 and 2019')
+ax.set_xticks(x)
+ax.set_xticklabels(labels)
+ax.legend()
+
+
+def autolabel(rects):
+    """Attach a text label above each bar in *rects*, displaying its height."""
+    for rect in rects:
+        height = rect.get_height()
+        ax.annotate('{}'.format(height),
+                    xy=(rect.get_x() + rect.get_width() / 2, height),
+                    xytext=(1, 0),  # 3 points vertical offset
+                    textcoords="offset points",
+                    ha='center', va='bottom')
+
+plt.bar(labels, otherso, color=['red', 'blue', 'purple', 'green', 'lavender'])
+autolabel(rects3)
+autolabel(rects4)
+fig.tight_layout()
+
+plt.show()
