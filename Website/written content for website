@@ -70,6 +70,44 @@ While we could make a week-to-week or year-on-year comparisons of weekly or mont
 
 
 
+#Why these crimes?
+In this section we will explain why we chose to focus on certain crimes. In order to give a broad view on how the pandemic played a role in the variation of crime rates in 2020, we wanted our study to encompass different types of offences which did not belong to a common category. 
+
+•	Sexual offences
+The choice of sexual offences as a variable comes from the important amount of news coverage and social media awareness campaigns about the rise in domestic abuse during the government imposed lockdown. Dometic abuse encompasses a wide range of types of abuse such as sexual. According to the crown prosectuion service,domestic abuse can therefore be prosecuted under different offences  . Therefore, our group decided to select one of these offences to investigate specifically. 
+
+Our choice of sexual offences was inspired by feminist motivations. Throughout history, major societal events have affected women’s rights and place in society. The coronavirus pandemic is an event of global social and one day historical significance. We wanted to therefore use our analysis of crime rates in relation to the pandemic to offer a small parenthesis on the effect it has had on women. As sexual offences are categorized as VAWG crimes, crimes primarily but not exclusively perpetrated by men against women , we thought it relevant to look at the evolution of sexual offences since the outbreak of covid19.
+
+There are a range of crimes that can be considered as sexual offences, including non-consensual crimes such as rape or sexual assault, crimes against children including child sexual abuse or grooming, and crimes that exploit others for a sexual purpose, whether in person or online  . These staturotry offences in England and Wales are defined in the 2003 Sexual Offences Act. 
+Following our available data we are going to look at sexual offences as a whole. Our data sets defferenciate between rapes and other sexual offences. However, rape is a sexual offence under s.1 o the 2003 SOA and the reader shoudl not be mislead by the dataset to think otherwise. Although our team does not know why the dataset draws this distinction we can conjecture it is because rape is often seen as the gravest sexual offence in society and is the most commonly known by laymen. 
+
+
+•	Burglary
+
+Previous studies agree on the fact that burglaries, in the absence of special circumstances such as a global pandemic, are more likely to happen in unoccupied homes (Mustaine, 1997; Tseloni et al., 2002) . 
+A study conducted by Ashby (2020) analyzed how different types of crime changed after the pandemic by using data from 16 different cities in the USA . When looking at burglary, the study found that in Chicago, Los Angeles, and Memphis the frequency of burglary was around half of the expected amount in the scenario in which there had an outbreak of covid-19. Cities such as Austin, Louisville and Minneapolis did not experience a decrease. Moreover, out of the 11 cities that saw a decrease in burglary, in only one was the difference statistically significant. 
+
+	Another study found ambiguous results when looking at how the rate of burglaries changed after the outbreak of coronavirus in Los Angeles (Campedelli, Aziani and Favarin, 2020) . More precisely, when the authors used a univariate statistical model, the results showed an increase of 0.89% with respect to the predicted value in the absence of state’s interventions, while when they used a multivariate model, a decrease of 0.58%  was found.
+
+Hodgkinson and Andresen (2020) looked at the effect of covid19 on residential and commercial burglary in Vancouver. The likelihood of burglary is strongly related to the presence of a guardian which, during the period of lockdown, varies significantly between residential homes and businesses . In fact, their research found an increase in commercial burglaries, since owners and employees were no longer able to guard their businesses, while residential burglary showed no obvious change. 
+
+The inconsistency of these findings illustrate the need for further research on the impact of coronavirus on burglaries in businesses and in dwellings. 
+
+We will keep this distinction between commerical and residential burglaries as found in our data sets because we hypothesized that the impact of coronavirus differs between both types of burglaries. 
+
+
+•	Drug offences
+
+A recent report from the UN suggested that drug markets were likely to be affected by the COVID-19 pandemic. 
+
+On the one hand, the report predicted an increase in drug use. Indeed, drug use has been rising for 20 years due to the population growth. However, the pandemic made the economy suffer and therefore increased unemployment while new opportunities stayed rare (UNODC, June 2020) . Studies show that disadvantaged people earning less have a higher risk to face a drug use disorder which may lead them to take part in drug trafficking activities (Shaw et al., 2007) . 
+Following tis reaoning, we ould predict the number of drug offences to rise even more than what expected from March 2020.
+
+On the other hand, the measures implemented in response to the COVID-19 spread induced a shortage of supply of certain drugs. Indeed, drug routes by air or by sea were disrupted due to closed borders and mobility restrictions (Bergeron et al., September 2020) . Therefore, some criminal groups shifted their illicit drug trafficking activity towards other emerging crime opportunities like cybercrime. Others adapted their markets to the restrictions by for example, using land routes which according to the UN report has a higher control rate. As a result, more seizures are being reported on our data sources (UNODC, June 2020). This means it may not be that the drug enforcement activities increased and not the number of drug offences. We acknowledge that this may be later on become a limitation of our study on drug offences.
+ 
+The said-complex impact of COVID-19 on the number of drug offences makes these offences an important crime to study in our research project. 
+
+The major categories of drug-related offences are posession and the dealing and supplying of drugs , which relates to trafficking(gov.uk).  Traficking of drugs is defined as the cultivation, manufacture, distribution and sale of substances which are subject to drug prohibition laws (un.org) . Our London crimes rates dataset for the 24 last months (2019 and 2020) include posession and trafficking drug offences, whereas our dataset for 2008-2018 also provides data for other drug offences. To insure consitency between the datasets we have chosen to take out óther drug offences’. 
 
 
 
