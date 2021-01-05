@@ -1,85 +1,56 @@
 CHOROPLETH MAP
 
--explain how the map works
-We decided to create a dual Choropleth map using a folium library which allowed to illustrate and compare the evolution of our selected crimes and COVID-19 spread. In other words, we depicted the normalised amount of each crime type (Burglary, Drug offences and Sexual offences) across the different London boroughs in 2020, compared to the amount of covid cases in each borough during the same time period. The boroughs which don't have values associated to them are colored in white.
+# Motivations #
+Our aim for creating this cartogram was to take a closer look at the impact of the outbreak of coronavirus on crime in specific boroughs, specifically from the geospatial angle. The ARIMA model above provided insight on the impact of COVID-19 on London's crime rates. However, it focused on London as a whole rather than each of its boroughs. Therefore, our motivation in creating a choropleth map was to see if the differences in the number of COVID-19 cases between the boroughs could be linked to their crime rate differences. Therefore, creating a map would allow a more thorough analysis on the influence of coronavirus on crime rates. 
+The reproducibility and accessibility of our project was of great importance for us as our theme is still very much ongoing. Thus, we thought that a dual map on which you can add choropleth layers on top of one another would be a dynamic, interactive and accessible method to understanding our project.
 
 
--analysis of map's results
-The map translates our data into a geospatial comparative visualisation. 
+# How does it work? #
+We decided to create a dual Choropleth map using a folium library. According to ArcGIS, a choropleth map is a thematic cartogram which can depict data through shading geographic areas (DeLorenzo and Dugger, 2020). Therefore, the map we created allows us to illustrate and compare the evolution of our selected crimes and COVID-19 new cases. In other words, we depicted the normalised data of each crime (Burglary, Drug offences and Sexual offences) across the different London boroughs in 2020 and compared them to the amount of covid cases in each borough during the same time period. 
 
-The map that is blue in colour represents the normalized data of Covid-19 cases in each borough. On this map, we can see higher rates of COVID-19 cases at the North of the Thames, especially away from central London (in Newham, Redbridge, Havering on the East side and Barnet and Ealing on the West side).
-
-The map that is coloured in purple represents the normalized data of burglaries in each borough. 
-For the most part, especially in central London, there seems to be a lower number of Covid-19 cases and higher rates of burglaries, while in xx area, more Covid-19 cases seems to reflect a lower rate of burglaries. 
-This seems to show that there is a negative correlation between covid cases and burglaries, where the higher the rates of Covid-19 cases, the lower the rate of burglaries. 
+The colours for each map are on a scale, from lightest to darkest. The lightest colour represents the smallest number, while the darkest colour is the greatest. The boroughs which don't have values associated with them are colored in white. 
 
 
+# Workflow in making the map #
+Our initial objective was to create a time evolutive choropleth map of crime in the boroughs of London. However, we struggled to structure our data to fit the complex format required for this type of map. The main issue was making our code read the month columns as dates. 
+Therefore, after many unsuccessful attempts we decide to compare  the number covid cases with crime rates. We believed that in doing so, there would be more information to analyse and that the map would be simpler and as a result a more accessible visualisation. Thus, we changed our map focus and started from scratch in December. which proved to be the right decision considering the analytical possibilities it provided.
+
+We first had to clean the datasets downloaded from the Metropolitan Police website again as this time the boroughs needed to be included in the dataframe. The code we used was very similar to the one in the dataset cleaning section except it focused different columns as we wanted our data per year and per borough. The cleaned data we obtained thus represented the number of crimes and covid cases that occured in 2020 in each borough. 
+
+For each data set, we had to delete columns which contained data that we did not need. Then, we renamed certain columns in order to have our 3 main crimes as we did not want the subcategories for our map. The intention behind dividing the data into 3 crimes was our desire for consolidated information for the three main crimes we were analysing  - burglary, sexual offences and drug offences. 
+
+After splitting the data, we had to normalize the numbers to ensure that the data and therefore the coloured layers of the choropleth map were not affected by the population size of each borough. Normalization was done on the three main crimes, as well as the number of COVID cases in each borough.
+
+Finally, we added our cleaned and normalized data onto the map. To make it the most straightforward possible for the reader, we adapted the colors and number of bins of each choropleth layer. Below is a part of our code used to create the folium dual map with a choropleth layer. The full version can be found here:
+→ INSERT RELEVANT CODE GIST
+→ INSERT LINK TO GITHUB REPOSITORY FOR THE MAP
 
 
-However, if we look at our 3 types of crime's rate we can see they are more emphasised towards central London Boroughs especially Westminster, Tower Hamlets and Lambeth (Although, some high rates can be seen on the outer boroughs like Croydon and Barnet). This may be due, for example in Westminster, to the numbers of commuters 
+# Analysis of map's results #
+The map translates our data into a geospatial comparative visualisation.
+The map shaded in blue represents the normalized data of Covid-19 cases in each borough. On this map, we can see higher normalized rates of COVID-19 cases at the North of the Thames, especially away from central London (in Newham, Redbridge, Havering on the East side and Barnet and Ealing on the West side).
 
-Therefore, we cannot say that there is a relationship between the number of Covid cases and the rate of Burglary, Sexual offences or Drug offences. The rare similarities encountered may be due to the number of commuters through the borough.
+- Burglaries 
+The map that is shaded in purple represents the normalized data of burglaries in each borough. For the most part, especially in central London, there seems to be a lower normalized number of Covid-19 cases and higher normalized rates of burglaries. For example, Lambeth has a normalized burglary rate between 0.23 and 0.27 while its infection rate is between 0.14 and 0.17. Meanwhile in Newham, Redbridge and Havering, a higher normalized rate of Covid-19 cases is accompanied by a lower normalized rate of burglaries. (In Havering, the normalized burglary rate is between 0.05 and 0.09 while its normalized COVID-19 infection rate is between 0.23 and 0.26.) This seems to show that there is a negative influence of covid cases on burglaries, where the higher the normalized rates of Covid-19 cases, the lower the rate of burglaries. However, we acknowledge that this does not imply a causal relationship between both variables
+There are exceptions to this influence. We can see that there are both higher numbers of Covid-19 cases but also higher rates of burglaries in Barnet and Croydon. Their normalized burglaries rate are respectively between 0,23 and 0,27 and between 0,18 and 0,23. Meanwhile, their normalized number of COVID-19 cases are  respectively between 0,23 and 0,26 and between 0,20 and 0,23.
+On the whole, due to an unclear enough influence on the map and a lack of literature proving otherwise we cannot state that the number of COVID-19 cases affects the rate of burglaries. The similarities encountered may be the results of some coincidences.
 
+- Drug offences
+The map shaded in green represents the normalized rate of drug offences in each borough. For the most part, especially in central London, it depicts a lower normalized number of Covid-19 cases and a higher normalized rate of drug offences. For example, in Westminster the drug offence rate is between 0.27 and 0.32, more than twice its normalized COVID-19 infection rate (which is between 0.11 and 0.14). Therefore it would seem to show that there is a negative influence of covid cases on drug offences.
+However, this example proves to be more of an exception to the comparison on the whole. For instance, Haringey presents some similar small normalized rates for drug offences and COVID-19 cases whereas Newham has high rates for both of them. Therefore we cannot say that there is a correlation between the number of drug offences and the number of COVID-19 cases. The few similarities discovered may be due to some coincidence.
 
--explain motivations and what the map brings to the project 
-Our aim with this cartogram was to take a closer on the impact of COVID on crime. We wanted to add a more specific geospatial notion to our analysis. The model already provided on the impact of COVID-19 on London's crime rate. However, it focused on London as a whole rather than each of its boroughs. The map added this more particular analysis angle. 
+- Sexual offences 
+The map that is shaded in red represents the normalized data of sexual offences in each borough. In the North East area of London (Newham, Redbridge, Havering) where the normalized number of COVID-19 cases are higher as shown by the darker blue, the normalized number of sexual offences are lower. Furthermore, In the South, the range of normalized COVID-19 cases never exceed 0.20. This is then accompanied by the highest number of normalized sexual offences, with Lambeth and Croydon within the highest range of 0.24 and 0.29. This thus seems to show that there is a negative influence of COVID-19 on sexual offences.
 
-We also wanted to see if the differences in the number of COVID-19 between the boroughs could be somehow linked to their crime rate differences. The possible relationship between crime and COVID could then be induced not only by the city's multiple lockdowns but also by the individual's own health psychology. Therefore creating a map would allow a more complex and thorough analysis for our project.
+However, there are also several exceptions to this said influence. For example, Tower Hamlets has similar ranges for both sexual offences and COVID-19 cases (between 0.20 and 0.23). Moreover, the South West area (Sutton, Kingston upon Thames) present weak normalised data for both COVID-19 cases and sexual offences. Finally on the whole, we cannot find a clearly shown influence of COVID-19 cases.
+Thus, our visualisation shows examples of two possible influences of the number of COVID-19 cases on sexual offences. In addition, we lack literature proving a relationship between them. Therefore, we cannot say that there is a correlation between sexual offences and COVID-19 cases.
 
-Furthermore, The repoducibility of our project was of great importance for us as our theme is still on going and recent.Therefore, creating a dual map on which you can add choroplethlayers on top of one another represents also a dynamic, interactive and accessible method to understand our project.
-
-
--code gists
-Below is a part of our code to create a folium dual map with a choropleth layer. The full version can be found here:
-
-# Creating the dual map object
-m = folium.plugins.DualMap(location=[51.5074, 0.1278], zoom_start=10)
-
-# Adding the choropleth layer onto the map
-folium.Choropleth(
-    geo_data=boroughsdata,
-    name='COVID-19 infections',
-    data=normalized_covid_with_borough,
-    columns=['area_name', 'Normalized Total'],
-    key_on='properties.name',
-    fill_color='Blues',
-    fill_opacity=0.7,
-    line_opacity=0.5,
-    bins=6,
-    nan_fill_color='White',
-    nan_fill_opacity=0.8,
-    legend_name='Covid infections',
-    overlay=True,
-    show=True
-).add_to(m.m1)
+Overall, we cannot say that there is a correlation between the normalized number of COVID-19 cases and the number of burglaries, sexual offences or drug offences committed. The rare similarities encountered may be due to the number of commuters through the borough or other confounding variables, which our group cannot be absolutely certain of. Through this analysis we may then conclude that the effect of coronavirus on crime would not be the result of an individual’s psychology but rather due to a physical constraint with national lockdowns (Stickle and Felson, 2020). Nevertheless, the map remains a useful tool for visualizing both geographical crime distribution and infection rates
 
 
--explain the worflow in making the map
-We firstly had to clean the data again, on top of the cleaned data that we had done for the three crimes as we needed to include the boroughs for our map. 
-
-For the data set, we had to delete the columns which contained data that we did not need, and also rename certain columns as we did not want to break our crimes down into subgroups for our map. This is because we wanted consolidated information for the three main crimes we were analysing  - burglary, sexual offences and drug offences. 
-Following that, we wanted to split our data into the three main crimes as mentioned earlier. Hence, we found code to do so. 
-Lastly, after splitting the data, we had to normalize the numbers to ensure that the data and therefore the colours reflected on the chloropleth map were not affected by the population size of each borough. 
-Hence, normalization was done on the three main crimes, as well as the number of COVID infections in each borough. 
-
-
-
--difficulties and explanation of changing map type 
-Our inital objective was to create an time evolutive map of crime in the boroughs of London. However, we struggled to format our data to fit the complex format required for this type of map, especially make the month columns be considered as date by our code. 
-
-Therefore, after many unfruitful attempts we found the idea of comparing the number covid cases and the crime rate. We believed there would be more information to analyse as well as being more simplifed and therefore more accessible visualisation. Thus, we changed our map focus and started from scratch in December. which later proved to be the right decision considering the analytical possibilities it provided.
-
-
-
-
--limitations
-Although it provides us with a great overview of crime and COVID-19 spread, the map admits some limitations. 
+# Limitations #
+Although the map provides us with a great overview of crime and the spread of COVID-19, it admits some limitations.
 First and foremost, the visualisation is not the most efficient for a comparison. The markers we chose (colored layers) cannot be put on top of one another. Each category has its color code therefore you cannot visualize all four of our variables at the same time. In other words, you can only put one layer at a time on each map which restricts our analysis.
-
-Moreover, our datasets either don't mention the City of London borough (crime dataset) or associated it with Hackney (covid cases dataset). Therefore, we lack information for a full picture which reduce our analysis' efficiency.
-
-Lastly, the data we mapped represents London boroughs in 2020 up until November. The scope is therefore short sighted and the conclusions drawn must be interpreted accordingly. We took it into account when analysing our results and encourage any future project to reproduce it to build upon our results.
-
-
-
-
+Moreover, our datasets either don't mention the City of London borough (crime dataset) or associate it with Hackney (covid cases dataset). Thus, these boroughs have no burglary, sexual offence, drug offence or COVID-19 cases values associated to them on the map and are colored in white. Therefore, we lack information for a full picture which reduces our analysis' efficiency.
+Furthermore, we recognize that the intervals on the legend across the 4 factors are not the same as one another. This is because our normalized data between each category is of different order. By wanting to put each borough on even scale within each category it created differences between them which affects our analysis. 
+Lastly, the data we mapped represents London boroughs in 2020 up until November. The scope is therefore short sighted and the conclusions drawn must be interpreted accordingly. We took it into account when analysing our results and encourage any future researchers reproducing this map to build upon our results.
