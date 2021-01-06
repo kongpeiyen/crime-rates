@@ -144,6 +144,21 @@ B] DATA COLLECTION
 -explain how he data was collected 
 -limitations of having just one data source
 
+The data sets we used for London crime rates between 2008-2020 was retrieved from the Metropolitan Police, under the : Recorded Crime: Geographic Breakdown section.
+
+This is our main source of data, which is a limitation as we are only relying on one source which reduces the objectivity of our research.
+
+The dataset shows monthly crime rates per borough per crime type .
+
+We chose this source for our data because other data sources either dealt with yearly crime rates in individual boroughs or monthly rates for crime categories. Also, the dataset is in csv format. 
+Find the dataset for London crime rates from December 2018 to November 2020 (MPS Borough Level Crime (24 months.csv) and from January 2008 to December 2018 (MPS_Borough_Level_Crime_Historic.csv).
+
+-> in our github repository under datasets:
+
+-> or download directly from the London Datastore 
+
+
+
 2) cleaning the data
 ->explain the steps of cleaning the data 
 ->difficulties cleaning the data 
