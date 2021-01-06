@@ -111,10 +111,6 @@ The major categories of drug-related offences are posession and the dealing and 
 
 
 
-
--section on biographies
--hypothesis
-
 Burglaries 
 Null Hypothesis 1: we hypothesize that the number of residential burglaries decreased after the outbreak of Covid-19
 Alternate Hypothesis 1: we hypothesize that the number of residential burglaries did not change after the outbreak of Covid-19
@@ -133,9 +129,6 @@ Null Hypothesis 4: we hypothesize that the number of drug offences changed after
 Alternate Hypothesis 4: we hypothesize that the number of drug offences did not change after the outbreak of Covid-19
 
 
-
-
--presentation of data visualisations
 
 
 B] DATA COLLECTION 
@@ -160,9 +153,7 @@ Find the dataset for London crime rates from December 2018 to November 2020 (MP
 
 
 2) cleaning the data
-->explain the steps of cleaning the data 
-->difficulties cleaning the data 
-->use for cleaned data 
+
 
 *Cleaning of the data for the predictive model*
 
@@ -241,11 +232,24 @@ C]DATA VISUALISATIONS AND ANALYSIS
 
 
 D] CONCLUSION 
--answering the research question 
--interpreting data analsysis findings 
--how does this resaerch fit into the wider context and what can still be done in future research 
+
+#LIMITATIONS:
+
+Firstly,  predictive methods are not totally accurate and the values we have predicted are not the only possible ones. We have provided a test of the accuracy of our model in hopes of acknowledging the limitations as regards to accuracy for future readers. 
+
+There are also limitations to the chloropleth map, such as the different intervals used on the legend due to our normalized data between each category is of different order. 
+
+We are also limited by our dataset because we are using the same source for all our crime rates data. This limitation can be attributed to the highly sensitive nature of crime meaning that we can only use crime rates from government databases. 
+
+Moreover, because of the available data and the ongoing nature of the pandemic, we are limited to a certain timeframe: 2008-2020. We encourage future researchers to look at crime rates over a longer period to increase the accuracy of their predicted crime trends. 
+
+Furthermore, the ongoing nature of the pandemic also limits our conclusions as we are unable to look at the situation with hindsight. 
+
+Although there are limitations, we have ensured that our process is as reproducible as possible so that others who may have more data can replicate our research. We have included our steps taken for each section, and have stated where we obtained our data from. We have also included gists and a link to our GitHub Repository with our full code. We are more than happy for others to build on our findings regarding this area.  
 
 
+
+#CONCLUSION 
 
 
 
