@@ -113,24 +113,46 @@ The said-complex impact of COVID-19 on the number of drug offences makes these o
 The major categories of drug-related offences are posession and the dealing and supplying of drugs , which relates to trafficking(gov.uk).  Traficking of drugs is defined as the cultivation, manufacture, distribution and sale of substances which are subject to drug prohibition laws (un.org) . Our London crimes rates dataset for the 24 last months (2019 and 2020) include posession and trafficking drug offences, whereas our dataset for 2008-2018 also provides data for other drug offences. To insure consitency between the datasets we have chosen to take out óther drug offences’. 
 
 
+#hypothesis
+Based on the literature as outlined above, our group came up with these hypotheses. 
+
+1. Burglaries 
+
+Null Hypothesis 1:  we hypothesize that the number of commercial burglaries did not change after the outbreak of Covid-19
+
+Alternative Hypothesis 1: we hypothesize that the number of commercial burglaries increased after the outbreak of Covid-19
 
 
-Burglaries 
-Null Hypothesis 1: we hypothesize that the number of residential burglaries decreased after the outbreak of Covid-19
-Alternate Hypothesis 1: we hypothesize that the number of residential burglaries did not change after the outbreak of Covid-19
+Null Hypothesis 2: we hypothesize that the number of residential burglaries did not change after the outbreak of Covid-19
 
-Null Hypothesis 2:  we hypothesize that the number of commercial burglaries increased after the outbreak of Covid-19
-Alternate Hypothesis 2: we hypothesize that the number of commercial burglaries did not change after the outbreak of Covid-19
+Alternative Hypothesis 2: we hypothesize that the number of residential burglaries decreased after the outbreak of Covid-19
 
 
-Sexual assaults 
-Null Hypothesis 3: we hypothesize that the number of sexual assaults changed after the outbreak of Covid-19
-Alternate Hypothesis 3: we hypothesize that the number of sexual assaults did not change after the outbreak of Covid-19
 
 
-Drug offences 
-Null Hypothesis 4: we hypothesize that the number of drug offences changed after the outbreak of Covid-19
-Alternate Hypothesis 4: we hypothesize that the number of drug offences did not change after the outbreak of Covid-19
+2. Sexual assaults 
+
+Null Hypothesis 3: we hypothesize that the number of sexual offences did not change after the outbreak of Covid-19
+
+Alternative Hypothesis 3:  we hypothesize that the number of sexual offences increased after the outbreak of Covid-19 
+
+
+Null Hypothesis 4: we hypothesize that rapes did not change after the outbreak of Covid-19
+
+Alternative Hypothesis 4: we hypothesize that rapes decreased after the outbreak of Covid-19
+
+
+
+3. Drug offences 
+Null Hypothesis 5: we hypothesize that the possession of drugs did not change after the outbreak of Covid-19
+
+Alternative Hypothesis 5: we hypothesize that the possession of drugs increased after the outbreak of Covid-19
+
+
+Null Hypothesis 6: we hypothesize that the number of drug trafficking did not change after the outbreak of Covid-19
+ 
+Alternative Hypothesis 6: we hypothesize that the number of drug trafficking increased after the outbreak of Covid-19
+
 
 
 
