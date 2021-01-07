@@ -20,3 +20,90 @@ This hence leads to (state which) hypotheses being accepted/ rejected.
 We do acknowledge that there are limitations to our project - such as (state).
 
 However, we have ensured that our process is as reproducible as possible. We have included our steps taken for each section, and have stated where we obtained our data from. We are more than happy for others to build on our findings regarding this area.  
+
+
+
+
+
+#updated abstract
+Our project aimed to explore the relationship between crime and covid-19 in London. 
+Covid-19 is a new occurrence and to our knowledge there is no previous academic literature on crime and Covid-19, specifically in the context of London.
+
+We focused on three crimes for our project - burglary, sexual offences and drug offences. 
+This was narrowed down after extensive literature review. 
+
+
+
+For each crime, we came up with our hypotheses as follows based on our literature review: 
+Burglaries 
+Null Hypothesis 1:  we hypothesize that the number of commercial burglaries did not change after the outbreak of Covid-19
+Alternative Hypothesis 1: we hypothesize that the number of commercial burglaries increased after the outbreak of Covid-19
+
+Null Hypothesis 2: we hypothesize that the number of residential burglaries did not change after the outbreak of Covid-19
+Alternative Hypothesis 2: we hypothesize that the number of residential burglaries decreased after the outbreak of Covid-19
+
+
+Sexual assaults 
+Null Hypothesis 3: we hypothesize that the number of sexual offences did not change after the outbreak of Covid-19
+Alternative Hypothesis 3:  we hypothesize that the number of sexual offences increased after the outbreak of Covid-19 
+
+Null Hypothesis 4: we hypothesize that rapes did not change after the outbreak of Covid-19
+Alternative Hypothesis 4: we hypothesize that rapes decreased after the outbreak of Covid-19
+
+
+Drug offences 
+Null Hypothesis 5: we hypothesize that the possession of drugs did not change after the outbreak of Covid-19
+Alternative Hypothesis 5: we hypothesize that the possession of drugs increased after the outbreak of Covid-19
+
+ Null Hypothesis 6: we hypothesize that the number of drug trafficking did not change after the outbreak of Covid-19
+Alternative Hypothesis 6: we hypothesize that the number of drug trafficking increased after the outbreak of Covid-19
+
+
+
+
+To conduct our research, we first cleaned our data. We used this cleaned data for our predictive model. 
+We constructed a predictive model to compare crime rates in the hypothetical scenario in which there had not been an outbreak of coronavirus and government enforced lockdowns in 2020 to the actual crime numbers for 2020. 
+
+We built on this predictive mode which analysed the impact of Covid-19 on crime on London as a whole and created an interactive choropleth map. 
+This was designed to analyse further the impact of the outbreak of coronavirus on crime in specific boroughs from a geospatial angle. We believed that the map would allow a more thorough analysis on the influence of coronavirus on crime rates. 
+
+
+
+
+After making our data visualisations and predictive model, we were able to analyse our data we had collected. The results we obtained were as follows:
+
+Burglaries 
+1a: Commercial burglaries decreased after the outbreak of Covid-19. As the team had hypothesized an increase for all months of 2020, at an alpha level of 0.05 we cannot reject the null-hypothesis 1 in favour of the alternative hypothesis 1. 
+1b: Residential burglaries decreased after the outbreak of Covid-19. However, because not all values fall outside the prediction interval for all months of 2020, at an alpha level of 0.05, we cannot reject the null-hypothesis 2 in favour of the alternative hypothesis 2.
+
+
+Sexual assaults 
+2a. Sexual offences increased after the outbreak of Covid-19. Therefore, because the team expected that sexual offences (other than rape) would decrease during COVID-19 for all months of 2020, at an alpha level of 0.05, we cannot reject the null-hypothesis 3 in favour of the alternative hypothesis. 3
+
+2b. Rapes decreased after the outbreak of Covid-19. Therefore, because the team expected a decrease for all months of 2020, at an alpha level of 0.05, we can reject the null-hypothesis 4 in favour of the alternative hypothesis 4.
+ 
+
+Drug offences 
+3a. It is difficult to tell whether the number of possession of drugs has increased or decreased because of the pandemic as the real trend is higher than the predicted one for some months and it is lower for others. Therefore, at an alpha level of 0.05, we cannot reject the null-hypothesis 5 in favour of the alternative hypothesis 5. 
+
+3b.  Drug trafficking increased after the outbreak of Covid-19. Therefore, because the team expected an increase for all months of 2020, at an alpha level of 0.05, we are able to reject the null-hypothesis 6 in favour of the alternative hypothesis 6. 
+
+
+
+We do acknowledge that there are limitations to our project. 
+Firstly,  predictive methods are not totally accurate and the values we have predicted are not the only possible ones. 
+We have provided a test of the accuracy of our model in hopes of acknowledging the limitations as regards to accuracy for future readers. 
+
+There are also limitations to the chloropleth map, such as the different intervals used on the legend due to our normalized data between each category is of different order. 
+
+We are also limited by our dataset because we are using the same source for all our crime rates data. 
+This limitation can be attributed to the highly sensitive nature of crime meaning that we can only use crime rates from government databases. 
+
+Moreover, because of the available data and the ongoing nature of the pandemic, we are limited to a certain timeframe: 2008-2020. 
+We encourage future researchers to look at crime rates over a longer period to increase the accuracy of their predicted crime trends. 
+
+Furthermore, the ongoing nature of the pandemic also limits our conclusions as we are unable to look at the situation with hindsight. 
+
+Although there are limitations, we have ensured that our process is as reproducible as possible so that others who may have more data can replicate our research. 
+We have included our steps taken for each section, and have stated where we obtained our data from. We have also included gists and a link to our GitHub Repository with our full code. We are more than happy for others to build on our findings regarding this area.  
+
