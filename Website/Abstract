@@ -64,8 +64,8 @@ Alternative Hypothesis 6: we hypothesize that the number of drug trafficking inc
 To conduct our research, we first cleaned our data. We used this cleaned data for our predictive model. 
 We constructed a predictive model to compare crime rates in the hypothetical scenario in which there had not been an outbreak of coronavirus and government enforced lockdowns in 2020 to the actual crime numbers for 2020. 
 
-We built on this predictive mode which analysed the impact of Covid-19 on crime on London as a whole and created an interactive choropleth map. 
-This was designed to analyse further the impact of the outbreak of coronavirus on crime in specific boroughs from a geospatial angle. We believed that the map would allow a more thorough analysis on the influence of coronavirus on crime rates. 
+Our group also created an interactive chloropleth map to further analyse the impact of the outbreak of coronavirus on crime in specific boroughs from a geospatial angle. This was designed to analyse further the impact of the outbreak of coronavirus on crime in specific boroughs from a geospatial angle. 
+We believed that the map would allow a more thorough analysis on the influence of coronavirus on crime rates. 
 
 
 
@@ -73,20 +73,32 @@ This was designed to analyse further the impact of the outbreak of coronavirus o
 After making our data visualisations and predictive model, we were able to analyse our data we had collected. The results we obtained were as follows:
 
 Burglaries 
-1a: Commercial burglaries decreased after the outbreak of Covid-19. As the team had hypothesized an increase for all months of 2020, at an alpha level of 0.05 we cannot reject the null-hypothesis 1 in favour of the alternative hypothesis 1. 
-1b: Residential burglaries decreased after the outbreak of Covid-19. However, because not all values fall outside the prediction interval for all months of 2020, at an alpha level of 0.05, we cannot reject the null-hypothesis 2 in favour of the alternative hypothesis 2.
+
+1a: Commercial burglaries decreased after the outbreak of Covid-19. 
+As the team had hypothesized an increase for all months of 2020, at an alpha level of 0.05 we cannot reject the null-hypothesis 1 in favour of the alternative hypothesis 1. 
+
+1b: Residential burglaries decreased after the outbreak of Covid-19. 
+However, because not all values fall outside the prediction interval for all months of 2020, at an alpha level of 0.05, we cannot reject the null-hypothesis 2 in favour of the alternative hypothesis 2.
+
 
 
 Sexual assaults 
-2a. Sexual offences increased after the outbreak of Covid-19. Therefore, because the team expected that sexual offences (other than rape) would decrease during COVID-19 for all months of 2020, at an alpha level of 0.05, we cannot reject the null-hypothesis 3 in favour of the alternative hypothesis. 3
 
-2b. Rapes decreased after the outbreak of Covid-19. Therefore, because the team expected a decrease for all months of 2020, at an alpha level of 0.05, we can reject the null-hypothesis 4 in favour of the alternative hypothesis 4.
+2a. Sexual offences increased after the outbreak of Covid-19. 
+Therefore, because the team expected that sexual offences (other than rape) would decrease during COVID-19 for all months of 2020, at an alpha level of 0.05, we cannot reject the null-hypothesis 3 in favour of the alternative hypothesis. 3
+
+2b. Rapes decreased after the outbreak of Covid-19. 
+Therefore, because the team expected a decrease for all months of 2020, at an alpha level of 0.05, we can reject the null-hypothesis 4 in favour of the alternative hypothesis 4.
  
 
 Drug offences 
-3a. It is difficult to tell whether the number of possession of drugs has increased or decreased because of the pandemic as the real trend is higher than the predicted one for some months and it is lower for others. Therefore, at an alpha level of 0.05, we cannot reject the null-hypothesis 5 in favour of the alternative hypothesis 5. 
 
-3b.  Drug trafficking increased after the outbreak of Covid-19. Therefore, because the team expected an increase for all months of 2020, at an alpha level of 0.05, we are able to reject the null-hypothesis 6 in favour of the alternative hypothesis 6. 
+3a. It is difficu
+lt to tell whether the number of possession of drugs has increased or decreased because of the pandemic as the real trend is higher than the predicted one for some months and it is lower for others. 
+Therefore, at an alpha level of 0.05, we cannot reject the null-hypothesis 5 in favour of the alternative hypothesis 5. 
+
+3b.  Drug trafficking increased after the outbreak of Covid-19. 
+Therefore, because the team expected an increase for all months of 2020, at an alpha level of 0.05, we are able to reject the null-hypothesis 6 in favour of the alternative hypothesis 6. 
 
 
 
