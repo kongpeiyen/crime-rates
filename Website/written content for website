@@ -259,6 +259,73 @@ C]DATA VISUALISATIONS AND ANALYSIS
 
 D] CONCLUSION 
 
+#findings 
+
+Findings
+
+Do our findings validate our hypothesis?
+
+After making our data visualisations and predictive model, we were able to analyse our data we had collected. 
+
+The results we obtained were as follows:
+ 
+ 
+ 
+1. Burglaries 
+
+Commercial burglaries: 
+
+Commercial burglaries decreased after the outbreak of Covid-19. 
+
+As the team had hypothesized an increase for all months of 2020, at an alpha level of 0.05 we cannot reject null-hypothesis 1 in favour of alternative hypothesis 1. 
+
+
+
+Residential burglaries:
+
+Residential burglaries decreased after the outbreak of Covid-19. 
+
+However, because not all values fall outside the prediction interval for all months of 2020, at an alpha level of 0.05, we cannot reject null-hypothesis 2 in favour of alternative hypothesis 2.
+
+ 
+ 
+ 
+2. Sexual assaults 
+
+Sexual offences: 
+
+Sexual offences increased after the outbreak of Covid-19. 
+
+Therefore, because the team expected that sexual offences (other than rape) would decrease during COVID-19 for all months of 2020, at an alpha level of 0.05, we cannot reject null-hypothesis 3 in favour of alternative hypothesis 3.
+ 
+ 
+ 
+Rapes:
+
+Rapes decreased after the outbreak of Covid-19. 
+
+Therefore, because the team expected a decrease for all months of 2020, at an alpha level of 0.05, we can reject null-hypothesis 4 in favour of alternative hypothesis 4.
+ 
+ 
+ 
+3. Drug offences 
+
+Possession of drugs: 
+
+It is difficult to tell whether the number of possession of drugs has increased or decreased because of the pandemic as the real trend is higher than the predicted one for some months and it is lower for others. 
+
+Therefore, at an alpha level of 0.05, we cannot reject null-hypothesis 5 in favour of alternative hypothesis 5. 
+
+
+ 
+Drug trafficking: 
+
+Drug trafficking increased after the outbreak of Covid-19. 
+
+Therefore, because the team expected an increase for all months of 2020, at an alpha level of 0.05, we are able to reject null-hypothesis 6 in favour of alternative hypothesis 6. 
+
+
+
 #LIMITATIONS:
 
 Firstly,  predictive methods are not totally accurate and the values we have predicted are not the only possible ones. We have provided a test of the accuracy of our model in hopes of acknowledging the limitations as regards to accuracy for future readers. 
