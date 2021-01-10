@@ -119,3 +119,36 @@ Furthermore, the ongoing nature of the pandemic also limits our conclusions as w
 Although there are limitations, we have ensured that our process is as reproducible as possible so that others who may have more data can replicate our research. 
 We have included our steps taken for each section, and have stated where we obtained our data from. We have also included gists and a link to our GitHub Repository with our full code. We are more than happy for others to build on our findings regarding this area.  
 
+
+
+
+
+
+# final abstract
+
+Our project aimed to explore the relationship between crime and Covid-19 in London. 
+
+We focused on three crimes for our project - burglary, sexual offences and drug offences. 
+
+
+
+To conduct our research, we first cleaned our data. 
+
+This enabled us to create bar charts to visualisation the evolution of the three categories of crimes we were investigating.
+ 
+ 
+ 
+ 
+Our group also created an interactive choropleth map to further analyse the impact of the outbreak of coronavirus on crime in specific boroughs from a geospatial angle.
+
+
+
+We also created a predictive model ARIMA on Python. 
+
+This was used to compare crime rates in the hypothetical scenario in which there had not been an outbreak of coronavirus and government-enforced lockdowns in 2020 with the actual crime numbers for 2020. 
+
+
+
+In conclusion, rapes and commercial burglaries are the only types of crime for which we have found statistically significant results.
+
+We were able to draw this conclusion because the actual crime rates for 2020 are outside the prediction interval for 2020, which considers what the crime rates would have been in the absence of the pandemic.
