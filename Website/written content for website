@@ -292,6 +292,20 @@ Hence, these changes in crime may not necessarily be solely because of covid-19.
 
 
 #CONCLUSION 
+Our group was able to perform a statistical analysis on the data which we were able to draw conclusions from. 
+
+From the bar charts, we were first able to visualise the evolution of each of the crimes we chose to investigate between 2015 and 2019 in London. 
+
+After the data visualizations and analysis of the folium map, we were able to conclude that there is no correlation between the normalized number of COVID-19 cases and the number of burglaries, sexual offences or drug offences committed.  
+
+With the ARIMA model, commercial burglaries and rapes are the only types of crime for which we have found statistically significant results. 
+The actual crime rates for 2020 are outside the prediction interval for 2020, which considers what the crime rates would have been in the absence of the pandemic. 
+Hence, for the results that are statistically significant, we can see that commercial burglaries and rape decreased after the outbreak of Covid-19. 
+Knowing this, resources can potentially be diverted to other crimes which may need support more urgently during this period of time. 
+
+As the measures implemented during the pandemic begin to relax, this will likewise affect the evolution of crime as well. 
+Law enforcements will have to constantly adapt to a new landscape, and there will be changing priorities during this period. 
+Hence, to the best of our knowledge, this would be our group’s recommendation at this juncture.
 
 
 
