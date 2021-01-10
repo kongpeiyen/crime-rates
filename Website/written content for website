@@ -274,6 +274,22 @@ Furthermore, the ongoing nature of the pandemic also limits our conclusions as w
 Although there are limitations, we have ensured that our process is as reproducible as possible so that others who may have more data can replicate our research. We have included our steps taken for each section, and have stated where we obtained our data from. We have also included gists and a link to our GitHub Repository with our full code. We are more than happy for others to build on our findings regarding this area.  
 
 
+#updated limitations 
+
+On top of the limitations mentioned about the ARIMA model and the chloropleth map, our project also faced other limitations. 
+
+As the majority of our data was retrieved from the Metropolitan Police Service, we are limited to the impact that covid19 has on reported crimes only. 
+However, literature suggests that the amount of unreported sexual offences has increased because the ability of survivors to report crimes is limited by national lockdowns. 
+
+
+We acknowledge that this study is necessarily limited and it will be possible to understand more as the pandemic progresses and more data become available. 
+however, we will use the most up to date data that can be found for this project. 
+
+Additionally, we also are aware that there are other factors which affect crime rates as well, such as weather. 
+Hence, these changes in crime may not necessarily be solely because of covid-19. 
+
+
+
 
 #CONCLUSION 
 
