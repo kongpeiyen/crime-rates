@@ -124,7 +124,7 @@ We have included our steps taken for each section, and have stated where we obta
 
 
 
-# final abstract
+# v3
 
 Our project aimed to explore the relationship between crime and Covid-19 in London. 
 
@@ -152,3 +152,37 @@ This was used to compare crime rates in the hypothetical scenario in which there
 In conclusion, rapes and commercial burglaries are the only types of crime for which we have found statistically significant results.
 
 We were able to draw this conclusion because the actual crime rates for 2020 are outside the prediction interval for 2020, which considers what the crime rates would have been in the absence of the pandemic.
+
+
+
+
+
+
+# final abstract
+
+
+Our project aims to quantitatively explore the relationship between crime and Covid-19 in London. 
+
+We focused on three crimes for our project - burglary, sexual offences and drug offences. 
+
+To conduct our research, we first cleaned our data. 
+
+This enabled us to create bar charts to visualise the evolution of the three categories of crimes we were investigating.
+
+
+
+Our group also created an interactive choropleth map to further analyse the impact of the outbreak of coronavirus on crime in specific boroughs from a geospatial angle. 
+
+However, we found no correlation between the COVID-19 cases and the number of burglaries, sexual offences or drug offences committed across the different London boroughs between 2008 and 2020.
+
+
+Finally, we constructed  a predictive model using the auto-ARIMA Python package. 
+
+This was used to compare crime rates in the hypothetical scenario in which there had not been an outbreak of coronavirus and government-enforced lockdowns in 2020 with the actual crime numbers for 2020. 
+
+Our research showed that rape and commercial burglaries are the only types of crime for which we have found statistically significant results. 
+
+Studying the full impact of the pandemic on society is crucial to understanding the new dynamics and challenges the world now faces and will be pivotal in policymaking in coming years. 
+
+We hope that this project provides some small insight into the criminological effect of coronavirus on London and that future researchers will continue to study the influence of the pandemic in a crime-specific manner. 
+
