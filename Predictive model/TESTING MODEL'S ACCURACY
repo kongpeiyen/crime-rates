@@ -16,11 +16,6 @@ from pmdarima.arima import auto_arima
 rape_accuracy = rape.head(145)
 rape_accuracy.head()
 
-#Testing for stationarity --> it should say 'False'
-from pmdarima.arima import ADFTest
-adf_test = ADFTest(alpha = 0.05)
-adf_test.should_diff(rape_accuracy)
-
 #Spliting the dataset into train and test 
 train = rape_accuracy['200801': '201901']
 test = rape_accuracy['201901':] 
@@ -56,17 +51,6 @@ table2019
 
 #Convert the month column to datetime and set the index of the Month 
 table2019.set_index('MONTH',inplace=True) 
-
-#Plotting predicted values and real values from 2019
-plt.figure(figsize=(8,5))
-plt.plot(prediction2019,label="predicted trend")
-plt.plot(data2019,label="Real trend")
-plt.plot(table, label="Prediction interval", color='red')
-plt.legend(loc = 'Left corner')
-plt.title("RESIDENTIAL BURGLARIES FROM 2015 TO 2019 IN LONDON")
-plt.xlabel("Time")
-plt.ylabel("Residential burglary's values")
-plt.show()
 
 #write values as lists
 import pandas as pd
