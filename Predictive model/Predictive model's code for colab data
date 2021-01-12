@@ -13,14 +13,16 @@ get_ipython().system(' pip install pmdarima')
 from pmdarima.arima import auto_arima
 
 #Read the crime dataset 
-rape.head()
+import pandas as pd
+rape.index = pd.to_datetime(rape.index, format='%Y%m')
+rape.tail(11)
 
 # To understand the pattern --> THIS IS PROBABLY ALREADY DONE
 rape.plot()
 
 #Spliting the dataset into train and test 
-train = rape['200801': '202001']
-test = rape['202001':] 
+train = rape['2008-01-01': '2020-01-01']
+test = rape['2020-01-01':] 
 
 #Building ARIMA model 
 arima_model =  auto_arima(train,start_p=0, d=1, start_q=0, 
@@ -35,11 +37,11 @@ arima_model.summary()
 #Finding predicted crime values
 prediction = pd.DataFrame(arima_model.predict(n_periods = 11),index=test.index)
 prediction.columns = ['predicted_rape']
+prediction.index.name = 'MONTH'
 
 #Finding prediction interval as an array
 conf_int = arima_model.predict(11,return_conf_int=True,alpha=0.05)
 interval = pd.DataFrame(conf_int[1], columns = ['min','max'])
-interval.head()
 
 #Create month column
 import pandas as pd
@@ -49,18 +51,43 @@ dates.head()
 #Put together min max and month
 table = pd.concat([dates, interval], axis=1)
 #Convert the month column to datetime and set the index of the Month 
-table_to_plot = table.set_index('MONTH') 
-table_to_plot
+table['MONTH'] = pd.to_datetime(table['MONTH'], format='%Y%m')
+table = table.set_index('MONTH') 
+min = table[["min"]]
+max =  table[["max"]]
+table
 
-#Plotting predicted values and real values from 2020
+#Plotting predicted values and real values from 2008 to 2020
 plt.figure(figsize=(10,5))
-plt.plot(prediction,label="Without COVID trend")
-plt.plot(rape,label="Real trend")
-plt.plot(table_to_plot,label="Interval", color='r')
+plt.plot(prediction,label="Predicted trend if there were no COVID",color='r')
+plt.plot(rape,label="Real trend", color='black')
+plt.plot(min, label="Lower prediction interval", color="g", alpha=0.5)
+plt.plot(max, label="Upper prediction interval", color="b", alpha=0.5)
 plt.legend(loc = 'Left corner')
 plt.title("RAPES FROM 2008 TO 2020 IN LONDON")
 plt.xlabel("Time")
-plt.ylabel("Number of rapes")
+plt.ylabel("Number of rapes per month")
 plt.grid(b=True, which='major', color='#666666', linestyle='-', linewidth=0.3)
 plt.show()
 
+#Preparing data for connected scatterplot and import libraries
+import pandas as pd
+rape.index = pd.to_datetime(rape.index, format='%Y%m')
+rape_2020 = rape.tail(11)
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import seaborn as sns
+
+#Creating connected scatterplots for 2020 data only
+plt.figure(figsize=(10,5))
+plt.plot(prediction.index,prediction, linestyle='-', marker='o', label="Predicted trend if there were no COVID",color='r')
+plt.plot(rape_2020.index, rape_2020, label="Real trend", color='black', linestyle='-', marker='o')
+plt.plot(min.index, min, label="Lower prediction interval", color="g", alpha=0.5, linestyle='-', marker='o')
+plt.plot(max.index, max, label="Upper prediction interval", color="b", alpha=0.5, linestyle='-', marker='o')
+plt.legend(loc = 'Left corner')
+plt.title("RAPES IN 2020 IN LONDON")
+plt.xlabel("Time")
+plt.ylabel("Number of rapes per month")
+plt.grid(b=True, which='major', color='#666666', linestyle='-', linewidth=0.3)
+plt.show()
