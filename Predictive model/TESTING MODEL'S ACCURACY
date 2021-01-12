@@ -93,13 +93,3 @@ The RMES error values are in the same units as the predictions. As with the mean
 
 All of them require two lists as parameters, with one being your predicted values and the other being the true values
 
-#import metrics library 
-From skylearn import metrics 
-
-#print results of MAE 
-print (metrics.mean__absolute_error(y_test, y_pred)
-
-#print resulto f MSE
-print (metrics.mean__squared_error(y_test, y_pred)
-#print results of RMSE 
-print (np.sqrt(metrics.mean__squared_error(y_test, y_pred))
