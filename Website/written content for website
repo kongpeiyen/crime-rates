@@ -375,6 +375,46 @@ Hence, these changes in crime may not necessarily be solely because of covid-19.
 
 
 
+#final limitations
+
+Other than the limitations mentioned in the data analysis and visualisations sections, our project also faced other limitations. 
+
+We were limited by our dataset because we used the same source for all our crime rates data,  from the Metropolitan Police Service. 
+
+This limitation can be attributed to the highly sensitive nature of crime, hence limiting us to using only crime rates from government databases (National Research Council, 2003). 
+
+
+As we are working with crime rates, the majority of our data was retrieved from the Metropolitan Police Service, we are limited by the impact that Covid-19 has on reported crimes only. 
+
+Furthermore, literature suggests that the amount of unreported sexual offences has increased because the ability of survivors to report crimes is limited by national lockdowns (Stripe, 2020). 
+
+
+
+In addition to this, although our group used the most up to date data available to us, because of the ongoing nature of the pandemic, we are limited to a certain timeframe: 2008-2020. 
+
+It will be possible to understand more as the pandemic progresses and more data becomes available. 
+
+We hope others will improve and reproduce our work with more recent data as it becomes available. 
+
+We also encourage future researchers to look at crime rates over a longer period to increase the accuracy of their predicted crime trends.
+
+
+We are limited by confounding variables. 
+
+Factors other than Covid-19  also affect crime rates, such as weather (Field, 1992). 
+
+Hence, we must acknowledge that crime rates are subject to other influences and seasonal patterns. 
+
+
+Although there are limitations, we have ensured that our process is as reproducible as possible so that others may replicate and build on our work. 
+
+We have included our steps taken for each section, and have stated where we obtained our data from. 
+
+We have also included gists within the different pages, and a link to our GitHub Repository with our full code. 
+
+
+
+
 #CONCLUSION 
 Our group was able to perform a statistical analysis on the data which we were able to draw conclusions from. 
 
